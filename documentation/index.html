@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Como - One Page Modern Template Design HTML</title>
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="col-lg-2 col-lg-offset-1 bodyheight sidebar">
+    	<h1>Como</h1>
+    	<h3>Navigation</h3>
+    	<ul>
+			<li><a href="#about">About</a></li>
+			<li><a href="#html">HTML Structure</a></li>
+			<li><a href="#css">CSS Structure</a></li>
+			<li><a href="#js">JS Structure</a></li>
+			<li><a href="#plugin">Additional plugin</a></li>
+			<li><a href="#credits">Credits</a></li>
+    	</ul>
+
+    	<p>&copy; 2018 <a href="https://themeforest.net/user/igdepe/portfolio?ref=igdepe" target="_blank">igdepe</a></p>
+    </div>
+    <div class="col-lg-7 bodyheight content">
+    	<div class="col-lg-12 contentdetail" id="about">
+	    	<h1>Documentation</h1>
+	    	<h2>Como - One Page Modern Template Design HTML</h2>
+	    	<h4>Author: <a href="https://themeforest.net/user/igdepe/portfolio?ref=igdepe" target="_blank">igdepe</a> | Email: <a href="mailto:igp.ekasuryawan@gmail.com">igp.ekasuryawan@gmail.com</a> | Date created: April 2nd, 2018 | Website: <a href="http://gusekacreations.com" target="_blank">www.gusekacreations.com</a></h4>
+	    	<hr>
+
+	    	<p>
+	    		Como is a One Page Modern Template Design HTML. This template contain section by section marketing to market your product. This template also have good HTML structure, so you can optimize your SEO Things for your current bussiness. Template is easy to edit and change the image.<br><br>
+
+Just follow the commented tag on index html and maching it with their style. For example there is commented tag <i>Navigation menu</i> on index.html and you will find class "Navigation" inside of it. Then find .navigation ( class navigation ) on the css file, then edit as you want. One thing else, for change the image, just put your image inside of image folder and adjust the img src location and image name, in this case ( images/your-image-name.jpg ). It's very easy isn't it?<br><br>
+
+For SEO things you need to edit meta tag and find good keyword for your business. Just see the commented tag on the header. <br><br>
+
+This template just include 1 html file ( one page ), 9 css file, 10 js file, fonts file and some image example that you can change later after you buying it. And also, this template include documentation detail about how the structure of the html page. This template also have working signup form. So, when you put it online, and try to put your detail to contact or subscriber, you will get the email about your detail. But first, you need to adjust the email address with yours on file postcontact.php<br><br>
+
+So what you waiting for? Buy now!!
+
+	    	</p>
+    	</div>
+
+    	<div class="col-lg-12 contentdetail" id="html">
+    		<h1>HTML Structure</h1>
+    		<hr>
+			
+			<img src="assets/images/html.jpg" class="img-responsive" alt="html structure">
+    		<p>
+    			As you can see above, HTML is structured. So you can easy to find class per section.
+    		</p>
+    	</div>
+
+    	<div class="col-lg-12 contentdetail" id="css">
+    		<h1>CSS Structure</h1>
+    		<hr>
+
+    		<img src="assets/images/css.jpg" class="img-responsive" alt="css structure">
+    		<p>
+    			See a commented tag above ?<br><br> 
+    			Yes, on the css file, I already fill inside,a commented tag. So you easy to find which one class or id which is handle the HTML structure. 
+    		</p>
+    	</div>
+
+    	<div class="col-lg-12 contentdetail" id="js">
+    		<h1>JS Structure</h1>
+    		<hr>
+
+    		<img src="assets/images/js.jpg" class="img-responsive" alt="css structure">
+    		<p>
+    			Same like css, my custom javascript is have a commented tag also. 
+    		</p>
+    	</div>
+
+    	<div class="col-lg-12 contentdetail" id="plugin">
+    		<h1>Additional Plugin</h1>
+    		<hr>
+    		<p>
+    			For the additional plugin I use <br>
+    			1. Jquery, is use for powered an additional plugin below.<br>
+    			2. masonry , is use for adjust the images.<br>
+    			3. imagesLoaded , is work with masonry to help it load image before it showing it.<br>
+                4. VenoBox, is use to make pop up on work section<br>
+                5. Google map, is use to showing maps left side of the contact form.<br>
+                    - To use google map, you should generate you key to replace my map key <a href="https://developers.google.com/maps/documentation/javascript/get-api-key" target="_blank">here</a>.<br>
+                6. swiper js, is use for make slider
+
+    		</p>
+    	</div>
+
+    	<div class="col-lg-12 contentdetail" id="credits">
+    		<h1>Credits</h1>
+    		<hr>
+
+    		<p>
+    			For the additional plugin I use <br>
+    			1. Jquery - https://jquery.com/<br>
+    			2. masonry - https://masonry.desandro.com/<br>
+    			3. imagesLoaded - https://imagesloaded.desandro.com/<br>
+                4. VenoBox - http://veno.es/venobox/<br>
+				5. Pexel - https://www.pexels.com/<br>
+                6. Google Map - https://maps.googleapis.com/<br>
+                7. swiper js - http://idangero.us/swiper/
+    		</p>
+    	</div>
+
+
+    </div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+    	$('a[href*="#"]').not('[href="#"]').not('[href="#0"]').on("click",function(event) {
+              // On-page links
+              if (
+                location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+                && 
+                location.hostname == this.hostname
+              ) {
+                // Figure out element to scroll to
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                // Does a scroll target exist?
+                if (target.length) {
+                  // Only prevent default if animation is actually gonna happen
+                  event.preventDefault();
+                  $('html, body').animate({
+                    scrollTop: target.offset().top
+                  }, 1000, function() {
+                    // Callback after animation
+                    // Must change focus!
+                    var $target = $(target);
+                    $target.focus();
+                    if ($target.is(":focus")) { // Checking if the target was focused
+                      return false;
+                    } else {
+                      $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                      $target.focus(); // Set focus again
+                    };
+                  });
+                }
+              }
+      });
+    </script>
+
+  </body>
+</html>

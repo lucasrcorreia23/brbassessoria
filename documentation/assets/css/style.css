@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
+*{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+html,body{
+	margin:0;
+	padding:0;
+	width: 100%;
+	height: 100%;
+}
+body{
+	background: #f8f8f8;
+}
+.bodyheight{
+	height: 100%;
+}
+.sidebar{
+	background: #2A2C2B;
+	padding:0 30px;
+	position: fixed;
+}
+.sidebar img{
+	display: block;
+	margin:20px auto;
+}
+.sidebar h1{
+	color:#fff;
+	font-weight: 700;
+	font-size: 35px;
+	text-align: center;
+	margin-bottom:40px;
+}
+.sidebar h3{
+	color:#4772D9;
+	font-weight: 700;
+	font-size: 20px;
+}
+.sidebar ul{
+	padding:0;
+	margin:0;
+}
+.sidebar ul li{
+	list-style-type: none;
+}
+.sidebar ul li a{
+	display: block;
+	padding:10px;
+	background: rgba(255,255,255,0.2);
+	color:#fff;
+	font-weight: 300;
+	letter-spacing: 1px;
+	margin-bottom:2px;
+	text-decoration: none;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	-o-border-radius: 2px;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+}
+.sidebar ul li a:hover{
+	background: rgba(255,255,255,0.4);
+	padding-left:20px;
+	color:#4772D9;
+}
+.sidebar p{
+	margin:30px 0;
+	color:#fff;
+	text-align: center;
+}
+.sidebar p a{
+	color:#4772D9;
+}
+.content{
+	margin-left:500px;
+}
+.contentdetail hr{
+	margin:30px 0;
+}
+.contentdetail{
+	height: 100%;
+	outline: 0;
+}
+.contentdetail:focus{
+	outline: 0;
+}
+.contentdetail h1{
+	font-weight: 700;
+	margin:30px 0;
+	color:#4772D9;
+}
+.contentdetail h2{
+	font-weight: 700;
+	margin:0;
+	color:#979797;
+}
+.contentdetail h4{
+	font-size: 16px;
+	color: #979797;
+}
+.contentdetail p{
+	font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    margin:20px 0;
+}
+@media only screen and (max-width: 1440px){
+	.content{
+		margin-left:350px;
+	}
+}
+@media only screen and (max-width: 1190px){
+	.sidebar{
+		position: relative;
+	}
+	.bodyheight{
+		height: auto;
+		padding: 20px;
+	}
+	.content {
+	    margin-left: auto;
+	}
+	.sidebar img{
+		width: 120px;
+	}
+}
