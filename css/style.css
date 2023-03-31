@@ -922,7 +922,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
 }
 .customerexperience h3{
     margin:0;
-    font-size: 22px;
+    font-size: 32px;
     color:#4973d9;
 }
 .customerexperience .atag a{
@@ -1102,7 +1102,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
 }
 .footer .cprights p{
     margin:50px 0 0 0;
-    color:#313954;
+    color:#ffffff;
     font-weight: 600;
 }
 
