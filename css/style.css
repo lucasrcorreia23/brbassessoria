@@ -203,7 +203,7 @@ body.loaded #preloader{
 }
 
 /* Button Style */
-.btn_group{}
+
 .btn_group a{
     margin: 5px;
 }
@@ -1287,7 +1287,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
     }
     .table-cell {
         display: block;
-        vertical-align: middle;
+        
     }
     .table-cell div{
         padding:0;
