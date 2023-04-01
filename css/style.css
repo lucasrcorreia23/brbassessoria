@@ -1,40 +1,4 @@
-/*------------------------------------------------
-Item    : Como - One Page Modern Template Design HTML
-Author  : igdepe
-Email   : igp.ekasuryawan@gmail.com
--------------------------------------------------*/
 
-/*------------------------------------------------|
-Fonts typography
---------------------------------|
-
-font-family: 'Poppins', sans-serif;
-font-family: 'Roboto', sans-serif;
-
--------------------------------------------------*/
-/*------------------------------------------------|
-Table of content
---------------------------------|
-
-1. Public style
-2. Navigation menu
-3. Banner
-4. About Section
-5. Destination Section
-6. Activity Section
-7. Benefit Section
-8. Customer Experience Section
-9. Client Section
-10. Testimonial Section
-11. Map Section
-12. Sosmed Section
-13. Footer Section
-14. Media Query ( Resposive Part )
-*/
-
-/*------------------------------------------------|
-1. Public style
---------------------------------|*/
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i');
 
 *{
