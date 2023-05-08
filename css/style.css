@@ -300,10 +300,17 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
 2. Navigation menu
 --------------------------------|*/
 .menu{
-    position: relative;
+    position: fixed;
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 120px;
+    z-index: 999;
+    background: #fff;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .menu .line{
     width: 100%;
@@ -341,7 +348,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
     padding: 0 20px;
 }
 .menu .navigation ul li:last-child a{
-    padding: 0 0 0 20px;
+    padding: 0 0 0 32px;
 }
 .menu .navigation ul li a:hover {
     color: #756de3;
@@ -391,7 +398,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
     z-index: -1;
 }
 .herobanner{
-    height: 640px;
+    height: 720px;
     background-size: cover;
     width: auto;
     background-position: center center;
@@ -406,12 +413,9 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
     color: #ffffff;
     text-align: center;
     position: absolute;
-    top: 40%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    font-size: 60px;
-    line-height: 60px;
+    inset: 40% 0px 0px;
+    font-size: 64px;
+    line-height: 90px;
     font-weight: 300;
     font-family: "Helvetica LT Std Light",sans-serif;
     
@@ -501,6 +505,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
 }
 .about_section h2{
     margin:0;
+    font-size: 40px;
 }
 .about_section .line{
     width: 50px;
