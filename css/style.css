@@ -488,8 +488,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
 4. About Section
 --------------------------------|*/
 .about_section{
-    padding:80px 0;
-    margin-bottom:50px;
+    padding:80px 0;   
 }
 .about_section .imgposabout{
     position: absolute;
@@ -517,8 +516,12 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
 /*------------------------------------------------|
 5. Destination Section
 --------------------------------|*/
+.row-margin{
+    margin-left:120px
+    
+}
 .destination_section{
-    background:url(http://via.placeholder.com/2500x1400) no-repeat center center;
+    /*background:url(http://via.placeholder.com/2500x1400) no-repeat center center;*/
     padding:100px 0;
     background-size: cover;
     -webkit-background-size: cover;
@@ -527,8 +530,11 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
     -o-background-size: cover;
 }
 .destination_section h2{
-    color:#fff;
-    margin:0;
+    color:#111;
+    margin-bottom:90px;
+    text-align: center;
+    line-height: 44px;
+    
 }
 .destination_section h4{
     text-align: center;
@@ -556,7 +562,21 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
     z-index: 1;
 }
 .destination_section.overlay:before{
-    background-color: #4772d9c4;
+    background-color: #e4ffff;
+    border-radius: 0 0 320px 320px;
+}
+.destination_list-group-item{
+    padding: 10px 0;
+}
+.destination_list-group-item::before{
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin-right: 10px;
+    background-color: #0FB9B1;
+    border-radius: 50%;
+    margin-bottom: 2px;
 }
 .destination_section .wrapdestination{
     min-height: 230px;
@@ -617,19 +637,79 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
 /*------------------------------------------------|
 6. Activity Section
 --------------------------------|*/
-.activity_section{
+.planos_section{
     padding:100px 0;
 }
-.activity_section h2{
+.planos_section h2{
+    margin-bottom:50px;
+    text-align: center;
+
+}
+.planos_section h3{
     margin:0;
     text-align: left;
+    padding: 15px;
+    font-size: 32px;
+    background:#00d1c6;
+    color:#fff
+
 }
-.activity_section .line{
+.planos_section h4 small{   
+    font-size: 20px;
+    color: #00d1c6;
+
+}
+.planos_section .line{
     width: 50px;
     height: 2px;
     margin:30px 0;
     background: #4772D9;
 }
+.pt-2{
+    padding: 0.5rem!important;
+}
+.pt-5, .py-5{
+    padding-top: 3rem!important;
+}
+.planos{
+    background: white;
+    
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 20px;
+    
+}
+.planos_descricao{
+    text-align:center;
+    padding: 0 20px;
+}
+.planos h4{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 42px;
+    color: #00d1c6;
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+    border-radius: 20px;
+}
+.planos:hover{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    
+    }
+
+
 .activity_section .gridmain{
     display: block;
     margin:0 auto;
@@ -816,11 +896,11 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
     padding:100px 0;
 }
 .benefit_section.overlay:before{
-    background-color: rgba(0,0,0,0.7);
+    background-color: #fff
 }
 .benefit_section h2{
     margin:0;
-    color:#fff;
+    color:#000;
     text-align: center;
 }
 .benefit_section .line{
@@ -832,17 +912,16 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
 .benefit_section img{
     display: block;
     margin: 0 0 20px;
-    width: 100px;
-    height: 100px;
+    width: auto;
+    height: 190px;
     border: 2px solid #a5a5a5;
     padding: 10px;
     background: transparent;
     border: none;
 }
 .benefit_section h3{
-    color:#4772D9;
-    font-size: 22px;
-    border-bottom: 1px solid #4772D9;
+    color: #00d1c6;
+    font-size: 19px;
     padding-bottom: 10px;
     margin: 8px 0 0 0;
 }
@@ -855,6 +934,10 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .benefit_section .wrap:after{
     content: "";
@@ -885,8 +968,8 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
     left: 0;
     right: 0;
     opacity: 1;
-    box-shadow: 0 4px 0 0px #4772d9;
-    background: #f3f3f3;
+    box-shadow: 0 4px 0 0px #00d1c6;
+    background: #e4ffff;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
@@ -894,9 +977,10 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
     -webkit-transform:translate(0,0);
     -o-transform:translate(0,0);
     -ms-transform:translate(0,0);
+    border-radius: 20px;
 }
-.benefit_section .wrap:hover img{
-    background: #4772d9;
+.benefit_section .wrap:hover img{    
+    border-radius: 10px;
 }
 .benefit_section .wrap:hover p{
     color:#333;
@@ -939,20 +1023,27 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
 --------------------------------|*/
 .client{
     padding:100px 0;
-    background: #fbfbfb;
+    background: #d9ffff;
 }
 .client h2{
-    margin:0;
+    margin-bottom:64px;
     text-align: center;
+    
 }
 .client img{
     display: block;
     margin:0 auto 20px;
 }
 .client h3{
-    margin:0;
+    margin-bottom:20px;
     font-size: 22px;
-    font-weight: 300;
+    font-weight: bolder;    
+    text-align: center;
+}
+.client p{
+    margin:0;
+    font-size: 12px;
+    font-weight: lighter;
     margin:0;
     text-align: center;
 }
@@ -962,9 +1053,8 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
     margin:30px auto;
     background: #4772D9;
 }
-.client .clientwrap{
-    border-bottom:1px solid #d0d0d0;
-    padding:40px;
+.client .clientwrap{    
+    padding:24px;
 }
 .client .clienttop{
     border-right:1px solid #d0d0d0;
@@ -972,6 +1062,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
 .client .clientbottom{
     border-bottom:1px solid transparent;
     border-right: 1px solid #d0d0d0;
+    border: none!important;
 }
 .client .clientbottom:last-child{
     border-top:1px solid transparent;
@@ -1256,7 +1347,13 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
         padding: 50px 0;
     }
     .herobanner {
-        height: 785px;
+        background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    position: relative;
+    transform: translate3d(0px,0px,0px);
+    transition: all 5s ease 0s;
     }
     .herobanner .hero_content {
         padding: 20px 0;
@@ -1276,6 +1373,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
     }
     .table-cell {
         display: block;
+        text-align: center;
         
     }
     .table-cell div{
@@ -1331,6 +1429,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
         width: 280px;
         display: block;
         margin: 0 auto;
+        text-align: center;
     }
     .customerexperience h3 {
         margin: 0 0 25px;
