@@ -639,6 +639,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
 --------------------------------|*/
 .planos_section{
     padding:100px 0;
+   
 }
 .planos_section h2{
     margin-bottom:50px;
@@ -687,11 +688,16 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(40px);
+    border-radius: 25px;
+    height: 800px;
     
 }
 .planos_descricao{
     text-align:center;
     padding: 0 20px;
+    height: 110px;
 }
 .planos h4{
     font-style: normal;
@@ -700,10 +706,149 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
     line-height: 42px;
     color: #00d1c6;
     display: flex;
-    justify-content: center;
+    
     font-weight: 900;
     border-radius: 20px;
 }
+h4.planos_descricao_incluso{
+    background: linear-gradient(90deg, #0FB9B1 3.61%, rgba(15, 185, 177, 0) 98.66%);
+    border-radius: 0;
+    color: #fff!important;
+    padding: 20px;
+    font-family: 'Helvetica LT Std', sans-serif;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    line-height: 24px !important;
+    letter-spacing: 0em;
+    text-align: right;
+    position: relative;
+    margin:0;
+}
+.planos_items{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 10px 0;
+    width: 100%;
+    right: 0;
+}
+.planos_items:before{
+    content: "";
+    display: inline-block;
+    width: 34px;
+    height: 40px;
+    padding: 30px;
+    background-image: url(/images/check-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;   
+    
+}
+.planos ul{
+    padding-right: 15px 15px 15px 0;
+}
+button {
+    font-family: 'Helvetica LT Std', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    letter-spacing: 0.025em;
+    background: #0FB9B1;
+    padding: 20px 40px;
+    cursor: pointer;
+    border: 0;    
+    min-width: 120px;
+    overflow: hidden;
+    position: absolute;
+    line-height: 24px;
+text-align: center;
+text-transform: uppercase;
+bottom: 0;
+    width: 100%;
+  }
+  
+  button span {
+    display: block;
+    position: relative;
+    z-index: 10;
+  }
+  
+  button:after,
+  button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(-100% - 40px);
+    height: calc(100% - 29px);
+    width: calc(100% + 20px);
+    color: #fff;
+    border-radius: 2px;
+    transform: skew(-25deg);
+    padding: 33px;
+  }
+  
+  button:after {
+    background: #fff;
+    transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
+    z-index: 0;
+    opacity: 0.8;
+  }
+  
+  button:before {
+    background: #10e0cf;
+    z-index: 5;
+    transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  
+  button:hover:after {
+    left: calc(0% - 14px);
+    transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  
+  button:hover:before {
+    left: calc(0% - 14px);
+    transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+.section_phrase{
+    padding: 0 0 100px 0;
+    
+    display: flex;
+}
+.section_phrase h2{
+    font-family: 'Helvetica LT Std Roman',sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    padding: 0 0 50px 0;
+    letter-spacing: 0em;
+    text-align: center;
+    line-height: 36px;
+}
+.section_phrase p{
+    
+font-family: Helvetica LT Std;
+font-size: 24px;
+font-weight: 700;
+letter-spacing: 0em;
+text-align: center;
+background: linear-gradient(180deg, #0FB9B1 0%, #0FA7A0 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+
+}
+.section_whats-app{
+    display: flex;
+    justify-content: center;
+}
+.sosmed-align{
+    display: flex;
+    align-items: center;
+}
+.sosmed-align ul{
+    display: flex;
+    justify-content: space-around;
+}
+
 .planos:hover{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     
@@ -990,13 +1135,14 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
 8. Customer Experience Section
 --------------------------------|*/
 .customerexperience{
-    padding:100px 0;
+    margin: 70px 0;
+    padding: 30px 0;
     background-color: #f7f7f7;
 }
 .customerexperience h3{
     margin:0;
-    font-size: 32px;
-    color:#4973d9;
+    font-size: 40px;
+    color: #606060;
 }
 .customerexperience .atag a{
     background-color: transparent;
@@ -1145,21 +1291,23 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
     display: inline-block;
 }
 .sosmed ul li a{
-    display: block;
-    width: 40px;
-    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
     line-height: 38px;
-    font-size: 20px;
+    font-size: 32px;
     color: #fff;
-    background: #7b7b7b;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
+    background: linear-gradient(180deg, #0FB9B1 0%, #0FA7A0 100%);
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
 }
 .sosmed ul li a:hover{
-    background: #232323;
+    background: #10e0cf;
 }
 
 /*------------------------------------------------|
