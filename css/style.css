@@ -1,8 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i');
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 *{
     padding: 0;
     margin: 0;
@@ -309,6 +309,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
     justify-content: center;
     height: 120px;
     z-index: 999;
+    max-width: 1920px;
     background: #fff;
     width: 100%;
     margin: auto;
@@ -354,7 +355,9 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
    
 }
 .menu .navigation ul li a:hover {
-    color: #756de3;
+    font-weight: bolder;
+    scale:1.05;
+    transition: 0.3s linear;
 }
 .menu .navigation .navbarmenumobile{
     position: absolute;
@@ -507,7 +510,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
 }
 .about_section h2{
     margin:0;
-    font-size: 40px;
+    font-size: 48px;
 }
 .about_section .line{
     width: 50px;
@@ -747,7 +750,7 @@ h4.planos_descricao_incluso{
     
 }
 .planos ul{
-    padding: 15px 10px 15px 0;
+    padding: 4px 10px 15px 0;
 }
 button {
     font-family: 'Helvetica LT Std', sans-serif;
@@ -756,7 +759,7 @@ button {
     line-height: 1;
     color: #fff;
     letter-spacing: 0.025em;
-    background: #0FB9B1;
+    background: #0FB9B1!important;
     padding: 20px 40px;
     cursor: pointer;
     border: 0;    
@@ -1126,7 +1129,7 @@ background-clip: text;
     -webkit-transform:translate(0,0);
     -o-transform:translate(0,0);
     -ms-transform:translate(0,0);
-    border-radius: 20px;
+    
 }
 .benefit_section .wrap:hover img{    
     border-radius: 10px;
@@ -1173,7 +1176,7 @@ background-clip: text;
 --------------------------------|*/
 .client{
     padding:100px 0;
-    background: #d9ffff;
+    background: #efffff;
 }
 .client h2{
     margin-bottom:64px;
@@ -1205,6 +1208,7 @@ background-clip: text;
 }
 .client .clientwrap{    
     padding:24px;
+    cursor: pointer;
 }
 .client .clienttop{
     border-right:1px solid #d0d0d0;
@@ -1401,7 +1405,7 @@ background-clip: text;
 }
 .footer_rights_items p{
    
-    font-size: 10px;
+    font-size: 12px;
 }
 
 /*------------------------------------------------|
@@ -1409,6 +1413,10 @@ background-clip: text;
 --------------------------------|*/
 
 @media (max-width: 1199px) {
+    .footer_rights_items p{
+   
+        font-size: 11px;
+    }
     .imgposabout{
         display:none
     }

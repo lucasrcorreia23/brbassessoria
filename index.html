@@ -8,7 +8,7 @@
 	<meta name="author" content="Gus eka creations">
 	<meta name="description" content="BRB - Assessoria">
 	<meta name="keywords" content="BRB - Assessoria">
-
+	<link href="dist/output.css" rel="stylesheet">
 	<title>BRB Assessoria</title>
 
 	<link rel="shortcut icon" type="image/x-icon" href="http://via.placeholder.com/5x5">
@@ -23,7 +23,7 @@
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script src="//unpkg.com/alpinejs" defer></script>
 	<script src="//unpkg.com/alpinejs" defer></script>
-	
+
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<style>
 		@font-face {
@@ -51,7 +51,7 @@
 						<div class="bar"></div>
 					</a>
 				</div>
-				<ul >
+				<ul>
 
 					<li class="menu1"><a href="#about">Quem somos</a></li>
 					<li class="menu2"><a href="#atuacao">Atuação</a></li>
@@ -71,10 +71,10 @@
 			para você e o seu negócio
 
 		</h1>
-		
-			<img src="images/banner.jpg" class="herobanner">
-		
-			
+
+		<img src="images/banner.jpg" class="herobanner">
+
+
 
 		<!-- Navigation menu -->
 
@@ -109,7 +109,7 @@
 			</div>
 
 			<div class="col-lg-4 col-lg-offset-4">
-				<h2 data-aos="fade-up" data-aos-offset="200">Quem somos</h2>
+				<h2 >Quem somos</h2>
 				<div data-aos="fade-up" data-aos-offset="200" class="line"></div>
 			</div>
 			<div class="col-lg-4"></div>
@@ -145,42 +145,65 @@
 
 			<div class="col-md-12" data-aos="fade-up" data-aos-offset="200">
 
-				<div class="col-md-3 col-sm-6 clientwrap " x-data="{ expanded: false }"  >
+				<div class="col-md-3 col-sm-6 clientwrap " x-data="{ expanded: false }">
 					<div @click="expanded = ! expanded">
-					<img src="images/redução de riscos.svg" class="img-responsive" alt="redução de riscos">
-					<h3>#1 - Redução de riscos e custos</h3>
-					<p x-show="expanded" x-transition:enter="transition ease-out duration-300"
-					x-transition:enter-start="opacity-0 scale-90"
-					x-transition:enter-end="opacity-100 scale-100"
-					x-transition:leave="transition ease-in duration-300"
-					x-transition:leave-start="opacity-100 scale-100"
-					x-transition:leave-end="opacity-0 scale-90">A adesão a um plano da BRB Assessoria permitirá que você evite litígios onerosos e minimize
-						riscos legais, nossa equipe de profissionais trabalha de forma proativa na prevenção e resolução
-						de problemas.</p>
-						</div>
-						
+						<img src="images/redução de riscos.svg" class="img-responsive" alt="redução de riscos">
+						<h3>#1 - Redução de riscos e custos</h3>
+						<p x-show="expanded" x-transition:enter="transition ease-out duration-300"
+							x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+							x-transition:leave="transition ease-in duration-300"
+							x-transition:leave-start="opacity-100 scale-100"
+							x-transition:leave-end="opacity-0 scale-90">A adesão a um plano da BRB Assessoria permitirá
+							que você evite litígios onerosos e minimize
+							riscos legais, nossa equipe de profissionais trabalha de forma proativa na prevenção e
+							resolução
+							de problemas.</p>
+					</div>
+
 				</div>
-				<div class="col-md-3 col-sm-6 clientwrap ">
-					<img src="images/atendimento.svg" class="img-responsive" alt="atendimento personalizado">
-					<h3>#2 - Atendimento
-						personalizado</h3>
-					<p> Entendemos que cada profissional possui necessidades específicas. Por isso, temos três planos de
-						serviços, garantindo um atendimento personalizado e eficiente. </p>
+				<div class="col-md-3 col-sm-6 clientwrap " x-data="{ expanded: false }">
+					<div @click="expanded = ! expanded">
+						<img src="images/atendimento.svg" class="img-responsive" alt="atendimento personalizado">
+						<h3>#2 - Atendimento
+							personalizado</h3>
+						<p x-show="expanded" x-transition:enter="transition ease-out duration-300"
+							x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+							x-transition:leave="transition ease-in duration-300"
+							x-transition:leave-start="opacity-100 scale-100"
+							x-transition:leave-end="opacity-0 scale-90"> Entendemos que cada profissional possui
+							necessidades específicas. Por isso, temos três planos de
+							serviços, garantindo um atendimento personalizado e eficiente. </p>
+					</div>
 				</div>
-				<div class="col-md-3 col-sm-6 clientwrap ">
-					<img src="images/suporte.svg" class="img-responsive" alt="suporte">
-					<h3>#3 - Suporte rápido e confiável</h3>
-					<p>Nossa equipe de profissionais qualificados está sempre disponível para fornecer suporte jurídico,
-						assegurando uma resposta rápida e eficaz diante de qualquer situação.</p>
+				<div class="col-md-3 col-sm-6 clientwrap " x-data="{ expanded: false }">
+					<div @click="expanded = ! expanded">
+						<img src="images/suporte.svg" class="img-responsive" alt="suporte">
+						<h3>#3 - Suporte rápido e confiável</h3>
+						<p x-show="expanded" x-transition:enter="transition ease-out duration-300"
+							x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+							x-transition:leave="transition ease-in duration-300"
+							x-transition:leave-start="opacity-100 scale-100"
+							x-transition:leave-end="opacity-0 scale-90">Nossa equipe de profissionais qualificados está
+							sempre disponível para fornecer suporte jurídico,
+							assegurando uma resposta rápida e eficaz diante de qualquer situação.</p>
+					</div>
 				</div>
-				<div class="col-md-3 col-sm-6 clientwrap ">
-					<img src="images/crescimento.svg" class="img-responsive" alt="crescimento sustentável">
-					<h3>#4 - Crescimento sustentável</h3>
-					<p>
-						Ao aderir a um plano da BRB Assessoria, você estará dando um passo importante para garantir um
-						crescimento sustentável e seguro. Trabalhamos para oferecer soluções responsáveis afim de
-						minimizar potenciais ameaças legais.
-					</p>
+				<div class="col-md-3 col-sm-6 clientwrap " x-data="{ expanded: false }">
+					<div @click="expanded = ! expanded">
+						<img src="images/crescimento.svg" class="img-responsive" alt="crescimento sustentável">
+						<h3>#4 - Crescimento sustentável</h3>
+						<p x-show="expanded" x-transition:enter="transition ease-out duration-300"
+							x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+							x-transition:leave="transition ease-in duration-300"
+							x-transition:leave-start="opacity-100 scale-100"
+							x-transition:leave-end="opacity-0 scale-90">
+							Ao aderir a um plano da BRB Assessoria, você estará dando um passo importante para garantir
+							um
+							crescimento sustentável e seguro. Trabalhamos para oferecer soluções responsáveis afim de
+							minimizar potenciais ameaças legais.
+						</p>
+					</div>
+
 				</div>
 
 				<div class="clearfix"></div>
@@ -202,7 +225,7 @@
 							</div>
 							<div class="row" data-aos="fade-up" data-aos-offset="200">
 								<div class="row-margin">
-									<ul class="col-md-3 col-sm-12 col-xs-6 destination_list-group" >
+									<ul class="col-md-3 col-sm-12 col-xs-6 destination_list-group">
 										<li class="destination_list-group-item">Corretor de Imóveis</li>
 										<li class="destination_list-group-item">Jardineiro</li>
 										<li class="destination_list-group-item">Mecânico</li>
@@ -450,10 +473,12 @@
 
 	</section>
 	<section>
-		<div class="section_whats-app" data-aos="fade-left" data-aos-offset="200" >
-			<a href="https://wa.me/489991517570" target="_blank">>
-			</a>
-		</div>
+		<a href="https://wa.me/489991517570" target="_blank">
+			<div class="section_whats-app" data-aos="fade-left" data-aos-offset="200">
+
+
+			</div>
+		</a>
 	</section>
 
 
@@ -543,20 +568,20 @@
 			</div>
 		</div>
 	</section>
-	<section class="footer_rights"	>
-			<div class="col-md-12 col-xs-12 cprights">
-				<div class="container">
-						<div class="footer_rights_items">
-						<p class="text-center">&copy; BRB Assessoria 2023. Todos os direitos reservados.</p>
-						
-						<p>
-							Desenvolvido por Neodds
-						</p>
-						</div>
+	<section class="footer_rights">
+		<div class="col-md-12 col-xs-12 cprights">
+			<div class="container">
+				<div class="footer_rights_items">
+					<p class="text-center">&copy; BRB Assessoria 2023. Todos os direitos reservados.</p>
+
+					<p>
+						Desenvolvido por Neodds
+					</p>
 				</div>
 			</div>
+		</div>
 	</section>
-	
+
 	<!-- End Footer -->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
