@@ -1,6 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i');
-
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 *{
     padding: 0;
     margin: 0;
@@ -120,7 +122,8 @@ button{
     color: #282828;
 }
 .text-white{
-    color: #4b9d41;
+    color: #fff;
+    margin-bottom: 16px;
 }
 .align-left{
     text-align: left;
@@ -319,7 +322,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
     margin-top: 20px;
 }
 .menu .logo{
-    width: 265px;
+    width: 240px;
 }
 .menu .nav{
     width: 870px;
@@ -348,7 +351,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
     padding: 0 20px;
 }
 .menu .navigation ul li:last-child a{
-    padding: 0 0 0 32px;
+   
 }
 .menu .navigation ul li a:hover {
     color: #756de3;
@@ -356,17 +359,17 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
 .menu .navigation .navbarmenumobile{
     position: absolute;
     right: 15px;
-    top: 24px;
+    top: 50px;
     display: none;
 }
 .menu .navigation .navbarmenumobile a{
     display: block;
 }
 .menu .navigation .navbarmenumobile a .bar{
-    width: 50px;
+    width: 32px;
     margin-bottom: 6px;
     height: 3px;
-    background: #fff;
+    background: #00a29f;
 }
 
 
@@ -638,7 +641,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
 6. Activity Section
 --------------------------------|*/
 .planos_section{
-    padding:100px 0;
+    padding:0 0 100px 0;
    
 }
 .planos_section h2{
@@ -670,7 +673,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
     padding: 0.5rem!important;
 }
 .pt-5, .py-5{
-    padding-top: 3rem!important;
+    
 }
 .planos{
     background: white;
@@ -696,7 +699,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
 }
 .planos_descricao{
     text-align:center;
-    padding: 0 20px;
+    padding: 0 44px;
     height: 110px;
 }
 .planos h4{
@@ -744,7 +747,7 @@ h4.planos_descricao_incluso{
     
 }
 .planos ul{
-    padding-right: 15px 15px 15px 0;
+    padding: 15px 10px 15px 0;
 }
 button {
     font-family: 'Helvetica LT Std', sans-serif;
@@ -822,6 +825,7 @@ bottom: 0;
     letter-spacing: 0em;
     text-align: center;
     line-height: 36px;
+    color:#555
 }
 .section_phrase p{
     
@@ -1274,7 +1278,42 @@ background-clip: text;
     text-align: center;
     color: #020f3b;
 }
+/*--------Banner WhatsApp--------*/
 
+.section_whats-app{
+
+    background-image: url(/images/Banner\ WhatsApp\ 3.png);
+    display: flex;
+    justify-content: center;
+    height: 320px;
+    position: relative;    
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+@media only screen and (max-width: 480px){
+
+.section_whats-app{
+
+    background-image: url(/images/Banner\ WhatsApp\ 3-mobile.png);
+    width: 100%;
+    height: 40vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    position: relative;
+    transform: translate3d(0px,0px,0px);
+    transition: all 5s ease 0s;
+}
+
+}
 /*------------------------------------------------|
 12. Sosmed Section
 --------------------------------|*/
@@ -1314,14 +1353,30 @@ background-clip: text;
 13. Footer Section
 --------------------------------|*/
 .footer{
-    padding:100px 0;
-    background: #2e2e2e;
+    padding: 80px 0 120px 0;
+    background: linear-gradient(90deg, #109690 0%, #14BCB4 98.96%);
+}
+.footer img{
+    padding: 20px 0;
+    
+    background:transparent;
 }
 .footer p{
-    color:#9e9e9e;
+    color:#fff;
+}
+.footer_logotipo{
+    border-right: 1px solid #fff;
+    padding: 0px 40px 40px 0;
+}
+.footer_logotipo p{
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+.footer_list li{
+    margin: 8px 0;
 }
 .footer ul li a{
-    color:#9e9e9e;
+    color:#ffffff;
     text-decoration:none;
 }
 .footer ul li a:hover{
@@ -1333,17 +1388,35 @@ background-clip: text;
     color:#ffffff;
     font-weight: 600;
 }
+.footer_rights{
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.footer_rights_items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 10px;
+}
+.footer_rights_items p{
+   
+    font-size: 10px;
+}
 
 /*------------------------------------------------|
 14. Media Query ( Resposive Part )
 --------------------------------|*/
 
 @media (max-width: 1199px) {
+    .imgposabout{
+        display:none
+    }
     .about_section .imgposabout {
         position: relative;
-        top: 0;
-        width: 100%;
-        height: 300px;
+        top: -100px;
+        width: auto;
+    height: 224px;
         margin-bottom: 50px;
         margin-left: 0;
     }
@@ -1401,7 +1474,13 @@ background-clip: text;
         -o-transform:translate(0,15px);
     }
     .menu .navigation .navbarmenumobile{
-        display: block;
+        display: flex;
+    justify-content: right;
+    right: 0;
+    top: 50px;   
+    position: absolute;
+    width: 100%;
+    padding: 0 20px;
     }
     .destination_section .wrapdestination a span {
         -webkit-transition: all .5s .5s ease;
@@ -1420,48 +1499,52 @@ background-clip: text;
         -webkit-transform: translate(-10px,-101px);
     }
     .menu {
+        position: fixed;
+        padding: 0 24px;
         position: relative;
-        top: 5px;
     }
     .menu .line {
         margin-top: 5px;
     }
     .menu .navigation ul{
-        float:none;
-        background: #fff;
-        opacity: 0;
-        transition: all 0.3s ease-in-out;
-        -webkit-transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-        transform:translate(0, -50px);
-        -webkit-transform:translate(0, -50px);
-        -moz-transform:translate(0, -50px);
-        -ms-transform:translate(0, -50px);
-        -o-transform:translate(0, -50px);
-        position: absolute;
-        width: 100%;
-        z-index: -1;
-        left:0;
+        float: none;
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transform: translate(0, -50px);
+    -webkit-transform: translate(0, -50px);
+    -moz-transform: translate(0, -50px);
+    -ms-transform: translate(0, -50px);
+    -o-transform: translate(0, -50px);
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    left: 0;
     }
     .menu .navigation ul.open{
-        margin-top: 5px;
-        opacity: 1;
-        transition: all 0.3s ease-in-out;
-        -webkit-transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-        transform:translate(0, 0);
-        -webkit-transform:translate(0, 0);
-        -moz-transform:translate(0, 0);
-        -ms-transform:translate(0, 0);
-        -o-transform:translate(0, 0);
-        z-index: 10;
+        margin-top: 61px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    z-index: 10;
     }
     .menu .navigation ul li{
         float:none;
+        border-bottom: 1px solid #999;
     }
     .menu .navigation ul li a {
         display: block;
@@ -1485,7 +1568,7 @@ background-clip: text;
 
 @media (max-width: 991px) {
     .about_section,
-    .destination_section,
+    
     .activity_section,
     .customerexperience,
     .client,
@@ -1494,14 +1577,42 @@ background-clip: text;
     .footer {
         padding: 50px 0;
     }
+    .row-margin{
+        margin-left:0px;
+        
+    }
+    .p-15{
+        padding:24px 12px;
+    }
+    .planos{
+        height: auto !important;
+    }
+    .planos ul {
+        height: auto;
+    margin: 0 0 60px 0;
+    }
+    .planos_section{
+        padding: 0;
+    }
+    .planos_descricao{
+        height: auto;
+        }
     .herobanner {
-        background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    position: relative;
-    transform: translate3d(0px,0px,0px);
+        background-repeat: no-repeat;
     transition: all 5s ease 0s;
+    height: 420px;
+    background-size: cover;
+    width: auto;
+    background-position: center center;
+    object-fit: cover;
+    max-width: 100%;
+    }
+    .herobanner h1{
+        inset: 30% 0px 0px;
+    font-size: 31px;
+    line-height: 40px;
+    padding: 0 88px;
+    
     }
     .herobanner .hero_content {
         padding: 20px 0;
@@ -1581,8 +1692,17 @@ background-clip: text;
     }
     .customerexperience h3 {
         margin: 0 0 25px;
-        font-size: 22px;
+        font-size: 36px;
         text-align: center;
+    }
+    .section_phrase h2{
+        font-size:28px;
+    }
+    .customerexperience{
+        margin:0;
+    }
+    .sosmed ul li{
+        margin: 0 12px; 
     }
     .client .clienttop {
         border-right: 1px solid transparent;
@@ -1602,8 +1722,32 @@ background-clip: text;
     .client .clientwrap{
         padding:25px;
     }
+    .sosmed-align{
+        flex-direction: column;
+    }
+    .footer{
+        display: flex;
+    text-align: center;
+    padding: 40px 0;
+    }
+    .footer ul{
+        margin: 0 0 36px 0;
+    }
+    .footer_logotipo{
+        border:none;
+        padding: 12px;
+        margin-bottom:20px;
+    }
     .footer .contentmain{
         margin-bottom:40px;
+    }
+    .footer_rights_items p{
+        font-size: 11px;
+       
+    }
+    .footer_rights_items{
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -1643,6 +1787,9 @@ background-clip: text;
         display: block;
         margin: 0 auto;
     }
+    .destination_section.overlay:before{
+        border-radius: 0 0 80px 80px;
+    }
     .destination_section .wrapdestination a:hover span {
         -webkit-transition: all .5s .5s ease;
         -moz-transition: all .5s .5s ease;
@@ -1654,6 +1801,9 @@ background-clip: text;
 }
 
 @media only screen and (max-width: 480px) {
+    .destination_list-group-item{
+        text-align: left;
+    }
     h2{
         font-size: 30px;
     }
