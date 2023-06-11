@@ -1,0 +1,10 @@
+{
+  "require": {
+    "slim/slim": "^3.0",
+    "tuupola/cors-middleware": "^0.5.2",
+    "ext-json": "*",
+    "ext-pdo": "*",
+    "firebase/php-jwt": "6.4.0",
+    "lcobucci/jwt": "^3.1"
+  }
+}
