@@ -23,8 +23,10 @@
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script src="//unpkg.com/alpinejs" defer></script>
 	<script src="//unpkg.com/alpinejs" defer></script>
+	<link href="/dist/output.css" rel="stylesheet">
 
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	
 	<style>
 		@font-face {
 			font-family: 'HelveticaLTStd-Roman';
@@ -66,9 +68,8 @@
 	</nav>
 	<!-- Banner -->
 	<section id="herobanner" class="hero_section herobanner overlay">
-		<h1 class="text-white">
-			Assessoria jurídica eficiente<br>
-			para você e o seu negócio
+		<h1 id="bannerfrase" class="text-white">
+			
 
 		</h1>
 
@@ -101,7 +102,7 @@
 
 	<!-- About -->
 	<section id="about" class="about_section about overlay">
-		<div class="container">
+		<div class="container h-240 md:min-h-full">
 			<div>
 
 				<img class="imgposabout" src="images/hero-content.png" data-aos="zoom-in" data-aos-offset="200">
@@ -112,24 +113,8 @@
 				<h2 >Quem somos</h2>
 				<div data-aos="fade-up" data-aos-offset="200" class="line"></div>
 			</div>
-			<div class="col-lg-4"></div>
-			<div data-aos="fade-up" data-aos-offset="200" class="col-lg-4 col-lg-offset-4">
-				<p>A BRB Assessoria jurídica se orgulha de oferecer serviços jurídicos personalizados e eficientes para
-					profissionais e empresas de todos os portes.<br><br>
-					Nossa equipe de profissionais qualificados possui sólida formação acadêmica e vasta experiência na
-					área jurídica, todos devidamente habilitados e registrados na Ordem dos Advogados do Brasil (OAB).
-				</p>
-			</div>
+			<div id="quemsomos">
 
-			<div data-aos="fade-up" data-aos-offset="200" class="col-lg-4">
-				<p>Essa habilitação assegura que nossos advogados possuem os conhecimentos e a ética necessários para
-					representar e defender os interesses dos nossos clientes com excelência.
-					<br><br>
-					Estamos sempre disponíveis para fornecer suporte rápido e confiável, garantindo a tranquilidade de
-					ter um braço jurídico confiável ao seu lado. Nossos planos de serviços são projetados para se
-					adaptar às necessidades específicas de cada cliente.<br><br>
-					<i><strong>"Prevenção jurídica eficaz<br> para o seu negócio"</strong></i>
-				</p>
 			</div>
 		</div>
 	</section>
@@ -225,25 +210,25 @@
 							</div>
 							<div class="row" data-aos="fade-up" data-aos-offset="200">
 								<div class="row-margin">
-									<ul class="col-md-3 col-sm-12 col-xs-6 destination_list-group">
+									<ul class="col-md-3 col-sm-12 col-xs-6 destination_list-group" data-aos="fade-up" data-aos-offset="200">
 										<li class="destination_list-group-item">Corretor de Imóveis</li>
 										<li class="destination_list-group-item">Jardineiro</li>
 										<li class="destination_list-group-item">Mecânico</li>
 										<li class="destination_list-group-item">Publicitário</li>
 									</ul>
-									<ul class="col-md-3 col-sm-12 col-xs-6 destination_list-group">
+									<ul class="col-md-3 col-sm-12 col-xs-6 destination_list-group" data-aos="fade-up" data-aos-offset="200">
 										<li class="destination_list-group-item">Autônomos</li>
 										<li class="destination_list-group-item">Arquitetos</li>
 										<li class="destination_list-group-item">Salões de Beleza</li>
 										<li class="destination_list-group-item">Clínicas</li>
 									</ul>
-									<ul class="col-md-3 col-sm-12 col-xs-6 destination_list-group">
+									<ul class="col-md-3 col-sm-12 col-xs-6 destination_list-group" data-aos="fade-up" data-aos-offset="200">
 										<li class="destination_list-group-item">Tatuadores</li>
 										<li class="destination_list-group-item">Youtubers</li>
 										<li class="destination_list-group-item">Programadores</li>
 										<li class="destination_list-group-item">Barbearias</li>
 									</ul>
-									<ul class="col-md-3 col-sm-12 col-xs-6 destination_list-group">
+									<ul class="col-md-3 col-sm-12 col-xs-6 destination_list-group " data-aos="fade-up" data-aos-offset="200">
 										<li class="destination_list-group-item">Produtoras</li>
 										<li class="destination_list-group-item">Artistas</li>
 										<li class="destination_list-group-item">Profissional liberal</li>
@@ -457,7 +442,7 @@
 
 		<div class="col-lg-12 col-12 p-2 ">
 			<div class="container">
-				<div class="phrase">
+				<div id="frasefinal" class="phrase">
 
 					<h2 id="contato" data-aos="fade-up" data-aos-offset="200">
 						“<b>Comprometidos com a excelência</b>, a BRB Assessoria é sinônimo de confiança e inovação,
@@ -535,11 +520,11 @@
 			<div class="col-md-4 col-sm-4">
 				<div class="widget_content editContent">
 					<h3 class="text-white">Contato</h3>
-					<p>contato@brbassessoria.online </p>
-					<p>
+					<p id="contato_email">contato@brbassessoria.online </p>
+					<p id="contato_telefone">
 						Telefone: (48) 9 99151-7570
 					</p>
-					<p><br>Rua 3700, nº 160, Sala 02 - Centro<br> Balneário Camboriú, SC<BR>CEP 88330-203 <br></p>
+					<p id="endereco"><br>Rua 3700, nº 160, Sala 02 - Centro<br> Balneário Camboriú, SC<BR>CEP 88330-203 <br></p>
 
 				</div>
 			</div>
@@ -590,6 +575,46 @@
 	<script src="js/masonry.pkgd.min.js"></script>
 	<script src="js/imagesloaded.pkgd.min.js"></script>
 	<script src="js/swiper.min.js"></script>
+	<script>
+		// Criação do objeto XMLHttpRequest
+		var xhr = new XMLHttpRequest();
+
+		// Definição da função de tratamento de resposta
+		xhr.onreadystatechange = function() {
+		if (xhr.readyState === 4 && xhr.status === 200) {
+			var response = JSON.parse(xhr.responseText);
+			// Manipule o objeto JSON 'response' aqui
+			console.log(response);
+			// Seleciona o elemento <h1> pelo seu ID
+		var h1Element = document.getElementById('bannerfrase');
+		var divQuemsomosFrase = document.getElementById('quemsomosfrase');
+		var divContatoEmail = document.getElementById('contatoemail');
+		var divEndereco = document.getElementById('endereco');
+		var divContatoTelefone = document.getElementById('contatotelefone');
+		var divFraseFinal = document.getElementById('frasefinal');
+		var divQuemSomosFoto = document.getElementById('quemsomosfoto');
+		var divElementFoto = document.getElementById('bannerfoto');
+
+		// Define o HTML do <h1> com a string
+		h1Element.innerHTML = response.banner_frase;
+		divQuemsomosFrase.innerHTML = response.quemsomos_frase;
+		divContatoEmail.innerHTML = response.contato_email;
+		divEndereco.innerHTML = response.contato_endereco;
+		divContatoTelefone.innerHTML = response.contato_telefone;
+		divFraseFinal.innerHTML = response.frasefinal;
+		divQuemSomosFoto.innerHTML = response.quemsomos_foto;
+		divElementFoto.innerHTML = response.banner_foto;
+		
+		}
+		};	
+
+		// Definição dos detalhes da requisição
+		xhr.open("GET", "https://api.brbempresarial.com/site", true);
+
+		// Envio da requisição
+		xhr.send();
+
+	</script>
 
 
 

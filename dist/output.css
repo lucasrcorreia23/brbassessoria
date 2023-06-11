@@ -616,6 +616,10 @@ video {
   display: none;
 }
 
+.h-240{
+  height: 48rem;
+}
+
 .scale-100{
   --tw-scale-x: 1;
   --tw-scale-y: 1;
@@ -1404,6 +1408,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
 .herobanner{
   height: 720px;
   background-size: cover;
+  max-width:1920px;
   width: auto;
   background-position: center center;
 }
@@ -1535,6 +1540,12 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
 
 .row-margin{
   margin-left:120px
+}
+
+.destination_list-group-item:hover:before{
+  width:10px;
+  height: 10px;
+  margin-bottom: 0px;
 }
 
 .destination_section{
@@ -2713,9 +2724,9 @@ button:hover:before {
 
   .herobanner h1{
     inset: 30% 0px 0px;
-    font-size: 31px;
+    font-size: 36px;
     line-height: 40px;
-    padding: 0 88px;
+    padding: 0px 64px;
   }
 
   .herobanner .hero_content {
@@ -2995,5 +3006,11 @@ button:hover:before {
     transform: translate(0,-164px);
     -moz-transform: translate(0,-164px);
     -webkit-transform: translate(0,-120px);
+  }
+}
+
+@media (min-width: 768px){
+  .md\:min-h-full{
+    min-height: 100%;
   }
 }

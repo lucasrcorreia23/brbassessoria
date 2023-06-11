@@ -406,6 +406,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
 .herobanner{
     height: 720px;
     background-size: cover;
+    max-width:1920px;
     width: auto;
     background-position: center center;
 }
@@ -525,6 +526,12 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button, .portfoli
 .row-margin{
     margin-left:120px
     
+}
+.destination_list-group-item:hover:before{
+    width:10px;
+    height: 10px;
+margin-bottom: 0px;
+
 }
 .destination_section{
     /*background:url(http://via.placeholder.com/2500x1400) no-repeat center center;*/
@@ -1490,6 +1497,7 @@ background-clip: text;
     width: 100%;
     padding: 0 20px;
     }
+    
     .destination_section .wrapdestination a span {
         -webkit-transition: all .5s .5s ease;
         -moz-transition: all .5s .5s ease;
@@ -1617,9 +1625,9 @@ background-clip: text;
     }
     .herobanner h1{
         inset: 30% 0px 0px;
-    font-size: 31px;
+    font-size: 36px;
     line-height: 40px;
-    padding: 0 88px;
+    padding: 0px 64px;
     
     }
     .herobanner .hero_content {
