@@ -361,7 +361,7 @@ sup {
 }
 
 a {
-    color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+    color: #E34E35;
     text-decoration: none
 }
 
@@ -8078,12 +8078,12 @@ fieldset:disabled .btn {
 }
 
 .link-primary {
-    color: #009ef7 !important
+    color: #E34E35 !important
 }
 
 .link-primary:focus,
 .link-primary:hover {
-    color: #33b1f9 !important
+    color: #702E3D !important
 }
 
 .link-secondary {
@@ -40806,7 +40806,7 @@ h6 {
 .btn.btn-primary {
     color: var(--bs-primary-inverse);
     border-color: var(--bs-primary);
-    background-color: var(--bs-primary)
+    background-color: #E34E35
 }
 
 .btn.btn-primary .svg-icon,
@@ -40828,7 +40828,7 @@ h6 {
 .show>.btn.btn-primary {
     color: var(--bs-primary-inverse);
     border-color: var(--bs-primary-active);
-    background-color: var(--bs-primary-active) !important
+    background-color: #702E3D !important
 }
 
 .btn-check:active+.btn.btn-primary .svg-icon,
@@ -42787,7 +42787,7 @@ h6 {
 .btn.btn-active-color-primary:focus:not(.btn-active),
 .btn.btn-active-color-primary:hover:not(.btn-active),
 .show>.btn.btn-active-color-primary {
-    color: var(--bs-text-primary)
+    color: #E34E35
 }
 
 .btn-check:active+.btn.btn-active-color-primary .svg-icon,

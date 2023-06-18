@@ -128,70 +128,15 @@
 
 			</div>
 
-			<div class="col-md-12" data-aos="fade-up" data-aos-offset="200">
+			<div class="col-md-12" data-aos="fade-up" data-aos-offset="200" id="metodologias">
 
-				<div class="col-md-3 col-sm-6 clientwrap " x-data="{ expanded: false }">
-					<div @click="expanded = ! expanded">
-						<img src="images/redução de riscos.svg" class="img-responsive" alt="redução de riscos">
-						<h3>#1 - Redução de riscos e custos</h3>
-						<p x-show="expanded" x-transition:enter="transition ease-out duration-300"
-							x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
-							x-transition:leave="transition ease-in duration-300"
-							x-transition:leave-start="opacity-100 scale-100"
-							x-transition:leave-end="opacity-0 scale-90">A adesão a um plano da BRB Assessoria permitirá
-							que você evite litígios onerosos e minimize
-							riscos legais, nossa equipe de profissionais trabalha de forma proativa na prevenção e
-							resolução
-							de problemas.</p>
-					</div>
+				
+				
+					
 
-				</div>
-				<div class="col-md-3 col-sm-6 clientwrap " x-data="{ expanded: false }">
-					<div @click="expanded = ! expanded">
-						<img src="images/atendimento.svg" class="img-responsive" alt="atendimento personalizado">
-						<h3>#2 - Atendimento
-							personalizado</h3>
-						<p x-show="expanded" x-transition:enter="transition ease-out duration-300"
-							x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
-							x-transition:leave="transition ease-in duration-300"
-							x-transition:leave-start="opacity-100 scale-100"
-							x-transition:leave-end="opacity-0 scale-90"> Entendemos que cada profissional possui
-							necessidades específicas. Por isso, temos três planos de
-							serviços, garantindo um atendimento personalizado e eficiente. </p>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 clientwrap " x-data="{ expanded: false }">
-					<div @click="expanded = ! expanded">
-						<img src="images/suporte.svg" class="img-responsive" alt="suporte">
-						<h3>#3 - Suporte rápido e confiável</h3>
-						<p x-show="expanded" x-transition:enter="transition ease-out duration-300"
-							x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
-							x-transition:leave="transition ease-in duration-300"
-							x-transition:leave-start="opacity-100 scale-100"
-							x-transition:leave-end="opacity-0 scale-90">Nossa equipe de profissionais qualificados está
-							sempre disponível para fornecer suporte jurídico,
-							assegurando uma resposta rápida e eficaz diante de qualquer situação.</p>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 clientwrap " x-data="{ expanded: false }">
-					<div @click="expanded = ! expanded">
-						<img src="images/crescimento.svg" class="img-responsive" alt="crescimento sustentável">
-						<h3>#4 - Crescimento sustentável</h3>
-						<p x-show="expanded" x-transition:enter="transition ease-out duration-300"
-							x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
-							x-transition:leave="transition ease-in duration-300"
-							x-transition:leave-start="opacity-100 scale-100"
-							x-transition:leave-end="opacity-0 scale-90">
-							Ao aderir a um plano da BRB Assessoria, você estará dando um passo importante para garantir
-							um
-							crescimento sustentável e seguro. Trabalhamos para oferecer soluções responsáveis afim de
-							minimizar potenciais ameaças legais.
-						</p>
-					</div>
+				
 
-				</div>
-
-				<div class="clearfix"></div>
+				
 
 
 			</div>
@@ -595,6 +540,28 @@
 		var divQuemSomosFoto = document.getElementById('quemsomosfoto');
 		var divElementFoto = document.getElementById('bannerfoto');
 
+		var Metodologias = document.getElementById('metodologias');
+				var divMetodologias = ""
+				for (var i = 0; i < response.metodologias.length; i++) {
+					divMetodologias += ""
+					+"<div class=\"col-md-3 col-sm-6 clientwrap \" x-data=\"{ expanded: false }\">"
+					+"<div @click=\"expanded =!expanded\">"
+						+"<img src=\"images/"+response.metodologias[i].icone+"\" class=\"img-responsive\">"
+						+"<h3>#"+(i+1)+" - "+response.metodologias[i].titulo+"</h3>"
+						+"<p x-show=\"expanded\" x-transition:enter=\"transition ease-out duration-300\""
+						+"x-transition:enter-start=\"opacity-0 scale-90\" x-transition:enter-end=\"opacity-100 scale-100\""
+						+"x-transition:leave=\"transition ease-in duration-300\""
+						+"x-transition:leave-start=\"opacity-100 scale-100\""
+						+"x-transition:leave-end=\"opacity-0 scale-90\">"+response.metodologias[i].descricao+"</p>"
+					+"</div>"
+				+"</div>"
+					console.log(response.metodologias[
+						i
+					])
+				}
+				divMetodologias += "<div class=\"clearfix\"></div>";
+
+				
 		// Define o HTML do <h1> com a string
 		h1Element.innerHTML = response.banner_frase;
 		divQuemsomosFrase.innerHTML = response.quemsomos_frase;
@@ -605,6 +572,7 @@
 		divQuemSomosFoto.innerHTML = response.quemsomos_foto;
 		divElementFoto.innerHTML = response.banner_foto;
 		
+		Metodologias.innerHTML = divMetodologias;
 		}
 		};	
 
