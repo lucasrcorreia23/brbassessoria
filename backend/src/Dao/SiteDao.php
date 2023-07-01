@@ -39,6 +39,10 @@ class SiteDao
 
             $return->planos = $st->fetchAll(PDO::FETCH_ASSOC);
 
+            foreach ($return->planos as &$plano) {
+                $plano["topicos"] = json_decode($plano["topicos"]);
+            }
+
             $query = "SELECT * FROM segmentos";
 
             $st = $c->prepare($query);

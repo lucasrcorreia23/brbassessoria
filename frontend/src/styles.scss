@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "HelveticaLTStd-Roman";
+  src: url("assets/fonts/HelveticaLTStd-Roman.otf") format("embedded-opentype");
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url("assets/css/bootstrap.min.css");
+@import url("assets/css/fontawesome-all.min.css");
+@import url("assets/css/venobox.css");
+@import url("assets/css/swiper.min.css");
+@import url("assets/css/style.css");
+@import url("https://unpkg.com/aos@2.3.1/dist/aos.css");
+@import url("assets/css/output.css");

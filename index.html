@@ -26,7 +26,7 @@
 	<link href="/dist/output.css" rel="stylesheet">
 
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	
+
 	<style>
 		@font-face {
 			font-family: 'HelveticaLTStd-Roman';
@@ -69,11 +69,11 @@
 	<!-- Banner -->
 	<section id="herobanner" class="hero_section herobanner overlay">
 		<h1 id="bannerfrase" class="text-white">
-			
+
 
 		</h1>
 
-		<img id ="bannerfoto" src="images/banner.jpg" class="herobanner">
+		<img id="bannerfoto" src="images/banner.jpg" class="herobanner">
 
 
 
@@ -105,12 +105,13 @@
 		<div class="container h-240 md:min-h-full">
 			<div>
 
-				<img id ="quemsomosfoto" class="imgposabout" src="images/hero-content.png" data-aos="zoom-in" data-aos-offset="200">
+				<img id="quemsomosfoto" class="imgposabout" src="images/hero-content.png" data-aos="zoom-in"
+					data-aos-offset="200">
 
 			</div>
 
 			<div class="col-lg-4 col-lg-offset-4">
-				<h2 >Quem somos</h2>
+				<h2>Quem somos</h2>
 				<div data-aos="fade-up" data-aos-offset="200" class="line"></div>
 			</div>
 			<div id="quemsomosfrase">
@@ -128,15 +129,66 @@
 
 			</div>
 
-			<div class="col-md-12" data-aos="fade-up" data-aos-offset="200" id="metodologias">
+			<div class="col-md-12" data-aos="fade-up" data-aos-offset="200" id="">
+				<div class="col-md-3 col-sm-6 clientwrap " x-data="{ expanded: false }">
+					<div @click="expanded = ! expanded">
+						<img src="images/redução de riscos.svg" class="img-responsive" alt="redução de riscos">
+						<h3>#1 - Redução de riscos e custos</h3>
+						<p x-show="expanded" x-transition:enter="transition ease-out duration-300"
+							x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+							x-transition:leave="transition ease-in duration-300"
+							x-transition:leave-start="opacity-100 scale-100"
+							x-transition:leave-end="opacity-0 scale-90">A adesão a um plano da BRB Assessoria permitirá
+							que você evite litígios onerosos e minimize riscos legais, nossa equipe de profissionais
+							trabalha de forma proativa na prevenção e resolução de problemas.</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 clientwrap " x-data="{ expanded: false }">
+					<div @click="expanded = ! expanded">
+						<img src="images/atendimento.svg" class="img-responsive" alt="atendimento personalizado">
+						<h3>#2 - Atendimento personalizado</h3>
+						<p x-show="expanded" x-transition:enter="transition ease-out duration-300"
+							x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+							x-transition:leave="transition ease-in duration-300"
+							x-transition:leave-start="opacity-100 scale-100"
+							x-transition:leave-end="opacity-0 scale-90"> Entendemos que cada profissional possui
+							necessidades específicas. Por isso, temos três planos de serviços, garantindo um atendimento
+							personalizado e eficiente. </p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 clientwrap " x-data="{ expanded: false }">
+					<div @click="expanded = ! expanded">
+						<img src="images/suporte.svg" class="img-responsive" alt="suporte">
+						<h3>#3 - Suporte rápido e confiável</h3>
+						<p x-show="expanded" x-transition:enter="transition ease-out duration-300"
+							x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+							x-transition:leave="transition ease-in duration-300"
+							x-transition:leave-start="opacity-100 scale-100"
+							x-transition:leave-end="opacity-0 scale-90">Nossa equipe de profissionais qualificados está
+							sempre disponível para fornecer suporte jurídico, assegurando uma resposta rápida e eficaz
+							diante de qualquer situação.</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 clientwrap " x-data="{ expanded: false }">
+					<div @click="expanded = ! expanded">
+						<img src="images/crescimento.svg" class="img-responsive" alt="crescimento sustentável">
+						<h3>#4 - Crescimento sustentável</h3>
+						<p x-show="expanded" x-transition:enter="transition ease-out duration-300"
+							x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+							x-transition:leave="transition ease-in duration-300"
+							x-transition:leave-start="opacity-100 scale-100"
+							x-transition:leave-end="opacity-0 scale-90">
+							Ao aderir a um plano da BRB Assessoria, você estará dando um passo importante para garantir
+							um crescimento sustentável e seguro. Trabalhamos para oferecer soluções responsáveis afim de
+							minimizar potenciais ameaças legais.
+						</p>
+					</div>
+				</div>
+				<div class="clearfix"></div>
 
-				
-				
-					
 
-				
 
-				
+
 
 
 			</div>
@@ -155,25 +207,29 @@
 							</div>
 							<div class="row" data-aos="fade-up" data-aos-offset="200">
 								<div class="row-margin">
-									<ul class="col-md-3 col-sm-12 col-xs-6 destination_list-group" data-aos="fade-up" data-aos-offset="200">
+									<ul class="col-md-3 col-sm-12 col-xs-6 destination_list-group" data-aos="fade-up"
+										data-aos-offset="200">
 										<li class="destination_list-group-item">Corretor de Imóveis</li>
 										<li class="destination_list-group-item">Jardineiro</li>
 										<li class="destination_list-group-item">Mecânico</li>
 										<li class="destination_list-group-item">Publicitário</li>
 									</ul>
-									<ul class="col-md-3 col-sm-12 col-xs-6 destination_list-group" data-aos="fade-up" data-aos-offset="200">
+									<ul class="col-md-3 col-sm-12 col-xs-6 destination_list-group" data-aos="fade-up"
+										data-aos-offset="200">
 										<li class="destination_list-group-item">Autônomos</li>
 										<li class="destination_list-group-item">Arquitetos</li>
 										<li class="destination_list-group-item">Salões de Beleza</li>
 										<li class="destination_list-group-item">Clínicas</li>
 									</ul>
-									<ul class="col-md-3 col-sm-12 col-xs-6 destination_list-group" data-aos="fade-up" data-aos-offset="200">
+									<ul class="col-md-3 col-sm-12 col-xs-6 destination_list-group" data-aos="fade-up"
+										data-aos-offset="200">
 										<li class="destination_list-group-item">Tatuadores</li>
 										<li class="destination_list-group-item">Youtubers</li>
 										<li class="destination_list-group-item">Programadores</li>
 										<li class="destination_list-group-item">Barbearias</li>
 									</ul>
-									<ul class="col-md-3 col-sm-12 col-xs-6 destination_list-group " data-aos="fade-up" data-aos-offset="200">
+									<ul class="col-md-3 col-sm-12 col-xs-6 destination_list-group " data-aos="fade-up"
+										data-aos-offset="200">
 										<li class="destination_list-group-item">Produtoras</li>
 										<li class="destination_list-group-item">Artistas</li>
 										<li class="destination_list-group-item">Profissional liberal</li>
@@ -187,7 +243,6 @@
 			</div>
 		</div>
 	</section>
-
 
 	<!-- End Destination -->
 	<!-- Benefit -->
@@ -411,10 +466,6 @@
 		</a>
 	</section>
 
-
-
-
-
 	<!-- Client -->
 
 	<!-- End Client -->
@@ -446,11 +497,6 @@
 
 	<!-- Testimonial -->
 
-
-
-
-
-
 	<!-- Footer -->
 	<section id="footer" class="footer">
 		<div class="container">
@@ -469,7 +515,9 @@
 					<p id="contatotelefone">
 						Telefone: (48) 9 99151-7570
 					</p>
-					<p id="endereco"><br>Rua 3700, nº 160, Sala 02 - Centro<br> Balneário Camboriú, SC<BR>CEP 88330-203 <br></p>
+					<p id="endereco"><br>Rua 3700, nº 160, Sala 02 - Centro<br> Balneário Camboriú, SC<BR>CEP
+						88330-203<br>
+					</p>
 
 				</div>
 			</div>
@@ -525,56 +573,54 @@
 		var xhr = new XMLHttpRequest();
 
 		// Definição da função de tratamento de resposta
-		xhr.onreadystatechange = function() {
-		if (xhr.readyState === 4 && xhr.status === 200) {
-			var response = JSON.parse(xhr.responseText);
-			// Manipule o objeto JSON 'response' aqui
-			console.log(response);
-			// Seleciona o elemento <h1> pelo seu ID
-		var h1Element = document.getElementById('bannerfrase');
-		var divQuemsomosFrase = document.getElementById('quemsomosfrase');
-		var divContatoEmail = document.getElementById('contatoemail');
-		var divEndereco = document.getElementById('endereco');
-		var divContatoTelefone = document.getElementById('contatotelefone');
-		var divFraseFinal = document.getElementById('frasefinal');
-		var divQuemSomosFoto = document.getElementById('quemsomosfoto');
-		var divElementFoto = document.getElementById('bannerfoto');
+		xhr.onreadystatechange = function () {
+			if (xhr.readyState === 4 && xhr.status === 200) {
+				var response = JSON.parse(xhr.responseText);
+				// Manipule o objeto JSON 'response' aqui
+				console.log(response);
+				// Seleciona o elemento <h1> pelo seu ID
+				var h1Element = document.getElementById('bannerfrase');
+				var divQuemsomosFrase = document.getElementById('quemsomosfrase');
+				var divContatoEmail = document.getElementById('contatoemail');
+				var divEndereco = document.getElementById('endereco');
+				var divContatoTelefone = document.getElementById('contatotelefone');
+				var divFraseFinal = document.getElementById('frasefinal');
+				var divQuemSomosFoto = document.getElementById('quemsomosfoto');
+				var divElementFoto = document.getElementById('bannerfoto');
 
-		var Metodologias = document.getElementById('metodologias');
+				var Metodologias = document.getElementById('metodologias');
 				var divMetodologias = ""
 				for (var i = 0; i < response.metodologias.length; i++) {
 					divMetodologias += ""
-					+"<div class=\"col-md-3 col-sm-6 clientwrap \" x-data=\"{ expanded: false }\">"
-					+"<div @click=\"expanded =!expanded\">"
-						+"<img src=\"images/"+response.metodologias[i].icone+"\" class=\"img-responsive\">"
-						+"<h3>#"+(i+1)+" - "+response.metodologias[i].titulo+"</h3>"
-						+"<p x-show=\"expanded\" x-transition:enter=\"transition ease-out duration-300\""
-						+"x-transition:enter-start=\"opacity-0 scale-90\" x-transition:enter-end=\"opacity-100 scale-100\""
-						+"x-transition:leave=\"transition ease-in duration-300\""
-						+"x-transition:leave-start=\"opacity-100 scale-100\""
-						+"x-transition:leave-end=\"opacity-0 scale-90\">"+response.metodologias[i].descricao+"</p>"
-					+"</div>"
-				+"</div>"
-					console.log(response.metodologias[
-						i
-					])
+						+ "<div class=\"col-md-3 col-sm-6 clientwrap \" x-data=\"{ expanded: false }\">"
+						+ "<div @click=\"expanded =!expanded\">"
+						+ "<img src=\"images/" + response.metodologias[i].icone + "\" class=\"img-responsive\">"
+						+ "<h3>#" + (i + 1) + " - " + response.metodologias[i].titulo + "</h3>"
+						+ "<p x-show=\"expanded\" x-transition:enter=\"transition ease-out duration-300\""
+						+ "x-transition:enter-start=\"opacity-0 scale-90\" x-transition:enter-end=\"opacity-100 scale-100\""
+						+ "x-transition:leave=\"transition ease-in duration-300\""
+						+ "x-transition:leave-start=\"opacity-100 scale-100\""
+						+ "x-transition:leave-end=\"opacity-0 scale-90\">" + response.metodologias[i].descricao + "</p>"
+						+ "</div>"
+						+ "</div>";
 				}
+
 				divMetodologias += "<div class=\"clearfix\"></div>";
 
-				
-		// Define o HTML do <h1> com a string
-		h1Element.innerHTML = response.banner_frase;
-		divQuemsomosFrase.innerHTML = response.quemsomos_frase;
-		divContatoEmail.innerHTML = response.contato_email;
-		divEndereco.innerHTML = response.contato_endereco;
-		divContatoTelefone.innerHTML = response.contato_telefone;
-		divFraseFinal.innerHTML = response.frasefinal;
-		divQuemSomosFoto.innerHTML = response.quemsomos_foto;
-		divElementFoto.innerHTML = response.banner_foto;
-		
-		Metodologias.innerHTML = divMetodologias;
-		}
-		};	
+
+				// Define o HTML do <h1> com a string
+				h1Element.innerHTML = response.banner_frase;
+				divQuemsomosFrase.innerHTML = response.quemsomos_frase;
+				divContatoEmail.innerHTML = response.contato_email;
+				divEndereco.innerHTML = response.contato_endereco;
+				divContatoTelefone.innerHTML = response.contato_telefone;
+				divFraseFinal.innerHTML = response.frasefinal;
+				divQuemSomosFoto.innerHTML = response.quemsomos_foto;
+				divElementFoto.innerHTML = response.banner_foto;
+
+				Metodologias.innerHTML = divMetodologias;
+			}
+		};
 
 		// Definição dos detalhes da requisição
 		xhr.open("GET", "https://api.brbempresarial.com/site", true);

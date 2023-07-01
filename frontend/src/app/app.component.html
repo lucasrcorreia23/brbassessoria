@@ -1,0 +1,371 @@
+<nav class="">
+  <div class="container menu" id="signup">
+
+    <img src="assets/images/Modelo 1.svg" alt="logotipo BRB Assessoria" class="navigation logo">
+    <div class="navigation nav">
+      <div class="navbarmenumobile">
+        <a href="#">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </a>
+      </div>
+      <ul>
+
+        <li class="menu1"><a href="#about">Quem somos</a></li>
+        <li class="menu2"><a href="#atuacao">Atuação</a></li>
+        <li class="menu3"><a href="#planos">Planos</a></li>
+        <li class="menu4"><a href="#contato">Contato</a></li>
+
+      </ul>
+    </div>
+
+  </div>
+
+</nav>
+<!-- Banner -->
+<section id="herobanner" class="hero_section herobanner overlay">
+  <h1 class="text-white" [innerHTML]="dados.banner_frase"></h1>
+  <img [src]="dados.banner_foto" class="herobanner">
+
+  <!-- Navigation menu -->
+
+  <div class="container height-100">
+    <div class="display-table">
+      <div class="table-cell">
+        <div class="col-md-12">
+          <div class="hero_content">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Banner -->
+
+<!-- About -->
+<section id="about" class="about_section about overlay">
+  <div class="container h-240 md:min-h-full">
+    <div>
+      <img class="imgposabout" [src]="dados.quemsomos_foto" data-aos="zoom-in" data-aos-offset="200">
+    </div>
+
+    <div class="col-lg-4 col-lg-offset-4">
+      <h2>Quem somos</h2>
+      <div data-aos="fade-up" data-aos-offset="200" class="line"></div>
+    </div>
+    <div [innerHTML]="dados.quemsomos_frase"></div>
+  </div>
+</section>
+<!-- End About -->
+<!-- Metodologias -->
+<section id="atuacao" class="client">
+  <div class="container">
+
+    <div data-aos="fade-up" data-aos-offset="200" class="col-md-12">
+      <h2>Metodologias de Atuação</h2>
+    </div>
+
+    <div class="col-md-12" data-aos="fade-up" data-aos-offset="200">
+      <div class="col-md-3 col-sm-6 clientwrap " x-data="{ expanded: false }"
+        *ngFor="let data of dados.metodologias; let i = index">
+        <div>
+          <img [src]="data.icone" class="img-responsive">
+          <h3>#{{i + 1}} - {{data.titulo}}</h3>
+          <p x-show="expanded" x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-90">{{data.descricao}}</p>
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</section>
+<!--  End Metodologias -->
+<!-- Destination -->
+<section id="destination" class="destination_section overlay">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <div class="display-table wrapdestination">
+          <div class="table-cell">
+            <div data-aos="fade-up" data-aos-offset="200" class="col-md-12">
+              <h2>Assessoria jurídica Ideal para empresas e profissionais como:</h2>
+            </div>
+            <div class="row" data-aos="fade-up" data-aos-offset="200">
+              <div class="row-margin">
+                <ul class="col-md-3 col-sm-12 col-xs-6 destination_list-group" data-aos="fade-up" data-aos-offset="200"
+                  *ngFor="let data of segmentos">
+                  <li class="destination_list-group-item" *ngFor="let item of data.itens">{{item}}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- End Destination -->
+<!-- Benefit -->
+<section id="benefit" class="benefit_section overlay">
+  <div class="container">
+
+
+    <div class="col-md-6 col-sm-6" data-aos="fade-right" data-aos-offset="200">
+      <div class="wrap">
+        <img src="assets/images/Legal1.png" class="img-responsive overlay" alt="Price">
+        <h3>Atendimento personalizado</h3>
+
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6" data-aos="fade-left" data-aos-offset="200">
+      <div class="wrap">
+        <img src="assets/images/Legal2.png" class="img-responsive overlay" alt="Plane">
+        <h3>Advogados especializados</h3>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+<!-- End Benefit -->
+<!-- Activity -->
+<section id="planos" class="planos_section">
+
+  <div class="container">
+    <div class="row p-15">
+      <div class="col-md-12">
+        <h2 data-aos="fade-up" data-aos-offset="200">Planos adaptados a sua necessidade</h2>
+      </div>
+
+      <div class="row pt-5 p-15">
+        <div class="col-lg-4 col-12 px-4">
+          <div class="planos" data-aos="fade-up" data-aos-offset="200">
+            <h3 class="planos_title">
+              {{dados.planos[0].nome}}
+            </h3>
+            <div class="py-2 mx-auto" style="width: fit-content; margin: 20px auto;">
+              <p class="start-price mb-2">a partir de</p>
+
+              <h4>
+                <small>
+                  R$
+                </small>
+                100
+                <small style="align-self: flex-end;">
+                  *<br>
+                  /mês
+                </small>
+              </h4>
+            </div>
+            <p class="planos_descricao" [innerHTML]="dados.planos[0].descricao"></p>
+            <hr class="py-2 mx-4">
+            <h4 class="planos_descricao_incluso">
+              Este plano inclui:
+            </h4>
+            <ul>
+              <li class="planos_items" *ngFor="let data of dados.planos[0].topicos">
+                {{data}}
+              </li>
+            </ul>
+            <button type="button">
+              <span>Adquirir {{dados.planos[0].nome}}</span>
+            </button>
+          </div>
+        </div>
+        <div class="row pt-5 p-15">
+          <div class="col-lg-4 col-12 px-4">
+            <div class="planos" data-aos="fade-up" data-aos-offset="200">
+              <h3 class="planos_title">
+                {{dados.planos[1].nome}}
+              </h3>
+              <div class="py-2 mx-auto" style="width: fit-content; margin: 20px auto;">
+                <p class="start-price mb-2">a partir de</p>
+
+                <h4>
+                  <small>
+                    R$
+                  </small>
+                  300
+                  <small style="align-self: flex-end;">
+                    *<br>
+                    /mês
+                  </small>
+                </h4>
+              </div>
+              <p class="planos_descricao" [innerHTML]="dados.planos[1].descricao"></p>
+              <hr class="py-2 mx-4">
+              <h4 class="planos_descricao_incluso">
+                Este plano inclui:
+              </h4>
+              <ul>
+                <li class="planos_items" *ngFor="let data of dados.planos[1].topicos">
+                  {{data}}
+                </li>
+              </ul>
+              <button type="button">
+                <span>Adquirir {{dados.planos[1].nome}}</span>
+              </button>
+            </div>
+          </div>
+          <div class="row pt-5 p-15">
+            <div class="col-lg-4 col-12 px-4">
+              <div class="planos" data-aos="fade-up" data-aos-offset="200">
+                <h3 class="planos_title">
+                  {{dados.planos[2].nome}}
+                </h3>
+                <div class="py-2 mx-auto" style="width: fit-content; margin: 20px auto;">
+                  <p class="start-price mb-2">a partir de</p>
+
+                  <h4>
+                    <small>
+                      R$
+                    </small>
+                    900
+                    <small style="align-self: flex-end;">
+                      *<br>
+                      /mês
+                    </small>
+                  </h4>
+                </div>
+                <p class="planos_descricao" [innerHTML]="dados.planos[2].descricao"></p>
+                <hr class="py-2 mx-4">
+                <h4 class="planos_descricao_incluso">
+                  Este plano inclui:
+                </h4>
+                <ul>
+                  <li class="planos_items" *ngFor="let data of dados.planos[2].topicos">
+                    {{data}}
+                  </li>
+                </ul>
+                <button type="button">
+                  <span>Adquirir {{dados.planos[2].nome}}</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Activity -->
+<section class="section_phrase">
+
+  <div class="col-lg-12 col-12 p-2 ">
+    <div class="container">
+      <div id="contato" class="phrase">
+
+        <h2 data-aos="fade-up" data-aos-offset="200" [innerHTML]="dados.frasefinal"></h2>
+        <p data-aos="fade-up" data-aos-offset="200">
+          Equipe BRB Assessoria
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+<section>
+  <a href="https://wa.me/489991517570" target="_blank">
+    <div class="section_whats-app" data-aos="fade-left" data-aos-offset="200">
+
+
+    </div>
+  </a>
+</section>
+
+<!-- Client -->
+
+<!-- End Client -->
+
+<!-- Customer Experience -->
+<section id="customerexperience" class="customerexperience">
+  <div class="container" data-aos="fade-right" data-aos-offset="200">
+    <div class="sosmed-align">
+      <div class="col-md-4">
+        <h3>Ou pelas nossas<br> redes sociais!</h3>
+      </div>
+      <div class="col-md-8">
+        <div class="row">
+          <div id="sosmed" class="sosmed">
+            <ul>
+              <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="http://instagram.com/"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="https://www.thumbr.com"><i class="fab fa-linkedin"></i></a></li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Customer Experience -->
+
+<!-- Testimonial -->
+
+<!-- Footer -->
+<section id="footer" class="footer">
+  <div class="container">
+    <div class="col-md-4 col-sm-12">
+      <div class="footer_logotipo">
+        <img src="assets/images/Modelo 4.svg" alt="logotipo BRB Assessoria" class="footer logo">
+        <p>Sua próxima mão jurídica.</p>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-4">
+      <div class="widget_content editContent">
+        <h3 class="text-white">Contato</h3>
+        <p>{{dados.contato_email}}</p>
+        <p>Telefone: {{dados.contato_telefone}}</p>
+        <p [innerHTML]="dados.contato_endereco"></p>
+      </div>
+    </div>
+    <div class="col-md-2 col-sm-4">
+      <div class="footer_list">
+        <h3 class="text-white">Empresa</h3>
+        <ul>
+          <li><a href="#about">Sobre nós</a></li>
+          <li><a href="#destination">Benefícios</a></li>
+          <li><a href="#benefit">Planos</a></li>
+          <li><a href="#client">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-2 col-sm-4">
+      <div class="footer_list">
+        <h3 class="text-white">Redes Sociais</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/">Facebook</a></li>
+          <li><a href="https://twitter.com/">Twitter</a></li>
+
+          <li><a href="http://instagram.com/">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/">Linkedin</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="footer_rights">
+  <div class="col-md-12 col-xs-12 cprights">
+    <div class="container">
+      <div class="footer_rights_items">
+        <p class="text-center">&copy; BRB Assessoria 2023. Todos os direitos reservados.</p>
+
+        <p>
+          Desenvolvido por Neodds
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- End Footer -->
