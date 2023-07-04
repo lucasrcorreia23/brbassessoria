@@ -1,0 +1,96 @@
+<kt-portlet>
+  <kt-portlet-header [title]="'Lista'" [class]="'card-head-lg'">
+    <ng-container ktPortletTools>
+      <button mat-icon-button matTooltip="Atualizar" (click)="loadList()" color="primary">
+        <mat-icon>refresh</mat-icon>
+      </button>
+      &nbsp;&nbsp;
+      <button type="button" mat-flat-button color="accent" (click)="excel()" style="margin-right: 10px;">Download em
+        Excel</button>
+      <button (click)="add()" mat-raised-button color="primary" matTooltip="Cadastrar">
+        Cadastrar
+      </button>
+    </ng-container>
+  </kt-portlet-header>
+  <!-- end::Header -->
+
+  <!-- start::Body (attribute: ktPortletBody) -->
+  <kt-portlet-body>
+    <!-- start::FILTERS & GROUP ACTIONS -->
+    <div class="form kt-margin-b-30">
+      <!-- start::FILTERS -->
+      <div class="form-filtration">
+        <div class="row align-items-center">
+          <div class="col-md-2 kt-margin-bottom-10-mobile">
+            <mat-form-field class="mat-form-field-fluid">
+              <input matInput #searchInput placeholder="Procurar">
+              <mat-hint align="start">
+                <strong>Procurar</strong> em todos os campos
+              </mat-hint>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <!-- end::FILTERS -->
+    </div>
+    <!-- end::FILTERS & GROUP ACTIONS -->
+
+    <!-- MATERIAL TABLE | Binded to datasources -->
+    <div class="mat-table__wrapper">
+      <mat-table class="lmat-elevation-z8" #table [dataSource]="dataSource" matSort matSortActive="id"
+        matSortDirection="asc" #sort1="matSort" matSortDisableClear>
+        <!-- Checkbox Column -->
+
+        <ng-container matColumnDef="id">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>ID</mat-header-cell>
+          <mat-cell *matCellDef="let user">{{user.id}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="nomefantasia">
+          <mat-header-cell *matHeaderCellDef>Nome fantasia</mat-header-cell>
+          <mat-cell *matCellDef="let user">{{user.pessoa.nomefantasia}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="razaosocial">
+          <mat-header-cell *matHeaderCellDef class="email-cell">Razão social</mat-header-cell>
+          <mat-cell *matCellDef="let user">{{user.pessoa.razaosocial}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="cpfcnpj">
+          <mat-header-cell *matHeaderCellDef>CPF/CNPJ</mat-header-cell>
+          <mat-cell *matCellDef="let user">{{user.pessoa.cpfcnpj | cgc}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+          <mat-header-cell *matHeaderCellDef>Ações</mat-header-cell>
+          <mat-cell *matCellDef="let user">
+            <button (click)="users(user.id)" mat-icon-button color="accent" matTooltip="Usuarios">
+              <mat-icon>person</mat-icon>
+            </button>
+            <button (click)="edit(user.id)" mat-icon-button color="primary" matTooltip="Editar">
+              <mat-icon>create</mat-icon>
+            </button>
+          </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+
+        <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+      </mat-table>
+      <div class="mat-table__message" *ngIf="dataSource.data.length == 0 && !carregando">Nenhum encontrado</div>
+      <!-- Message for empty data  -->
+      <div class="mat-table__message" *ngIf="carregando">Por favor aguarde....</div>
+    </div>
+
+    <!-- start: BOTTOM -->
+    <div class="mat-table__bottom">
+      <mat-spinner [diameter]="20" *ngIf="carregando"></mat-spinner>
+      <!-- MATERIAL PAGINATOR | Binded to dasources -->
+      <mat-paginator [pageSize]="pageSize" [pageSizeOptions]="[3, 5, 10, 50]" [length]="10"
+        [showFirstLastButtons]="true">
+      </mat-paginator>
+    </div>
+    <!-- end: BOTTOM -->
+  </kt-portlet-body>
+  <!-- end::Body -->
+</kt-portlet>

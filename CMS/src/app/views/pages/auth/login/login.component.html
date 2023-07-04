@@ -1,0 +1,61 @@
+<div class="d-flex flex-column-fluid flex-center mt-30 mt-lg-0">
+  <!--begin::Signin-->
+  <div class="login-form login-signin">
+    <div class="text-center" style="margin-bottom: 50px;">
+      <img src="assets/media/logos/logo.svg" alt="">
+    </div>
+    <div class="text-center mb-10 mb-lg-20">
+      <h3 class="font-size-h1">Entrar</h3>
+      <p class="text-muted font-weight-bold">
+        Informe seu usuario e senha
+      </p>
+    </div>
+
+    <kt-auth-notice></kt-auth-notice>
+
+    <!--begin::Form-->
+    <form class="form" [formGroup]="loginForm" autocomplete="off" novalidate="novalidate" id="kt_login_form">
+      <input style="opacity: 0;position: absolute;">
+      <input type="password" style="opacity: 0;position: absolute;">
+      <div class="form-group">
+        <mat-form-field>
+          <mat-label>Usuário</mat-label>
+          <input matInput type="login" placeholder="Usuário" formControlName="login" autocomplete="off" />
+          <mat-error *ngIf="isControlHasError('login', 'required')">
+            <strong>Por favor, informe o seu login</strong>
+          </mat-error>
+          <mat-error *ngIf="isControlHasError('login', 'minlength')">
+            <strong>Por favor, informe pelo menos 3 caracteres</strong>
+          </mat-error>
+          <mat-error *ngIf="isControlHasError('login', 'maxlength')">
+            <strong>O tamanho máximo é de 50 caracteres</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field>
+          <mat-label>Senha</mat-label>
+          <input matInput type="password" placeholder="Senha" formControlName="password" autocomplete="off" />
+          <mat-error *ngIf="isControlHasError('password', 'required')">
+            <strong>Por favor, informe sua senha</strong>
+          </mat-error>
+          <mat-error *ngIf="isControlHasError('password', 'minlength')">
+            <strong>Por favor, informe pelo menos 3 caracteres</strong>
+          </mat-error>
+          <mat-error *ngIf="isControlHasError('password', 'maxlength')">
+            <strong>O tamanho máximo da senha é de 20 caracteres</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <!--begin::Action-->
+      <div class="form-group d-flex flex-wrap justify-content-between align-items-center">
+        <button id="kt_login_signin_submit" (click)="submit()" [ngClass]="{
+            'spinner spinner-right spinner-md spinner-light': loading
+          }" class="btn btn-primary font-weight-bold px-9 py-4 my-3">Entrar</button>
+      </div>
+      <!--end::Action-->
+    </form>
+    <!--end::Form-->
+  </div>
+  <!--end::Signin-->
+</div>

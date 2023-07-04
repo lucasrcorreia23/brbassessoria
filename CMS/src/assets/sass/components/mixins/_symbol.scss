@@ -1,0 +1,71 @@
+//
+// Symbol
+//
+
+@mixin symbol-size($size) {
+  > img {
+    width: 100%;
+    max-width: $size;
+    height: $size;
+  }
+
+  .symbol-label {
+    width: $size;
+    height: $size;
+  }
+
+  $badge-size: 12px;
+
+  .symbol-badge {
+    width: $badge-size;
+    height: $badge-size;
+    top: calc($badge-size / 2) * -1;
+    right: calc($badge-size / 2) * -1;
+
+    &.symbol-badge-bottom {
+      top: auto;
+      bottom: calc($badge-size / 2) * -1;
+    }
+  }
+
+  &.symbol-circle {
+    $distance: calc($size / 2) * (1.41 - 1) - $badge-size;
+
+    .symbol-badge {
+      top: $distance;
+      right: $distance;
+
+      &.symbol-badge-bottom {
+        top: auto;
+        bottom: $distance;
+      }
+    }
+  }
+
+  &.symbol-fixed {
+    .symbol-label {
+      width: $size;
+      height: $size;
+    }
+
+    > img {
+      width: $size;
+      height: $size;
+      max-width: auto;
+    }
+  }
+
+  // Ratios
+  &.symbol-2by3 {
+    .symbol-label {
+      height: $size;
+      width: $size * calc(3 / 2);
+    }
+
+    > img {
+      height: $size;
+      width: $size * calc(3 / 2);
+      max-width: auto;
+    }
+  }
+}
