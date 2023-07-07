@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
-import { NavigationEnd, Params, Router } from '@angular/router';
-import { BehaviorSubject, Subject } from 'rxjs';
-import { filter } from 'rxjs/operators';
-import * as objectPath from 'object-path';
-import { PageConfigService } from './page-config.service';
-import { MenuConfigService } from './menu-config.service';
+import { Injectable } from "@angular/core";
+import { NavigationEnd, Params, Router } from "@angular/router";
+import { BehaviorSubject, Subject } from "rxjs";
+import { filter } from "rxjs/operators";
+import * as objectPath from "object-path";
+import { PageConfigService } from "./page-config.service";
+import { MenuConfigService } from "./menu-config.service";
 
 export interface Breadcrumb {
   title: string;
@@ -20,7 +20,7 @@ export interface BreadcrumbTitle {
 @Injectable()
 export class SubheaderService {
   title$: BehaviorSubject<BreadcrumbTitle> =
-    new BehaviorSubject<BreadcrumbTitle>({ title: '', desc: '' });
+    new BehaviorSubject<BreadcrumbTitle>({ title: "", desc: "" });
   breadcrumbs$: BehaviorSubject<Breadcrumb[]> = new BehaviorSubject<
     Breadcrumb[]
   >([]);
@@ -30,7 +30,6 @@ export class SubheaderService {
   private appendingBreadcrumbs: any = {};
   private manualTitle: any = {};
 
-  private asideMenus: any;
   private headerMenus: any;
   private pageConfig: any;
 
@@ -45,34 +44,25 @@ export class SubheaderService {
 
       this.headerMenus = objectPath.get(
         this.menuConfigService.getMenus(),
-        'header'
+        "header"
       );
-      this.asideMenus = objectPath.get(
-        this.menuConfigService.getMenus(),
-        'aside'
-      );
-
-      // update breadcrumb on initial page load
-      this.updateBreadcrumbs();
 
       if (objectPath.get(this.manualTitle, this.router.url)) {
         this.setTitle(this.manualTitle[this.router.url]);
       } else {
         // get updated page title on every route changed
-        this.title$.next(objectPath.get(this.pageConfig, 'page'));
+        this.title$.next(objectPath.get(this.pageConfig, "page"));
 
         // subheader enable/disable
-        const hideSubheader = objectPath.get(this.pageConfig, 'page.subheader');
+        const hideSubheader = objectPath.get(this.pageConfig, "page.subheader");
         this.disabled$.next(
-          typeof hideSubheader !== 'undefined' && !hideSubheader
+          typeof hideSubheader !== "undefined" && !hideSubheader
         );
 
         if (objectPath.get(this.manualBreadcrumbs, this.router.url)) {
           // breadcrumbs was set manually
           this.setBreadcrumbs(this.manualBreadcrumbs[this.router.url]);
         } else {
-          // get updated breadcrumbs on every route changed
-          this.updateBreadcrumbs();
           // breadcrumbs was appended before, reuse it for this page
           if (objectPath.get(this.appendingBreadcrumbs, this.router.url)) {
             this.appendBreadcrumbs(this.appendingBreadcrumbs[this.router.url]);
@@ -87,30 +77,6 @@ export class SubheaderService {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(initBreadcrumb);
-  }
-
-  updateBreadcrumbs() {
-    // get breadcrumbs from header menu
-    let breadcrumbs = this.getBreadcrumbs(this.asideMenus);
-    // if breadcrumbs empty from header menu
-    if (breadcrumbs.length === 0) {
-      // get breadcrumbs from aside menu
-      breadcrumbs = this.getBreadcrumbs(this.headerMenus);
-    }
-
-    if (
-      // if breadcrumb has only 1 item
-      breadcrumbs.length === 1 &&
-      // and breadcrumb title is same as current page title
-      breadcrumbs[0].title.indexOf(
-        objectPath.get(this.pageConfig, 'page.title')
-      ) !== -1
-    ) {
-      // no need to display on frontend
-      breadcrumbs = [];
-    }
-
-    this.breadcrumbs$.next(breadcrumbs);
   }
 
   /**
@@ -137,7 +103,7 @@ export class SubheaderService {
    */
   getBreadcrumbs(menus: any): Breadcrumb[] {
     let url = this.pageConfigService.cleanUrl(this.router.url);
-    url = url.replace(new RegExp(/\./, 'g'), '/');
+    url = url.replace(new RegExp(/\./, "g"), "/");
     const urls = getUrlsFromCurrentUrl(url);
 
     const breadcrumbs: Breadcrumb[] = [];
@@ -145,7 +111,7 @@ export class SubheaderService {
       const menuPath = this.getPath(menus, urls[u]) || [];
       menuPath.forEach((key) => {
         menus = menus[key];
-        if (typeof menus !== 'undefined' && menus.title) {
+        if (typeof menus !== "undefined" && menus.title) {
           const item = {
             title: menus.title,
             page: urls[u],
@@ -174,7 +140,7 @@ export class SubheaderService {
    * param value
    */
   getPath(obj: any, value: any) {
-    if (typeof obj !== 'object') {
+    if (typeof obj !== "object") {
       return;
     }
     const path: any[] = [];
@@ -188,7 +154,7 @@ export class SubheaderService {
           found = true;
           break;
         }
-        if (typeof haystack[key] === 'object') {
+        if (typeof haystack[key] === "object") {
           search(haystack[key]);
           if (found) {
             break;
@@ -205,11 +171,11 @@ export class SubheaderService {
 
 function getUrlsFromCurrentUrl(currentUrl: string): string[] {
   const result: string[] = [];
-  const urlParts = currentUrl.split('/');
+  const urlParts = currentUrl.split("/");
   urlParts.reduce((accum, item) => {
     const url = `${accum}/${item}`;
     result.push(url);
     return url;
-  }, '');
+  }, "");
   return result;
 }

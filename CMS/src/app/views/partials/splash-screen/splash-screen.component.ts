@@ -1,20 +1,20 @@
 // Angular
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 // Object-Path
-import * as objectPath from 'object-path';
-import { LayoutConfigService } from '../../../../services/layout-config.service';
-import { SplashScreenService } from '../../../../services/splash-screen.service';
+import * as objectPath from "object-path";
+import { LayoutConfigService } from "../../../services/layout-config.service";
+import { SplashScreenService } from "../../../services/splash-screen.service";
 // Layout
 
 @Component({
-  selector: 'kt-splash-screen',
-  templateUrl: './splash-screen.component.html',
-  styleUrls: ['./splash-screen.component.scss'],
+  selector: "kt-splash-screen",
+  templateUrl: "./splash-screen.component.html",
+  styleUrls: ["./splash-screen.component.scss"],
 })
 export class SplashScreenComponent implements OnInit {
   // Public properties
   loaderType!: string;
-  @ViewChild('splashScreen', { static: true }) splashScreen!: ElementRef;
+  @ViewChild("splashScreen", { static: true }) splashScreen!: ElementRef;
 
   /**
    * Component constructor
@@ -38,8 +38,8 @@ export class SplashScreenComponent implements OnInit {
    */
   ngOnInit() {
     // init splash screen, see loader option in layout.config.ts
-    const loaderConfig = this.layoutConfigService.getConfig('loader');
-    this.loaderType = objectPath.get(loaderConfig, 'page-loader.type');
+    const loaderConfig = this.layoutConfigService.getConfig("loader");
+    this.loaderType = objectPath.get(loaderConfig, "page-loader.type");
 
     this.splashScreenService.init(this.splashScreen);
   }

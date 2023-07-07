@@ -13,7 +13,6 @@ import { LayoutConfigService } from "../../../../services/layout-config.service"
 export class HeaderMobileComponent implements OnInit {
   // Public properties
   headerLogo = "";
-  asideSelfDisplay = true;
   headerMobileClasses = "";
 
   toggleOptions: ToggleOptions = {
@@ -44,9 +43,6 @@ export class HeaderMobileComponent implements OnInit {
       .getClasses("header_mobile", true)
       .toString();
     this.headerLogo = this.getLogoUrl();
-    this.asideSelfDisplay = this.layoutConfigService.getConfig(
-      "aside.self.display"
-    );
   }
 
   getLogoUrl() {
@@ -55,14 +51,8 @@ export class HeaderMobileComponent implements OnInit {
     const brandSelfTheme =
       this.layoutConfigService.getConfig("brand.self.theme") || "";
     let result = "logo-GrupoStudio-light-180x20.png";
-    if (!this.asideSelfDisplay) {
-      if (headerSelfTheme === "light") {
-        result = "logo-dark.png";
-      }
-    } else {
-      if (brandSelfTheme === "light") {
-        result = "logo-dark.png";
-      }
+    if (headerSelfTheme === "light") {
+      result = "logo-dark.png";
     }
     return `./assets/media/logos/${result}`;
   }

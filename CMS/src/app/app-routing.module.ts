@@ -24,13 +24,6 @@ const routes: Routes = [
             (m) => m.DashboardModule
           ),
       },
-      {
-        path: "client",
-        loadChildren: () =>
-          import("./views/pages/client/client.module").then(
-            (m) => m.ClientModule
-          ),
-      },
       { path: "", redirectTo: "dashboard", pathMatch: "full" },
       { path: "**", redirectTo: "dashboard", pathMatch: "full" },
     ],

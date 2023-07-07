@@ -144,3 +144,7 @@ a {
 .clickable-row:hover {
   background: #fafafa !important;
 }
+
+.custom-file-label:after {
+  content: "Selecione" !important;
+}

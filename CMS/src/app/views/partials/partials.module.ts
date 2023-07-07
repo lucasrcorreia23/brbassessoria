@@ -7,11 +7,6 @@ import {
   NgbTooltipModule,
 } from "@ng-bootstrap/ng-bootstrap";
 import { PerfectScrollbarModule } from "ngx-perfect-scrollbar";
-import {
-  ScrollTopComponent,
-  SplashScreenComponent,
-  UserProfileComponent,
-} from "./layout";
 import { InlineSVGModule } from "ng-inline-svg";
 import { MatButtonModule } from "@angular/material/button";
 import { MatMenuModule } from "@angular/material/menu";
@@ -37,30 +32,11 @@ import { SharedModule } from "../../shared/shared.module";
 import { PortletModule } from "./general/portlet/portlet.module";
 import { AlertComponent } from "./general/alert/alert.component";
 import { NgApexchartsModule } from "ng-apexcharts";
+import { SplashScreenComponent } from "./splash-screen/splash-screen.component";
 
 @NgModule({
-  declarations: [
-    ScrollTopComponent,
-
-    // topbar components
-    ScrollTopComponent,
-    SplashScreenComponent,
-    UserProfileComponent,
-
-    AlertComponent,
-  ],
-  exports: [
-    ScrollTopComponent,
-
-    // topbar components
-    ScrollTopComponent,
-    SplashScreenComponent,
-    UserProfileComponent,
-
-    AlertComponent,
-
-    PortletModule,
-  ],
+  declarations: [SplashScreenComponent, AlertComponent],
+  exports: [SplashScreenComponent, AlertComponent, PortletModule],
   imports: [
     CommonModule,
     RouterModule,

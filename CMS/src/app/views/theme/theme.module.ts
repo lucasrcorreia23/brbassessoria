@@ -3,6 +3,7 @@ import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
 import { FormsModule } from "@angular/forms";
 import {
+  NgbDropdownModule,
   NgbProgressbarModule,
   NgbTooltipModule,
 } from "@ng-bootstrap/ng-bootstrap";
@@ -15,10 +16,8 @@ import { MatTabsModule } from "@angular/material/tabs";
 import { MatButtonModule } from "@angular/material/button";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { HeaderComponent } from "./header/header.component";
-import { AsideLeftComponent } from "./aside/aside-left.component";
 import { FooterComponent } from "./footer/footer.component";
 import { SubheaderComponent } from "./subheader/subheader.component";
-import { BrandComponent } from "./brand/brand.component";
 import { TopbarComponent } from "./header/topbar/topbar.component";
 import { PartialsModule } from "../partials/partials.module";
 import { BaseComponent } from "./base/base.component";
@@ -33,7 +32,6 @@ import { SharedModule } from "../../shared/shared.module";
 
     // headers
     HeaderComponent,
-    BrandComponent,
     HeaderMobileComponent,
 
     // subheader
@@ -41,9 +39,6 @@ import { SharedModule } from "../../shared/shared.module";
 
     // topbar components
     TopbarComponent,
-
-    // aside left menu components
-    AsideLeftComponent,
   ],
   exports: [
     BaseComponent,
@@ -51,7 +46,6 @@ import { SharedModule } from "../../shared/shared.module";
 
     // headers
     HeaderComponent,
-    BrandComponent,
     HeaderMobileComponent,
 
     // subheader
@@ -59,9 +53,6 @@ import { SharedModule } from "../../shared/shared.module";
 
     // topbar components
     TopbarComponent,
-
-    // aside left menu components
-    AsideLeftComponent,
   ],
   providers: [HtmlClassService],
   imports: [
@@ -81,6 +72,7 @@ import { SharedModule } from "../../shared/shared.module";
     // ng-bootstrap modules
     NgbProgressbarModule,
     NgbTooltipModule,
+    NgbDropdownModule,
 
     SharedModule,
   ],

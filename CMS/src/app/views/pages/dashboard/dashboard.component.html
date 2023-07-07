@@ -2,9 +2,121 @@
   <div class="row">
     <div class="col-lg-12 order-2 order-xxl-1">
       <div class="card card-custom card-stretch gutter-b">
+        <div class="card-header">
+          <div class="card-title">
+            <h3 class="card-label">Banner topo</h3>
+          </div>
+        </div>
         <!-- Body -->
         <div class="card-body">
-          aa
+          <div class="row">
+            <div class="col pb-5">
+              <div class="row">
+                <div class="col-4" style="padding-bottom: 25px">
+                  <img [src]="imgPreview" style="width: 100%">
+                </div>
+                <div class="col-8">
+                  <div class="row">
+                    <div class="col pb-5">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile" #file (change)="onFilesAdded()"
+                          accept="image/*">
+                        <label class="custom-file-label form-control" for="customFile">{{fileNameLabel}}</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col">
+                      <ckeditor [(ngModel)]="dados.banner_frase" [editor]="Editor"></ckeditor>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 order-2 order-xxl-1">
+      <div class="card card-custom card-stretch gutter-b">
+        <div class="card-header">
+          <div class="card-title">
+            <h3 class="card-label">Quem somos</h3>
+          </div>
+        </div>
+        <!-- Body -->
+        <div class="card-body">
+          <div class="row">
+            <div class="col pb-5">
+              <div class="row">
+                <div class="col-4" style="padding-bottom: 25px">
+                  <img [src]="imgPreview" style="width: 100%">
+                </div>
+                <div class="col-8">
+                  <div class="row">
+                    <div class="col pb-5">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile" #file (change)="onFilesAdded()"
+                          accept="image/*">
+                        <label class="custom-file-label form-control" for="customFile">{{fileNameLabel}}</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col">
+                      <ckeditor [(ngModel)]="dados.quemsomos_frase" [editor]="Editor"></ckeditor>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 order-2 order-xxl-1">
+      <div class="card card-custom card-stretch gutter-b">
+        <div class="card-header">
+          <div class="card-title">
+            <h3 class="card-label">Final</h3>
+          </div>
+        </div>
+        <!-- Body -->
+        <div class="card-body">
+          <div class="row pb-5">
+            <div class="col">
+              <label for="" class="form-label">Frase final</label>
+              <ckeditor [(ngModel)]="dados.frasefinal" [editor]="Editor"></ckeditor>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="mat-form-field-fluid" appearance="fill">
+                <mat-label>E-mail de contato</mat-label>
+                <input matInput [(ngModel)]="dados.contato_email" />
+              </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field class="mat-form-field-fluid" appearance="fill">
+                <mat-label>Telefone de contato</mat-label>
+                <input matInput [(ngModel)]="dados.contato_telefone" />
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="" class="form-label">Endereço de contato</label>
+              <ckeditor [(ngModel)]="dados.contato_endereco" [editor]="Editor"></ckeditor>
+            </div>
+          </div>
         </div>
       </div>
     </div>

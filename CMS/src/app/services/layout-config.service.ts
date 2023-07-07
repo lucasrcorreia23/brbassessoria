@@ -1,15 +1,15 @@
 // Angular
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 // RxJS
-import { Subject } from 'rxjs';
+import { Subject } from "rxjs";
 // Object-Path
-import * as objectPath from 'object-path';
+import * as objectPath from "object-path";
 // Lodash
-import { merge } from 'lodash';
+import { merge } from "lodash";
 // Models
-import { LayoutConfigModel } from '../models/layout-config.model';
+import { LayoutConfigModel } from "../models/layout-config.model";
 
-const localStorageKey = 'layoutConfigV702';
+const localStorageKey = "layoutConfigV702";
 
 @Injectable()
 export class LayoutConfigService {
@@ -49,7 +49,7 @@ export class LayoutConfigService {
    * Remove saved layout config and revert back to default
    */
   resetConfig(): void {
-    localStorage.removeItem('layoutConfig');
+    localStorage.removeItem("layoutConfig");
   }
 
   /**
@@ -89,23 +89,16 @@ export class LayoutConfigService {
    * Get brand logo
    */
   getLogo(): string {
-    const menuAsideLeftSkin = objectPath.get(
-      this.layoutConfig,
-      'brand.self.theme'
-    );
     // set brand logo
-    const logoObject = objectPath.get(this.layoutConfig, 'self.logo');
+    const logoObject = objectPath.get(this.layoutConfig, "self.logo");
 
     let logo;
-    if (typeof logoObject === 'string') {
+    if (typeof logoObject === "string") {
       logo = logoObject;
     }
-    if (typeof logoObject === 'object') {
-      logo = objectPath.get(logoObject, menuAsideLeftSkin + '');
-    }
-    if (typeof logo === 'undefined') {
+    if (typeof logo === "undefined") {
       try {
-        const logos = objectPath.get(this.layoutConfig, 'self.logo');
+        const logos = objectPath.get(this.layoutConfig, "self.logo");
         logo = logos[Object.keys(logos)[0]];
       } catch (e) {}
     }
@@ -116,11 +109,11 @@ export class LayoutConfigService {
    * Returns sticky logo
    */
   getStickyLogo(): string {
-    let logo = objectPath.get(this.layoutConfig, 'self.logo.sticky');
-    if (typeof logo === 'undefined') {
+    let logo = objectPath.get(this.layoutConfig, "self.logo.sticky");
+    if (typeof logo === "undefined") {
       logo = this.getLogo();
     }
-    return logo + '';
+    return logo + "";
   }
 
   /**
@@ -132,7 +125,7 @@ export class LayoutConfigService {
     // use saved config as priority, or load new config if demo does not matched
     if (
       !this.layoutConfig ||
-      objectPath.get(this.layoutConfig, 'demo') !== config.demo
+      objectPath.get(this.layoutConfig, "demo") !== config.demo
     ) {
       this.layoutConfig = config;
     }

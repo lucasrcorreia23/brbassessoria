@@ -2,14 +2,12 @@ import { SharedModule } from "./../../../shared/shared.module";
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { CommonModule } from "@angular/common";
-import {
-  NgbDropdownModule,
-  NgbTooltipModule,
-} from "@ng-bootstrap/ng-bootstrap";
 import { PartialsModule } from "../../partials/partials.module";
 import { DashboardComponent } from "./dashboard.component";
-import { InlineSVGModule } from "ng-inline-svg";
-import { ClientService } from "../client/services/client.service";
+import { CKEditorModule } from "@ckeditor/ckeditor5-angular";
+import { BrowserModule } from "@angular/platform-browser";
+import { FormsModule } from "@angular/forms";
+import { DashboardService } from "./dashboard.service";
 
 @NgModule({
   imports: [
@@ -22,13 +20,12 @@ import { ClientService } from "../client/services/client.service";
         data: { breadcrumb: "Dashboard" },
       },
     ]),
-    // ng-bootstrap modules
-    NgbDropdownModule,
-    NgbTooltipModule,
-    InlineSVGModule,
     SharedModule,
+    FormsModule,
+    BrowserModule,
+    CKEditorModule,
   ],
-  providers: [ClientService],
+  providers: [DashboardService],
   declarations: [DashboardComponent],
 })
 export class DashboardModule {}

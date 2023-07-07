@@ -1,9 +1,30 @@
-<!-- begin:: Header Topbar -->
-<ng-container>
-  <ng-container>
+<div ngbDropdown placement="bottom-right" *ngIf="user" class="dropdown dropdown-fluid">
+  <div ngbDropdownToggle class="topbar-item">
+    <div class="btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2">
+      <span class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">Olá,</span>
+      <span class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">{{user.nome}}</span>
+    </div>
+  </div>
+
+  <div ngbDropdownMenu class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg p-0">
     <ng-container>
-      <kt-user-profile></kt-user-profile>
+      <div
+        class="d-flex align-items-center justify-content-between flex-wrap p-8 bgi-size-cover bgi-no-repeat rounded-top"
+        style="background-image: url(./assets/media/misc/bg-1.jpg)">
+        <div class="d-flex align-items-center mr-2">
+          <div class="symbol bg-white-o-15 mr-3">
+            <span class="symbol-label text-success font-weight-bold font-size-h4">{{user.nome|firstLetter}}</span>
+          </div>
+          <div class="text-white m-0 flex-grow-1 mr-3 font-size-h5">
+            {{user.nome}}
+          </div>
+        </div>
+      </div>
     </ng-container>
-  </ng-container>
-</ng-container>
-<!-- end:: Header Topbar -->
+    <div class="navi navi-spacer-x-0">
+      <div class="navi-footer px-8 py-5">
+        <a href="javascript:void(0);" (click)="logout()" class="btn btn-light-primary font-weight-bold">Sair</a>
+      </div>
+    </div>
+  </div>
+</div>

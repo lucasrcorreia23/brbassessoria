@@ -5,7 +5,7 @@ import {
   ElementRef,
   OnInit,
   ViewChild,
-} from '@angular/core';
+} from "@angular/core";
 import {
   NavigationCancel,
   NavigationEnd,
@@ -13,29 +13,28 @@ import {
   RouteConfigLoadEnd,
   RouteConfigLoadStart,
   Router,
-} from '@angular/router';
+} from "@angular/router";
 // Loading bar
-import { LoadingBarService } from '@ngx-loading-bar/core';
+import { LoadingBarService } from "@ngx-loading-bar/core";
 // Layout
 // HTML Class Service
-import { HtmlClassService } from '../html-class.service';
-import { LayoutRefService } from '../../../services/layout-ref.service';
-import { LayoutConfigService } from '../../../services/layout-config.service';
+import { HtmlClassService } from "../html-class.service";
+import { LayoutRefService } from "../../../services/layout-ref.service";
+import { LayoutConfigService } from "../../../services/layout-config.service";
 
 @Component({
-  selector: 'kt-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+  selector: "kt-header",
+  templateUrl: "./header.component.html",
+  styleUrls: ["./header.component.scss"],
 })
 export class HeaderComponent implements OnInit, AfterViewInit {
   // Public properties
-  headerClasses = '';
-  headerContainerClasses = '';
-  headerMenuClasses = '';
-  headerLogo = '';
-  headerAttributes = {};
+  headerClasses = "";
+  headerContainerClasses = "";
+  headerMenuClasses = "";
+  headerLogo = "";
 
-  @ViewChild('ktHeader', { static: true }) ktHeader!: ElementRef;
+  @ViewChild("ktHeader", { static: true }) ktHeader!: ElementRef;
 
   /**
    * Component constructor
@@ -81,15 +80,14 @@ export class HeaderComponent implements OnInit, AfterViewInit {
    */
   ngOnInit(): void {
     this.headerClasses = this.htmlClassService
-      .getClasses('header', true)
+      .getClasses("header", true)
       .toString();
-    this.headerAttributes = this.htmlClassService.getAttributes('header');
     this.headerLogo = this.getLogo();
     this.headerContainerClasses = this.htmlClassService
-      .getClasses('header_container', true)
+      .getClasses("header_container", true)
       .toString();
     this.headerMenuClasses = this.htmlClassService
-      .getClasses('header_menu', true)
+      .getClasses("header_menu", true)
       .toString();
     // header width fluid
 
@@ -102,18 +100,18 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     // keep header element in the service
-    this.layoutRefService.addElement('header', this.ktHeader.nativeElement);
+    this.layoutRefService.addElement("header", this.ktHeader.nativeElement);
   }
 
   getLogo() {
-    let result = 'logo-GrupoStudio-light-180x20.png';
+    let result = "logo-GrupoStudio-light-180x20.png";
     const headerSelfTheme =
-      this.layoutConfigService.getConfig('header.self.theme') || '';
-    if (headerSelfTheme === 'light') {
-      result = 'logo-dark.png';
+      this.layoutConfigService.getConfig("header.self.theme") || "";
+    if (headerSelfTheme === "light") {
+      result = "logo-dark.png";
     } else {
-      if (headerSelfTheme === 'dark') {
-        result = 'logo-GrupoStudio-light-180x20.png';
+      if (headerSelfTheme === "dark") {
+        result = "logo-GrupoStudio-light-180x20.png";
       }
     }
     return `./assets/media/logos/${result}`;

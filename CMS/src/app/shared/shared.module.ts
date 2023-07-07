@@ -2,17 +2,11 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { CgcPipe } from "./pipes/cgc.pipe";
-import { ScrollTopDirective } from "./directives/scroll-top.directive";
-import { OffcanvasDirective } from "./directives/offcanvas.directive";
 import { ToggleDirective } from "./directives/toggle.directive";
-import { MenuDirective } from "./directives/menu.directive";
 import { FirstLetterPipe } from "./pipes/first-letter.pipe";
 import { StickyDirective } from "./directives/sticky.directive";
 import { IConfig, NgxMaskModule } from "ngx-mask";
 import { LayoutUtilsService } from "../services/layout-utils.service";
-import { DateBrPipe } from "./pipes/datebr.pipe";
-import { NumberPipe } from "./pipes/number.pipe";
 import { ContentAnimateDirective } from "./directives/content-animate.directive";
 import { MatButtonModule } from "@angular/material/button";
 import { MatMenuModule } from "@angular/material/menu";
@@ -26,10 +20,7 @@ import { MatNativeDateModule } from "@angular/material/core";
 import { MatProgressBarModule } from "@angular/material/progress-bar";
 import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatCardModule } from "@angular/material/card";
-import {
-  MatPaginatorIntl,
-  MatPaginatorModule,
-} from "@angular/material/paginator";
+import { MatPaginatorModule } from "@angular/material/paginator";
 import { MatSortModule } from "@angular/material/sort";
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
@@ -46,14 +37,11 @@ import {
 import { MaterialFileInputModule } from "ngx-material-file-input";
 import { HTTP_INTERCEPTORS } from "@angular/common/http";
 import { InterceptService } from "../services/intercept.service";
-import { getTranslatePaginacaoIntl } from "./_config/translate-paginacao";
 import { AuthService } from "../views/pages/auth/services/auth.service";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
-import { LocalityService } from "../services/locality.service";
 import { SweetAlert2Module } from "@sweetalert2/ngx-sweetalert2";
 import { NgxMatSelectSearchModule } from "ngx-mat-select-search";
 import { take } from "rxjs/operators";
-import { ClientService } from "../views/pages/client/services/client.service";
 
 export function getState(store: any) {
   let state: any;
@@ -107,28 +95,14 @@ const maskConfig: Partial<IConfig> = {
     ...materialExport,
   ],
   declarations: [
-    CgcPipe,
     FirstLetterPipe,
-    DateBrPipe,
-    NumberPipe,
-
-    ScrollTopDirective,
-    OffcanvasDirective,
     ToggleDirective,
-    MenuDirective,
     StickyDirective,
     ContentAnimateDirective,
   ],
   exports: [
-    CgcPipe,
     FirstLetterPipe,
-    DateBrPipe,
-    NumberPipe,
-
-    ScrollTopDirective,
-    OffcanvasDirective,
     ToggleDirective,
-    MenuDirective,
     StickyDirective,
     ContentAnimateDirective,
 
@@ -138,10 +112,7 @@ const maskConfig: Partial<IConfig> = {
   ],
   providers: [
     AuthService,
-    ClientService,
     LayoutUtilsService,
-    LocalityService,
-    { provide: MatPaginatorIntl, useValue: getTranslatePaginacaoIntl() },
     {
       provide: HTTP_INTERCEPTORS,
       useClass: InterceptService,

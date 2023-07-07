@@ -16,19 +16,19 @@ export interface LayoutConfigModel {
       };
       gray?: any;
     };
-    fontFamily?: 'Poppins';
+    fontFamily?: "Poppins";
   };
   self: {
-    layout?: 'default' | 'blank';
+    layout?: "default" | "blank";
   };
-  'page-loader': {
-    type?: string | 'default' | 'spinner-message' | 'spinner-logo';
+  "page-loader": {
+    type?: string | "default" | "spinner-message" | "spinner-logo";
   };
   header: {
     self: {
       display?: boolean;
-      width?: 'fluid' | 'fixed';
-      theme?: 'light' | 'dark';
+      width?: "fluid" | "fixed";
+      theme?: "light" | "dark";
       fixed: {
         desktop: boolean;
         mobile: boolean;
@@ -39,13 +39,13 @@ export interface LayoutConfigModel {
         arrow: boolean;
         toggle: string;
         submenu: {
-          theme?: 'light' | 'dark';
+          theme?: "light" | "dark";
           arrow: boolean;
         };
       };
       mobile: {
         submenu: {
-          theme: 'dark' | 'light';
+          theme: "dark" | "light";
           accordion: boolean;
         };
       };
@@ -55,90 +55,61 @@ export interface LayoutConfigModel {
     display: boolean;
     displayDesc?: boolean;
     displayDaterangepicker?: boolean;
-    layout?: 'subheader-v1' | 'subheader-v2' | 'subheader-v3' | 'subheader-v4';
+    layout?: "subheader-v1" | "subheader-v2" | "subheader-v3" | "subheader-v4";
     fixed?: boolean;
-    width?: 'fluid' | 'fixed';
+    width?: "fluid" | "fixed";
     clear?: boolean;
     layouts?: any;
-    style?: 'light' | 'solid' | 'transparent';
+    style?: "light" | "solid" | "transparent";
   };
   content?: {
-    width?: 'fluid' | 'fixed';
+    width?: "fluid" | "fixed";
   };
   brand?: {
     self: {
-      theme: 'light' | 'dark';
-    };
-  };
-  aside?: {
-    self: {
-      theme?: 'dark' | 'light';
-      display: boolean;
-      fixed?: boolean | any;
-      minimize?: {
-        toggle: boolean;
-        default: boolean;
-        hoverable: boolean;
-      };
-    };
-    footer?: {
-      self: {
-        display: boolean;
-      };
-    };
-    menu: {
-      dropdown: boolean;
-      scroll: boolean;
-      'icon-style'?: 'duotone' | 'line' | 'bold' | 'solid';
-      submenu: {
-        accordion: boolean;
-        dropdown: {
-          arrow: boolean;
-          'hover-timeout': number;
-        };
-      };
+      theme: "light" | "dark";
     };
   };
   footer?: {
-    width?: 'fluid' | 'fixed';
+    width?: "fluid" | "fixed";
     fixed?: boolean;
   };
   extras: {
     search?: {
       display?: boolean;
-      layout?: 'dropdown' | 'offcanvas';
+      layout?: "dropdown" | "offcanvas";
       offcanvas?: {
-        direction: 'right' | 'left';
+        direction: "right" | "left";
       };
     };
     notifications?: {
       display?: boolean;
-      layout?: 'dropdown' | 'offcanvas';
+      layout?: "dropdown" | "offcanvas";
       dropdown?: {
-        style?: 'dark' | 'light';
+        style?: "dark" | "light";
       };
       offcanvas?: {
-        direction?: 'right' | 'left';
+        direction?: "right" | "left";
       };
     };
-    'quick-actions'?: {
+    "quick-actions"?: {
       display?: boolean;
-      layout?: 'dropdown' | 'offcanvas';
+      layout?: "dropdown" | "offcanvas";
       dropdown?: {
-        style: 'light' | 'dark';
+        style: "light" | "dark";
       };
       offcanvas?: {
-        direction: 'right' | 'left';
+        direction: "right" | "left";
       };
     };
     user?: {
       display?: boolean;
-      layout?: 'offcanvas' | 'dropdown';
+      layout?: "offcanvas" | "dropdown";
       dropdown?: {
-        style?: 'light' | 'dark';
+        style?: "light" | "dark";
       };
       offcanvas?: {
-        direction: 'right' | 'left';
+        direction: "right" | "left";
       };
     };
     languages?: {
@@ -147,13 +118,13 @@ export interface LayoutConfigModel {
     cart?: {
       display?: boolean;
       dropdown?: {
-        style: 'dark' | 'light';
+        style: "dark" | "light";
       };
     };
-    'quick-panel'?: {
+    "quick-panel"?: {
       display?: true;
       offcanvas?: {
-        direction: 'right' | 'left';
+        direction: "right" | "left";
       };
     };
     chat?: {
