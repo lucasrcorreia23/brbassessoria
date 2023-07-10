@@ -34,6 +34,7 @@ export class DashboardComponent implements OnInit {
     contato_endereco: string;
     contato_telefone: string;
     metodologias: any[];
+    segmentos: any[];
   } = {
     banner_foto: "",
     banner_frase: "",
@@ -44,12 +45,15 @@ export class DashboardComponent implements OnInit {
     contato_endereco: "",
     contato_telefone: "",
     metodologias: [],
+    segmentos: [],
   };
 
   metodologia = {
     titulo: "",
     descricao: "",
   };
+
+  segmento = "";
 
   constructor(private dashboardService: DashboardService) {}
 
@@ -67,7 +71,7 @@ export class DashboardComponent implements OnInit {
   }
 
   onFilesAdded(type: number) {
-    let allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+    let allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif|\.svg)$/i;
     let name = "Selecionar arquivo";
     let imgPreview = "";
     let me = this;
@@ -112,7 +116,7 @@ export class DashboardComponent implements OnInit {
       } else {
         Swal.fire(
           "",
-          "Por favor, selecione arquivos do tipo .jpeg/.jpg/.png/.gif somente.",
+          "Por favor, selecione arquivos do tipo .jpeg/.jpg/.png/.gif/.svg somente.",
           "error"
         );
       }
@@ -186,5 +190,17 @@ export class DashboardComponent implements OnInit {
 
   delMetodologia(index: number) {
     this.dados.metodologias.splice(index, 1);
+  }
+
+  addSegmento() {
+    this.dados.segmentos.push({
+      nome: this.segmento,
+    });
+
+    this.segmento = "";
+  }
+
+  delSegmento(index: number) {
+    this.dados.segmentos.splice(index, 1);
   }
 }

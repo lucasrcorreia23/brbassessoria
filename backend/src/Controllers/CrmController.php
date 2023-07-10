@@ -14,7 +14,6 @@ class CrmController
                 throw $e;
             }
 
-            throw new Exception("teste");
             $responseNew = $response->withStatus(200);
         } catch (Exception $e) {
             $responseNew = $response->withStatus(500)->withJson($e->getMessage());
