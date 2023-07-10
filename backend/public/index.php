@@ -1,7 +1,6 @@
 <?php
 header("Access-Control-Allow-Origin: *");
 
-define('CONTROLLERS_PATH', '../src/Controllers/');
 define('ROUTERS_PATH', '../src/Routers/');
 
 $ds = DIRECTORY_SEPARATOR;
@@ -60,10 +59,11 @@ $app->add(function ($req, $res, $next) use ($app) {
             $route != "login"
             && $route != "site"
         ) {
-            $token = $app->request()->headers->get('Authorization');
+            $token = $req->getHeader('Authorization');
 
             if (!empty($token)) {
                 try {
+                    $token = substr($token[0], 7);
                     TokenHelper::validaToken($token);
 
                     require_once $fileName;

@@ -1,11 +1,11 @@
 // Angular
-import { Pipe, PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform } from "@angular/core";
 
 /**
  * Returns only first letter of string
  */
 @Pipe({
-  name: 'firstLetter',
+  name: "firstLetter",
 })
 export class FirstLetterPipe implements PipeTransform {
   /**
@@ -16,8 +16,8 @@ export class FirstLetterPipe implements PipeTransform {
    */
   transform(value: any, args?: any): any {
     return value
-      .split(' ')
+      ?.split(" ")
       .map((n: any) => n[0])
-      .join('');
+      .join("");
   }
 }

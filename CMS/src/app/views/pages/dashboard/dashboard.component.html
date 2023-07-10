@@ -1,5 +1,10 @@
 <div style="min-height: 76.9vh">
   <div class="row">
+    <div class="col pb-5 text-right">
+      <button class="btn btn-success" type="button" (click)="save()">Salvar</button>
+    </div>
+  </div>
+  <div class="row">
     <div class="col-lg-12 order-2 order-xxl-1">
       <div class="card card-custom card-stretch gutter-b">
         <div class="card-header">
@@ -19,7 +24,7 @@
                   <div class="row">
                     <div class="col pb-5">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="customFile" #file (change)="onFilesAdded()"
+                        <input type="file" class="custom-file-input" id="customFile" #file (change)="onFilesAdded(1)"
                           accept="image/*">
                         <label class="custom-file-label form-control" for="customFile">{{fileNameLabel}}</label>
                       </div>
@@ -53,15 +58,15 @@
             <div class="col pb-5">
               <div class="row">
                 <div class="col-4" style="padding-bottom: 25px">
-                  <img [src]="imgPreview" style="width: 100%">
+                  <img [src]="imgPreview2" style="width: 100%">
                 </div>
                 <div class="col-8">
                   <div class="row">
                     <div class="col pb-5">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="customFile" #file (change)="onFilesAdded()"
+                        <input type="file" class="custom-file-input" id="customFile2" #file2 (change)="onFilesAdded(2)"
                           accept="image/*">
-                        <label class="custom-file-label form-control" for="customFile">{{fileNameLabel}}</label>
+                        <label class="custom-file-label form-control" for="customFile2">{{fileNameLabel2}}</label>
                       </div>
                     </div>
                   </div>
@@ -115,6 +120,95 @@
             <div class="col">
               <label for="" class="form-label">Endereço de contato</label>
               <ckeditor [(ngModel)]="dados.contato_endereco" [editor]="Editor"></ckeditor>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 order-2 order-xxl-1">
+      <div class="card card-custom card-stretch gutter-b">
+        <div class="card-header">
+          <div class="card-title">
+            <h3 class="card-label">Metodologias</h3>
+          </div>
+        </div>
+        <!-- Body -->
+        <div class="card-body">
+          <div class="row">
+            <div class="col-4" style="padding-bottom: 25px">
+              <img [src]="imgPreview3" style="width: 100%">
+            </div>
+            <div class="col-8">
+              <div class="row">
+                <div class="col pb-5">
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="customFile" #file3 (change)="onFilesAdded(3)"
+                      accept="image/*">
+                    <label class="custom-file-label form-control" for="customFile">{{fileNameLabel3}}</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <mat-form-field class="mat-form-field-fluid" appearance="fill">
+                    <mat-label>Titulo</mat-label>
+                    <input matInput [(ngModel)]="metodologia.titulo" />
+                  </mat-form-field>
+                </div>
+                <div class="col">
+                  <mat-form-field class="mat-form-field-fluid" appearance="fill">
+                    <mat-label>Descrição</mat-label>
+                    <input matInput [(ngModel)]="metodologia.descricao" />
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col text-right">
+                  <button class="btn btn-primary" type="button" (click)="addMetodologia()">Adicionar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>
+                        Imagem
+                      </th>
+                      <th>
+                        Titulo
+                      </th>
+                      <th>
+                        Descrição
+                      </th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let data of dados.metodologias; let i = index">
+                      <td>
+                        <img [src]="data.icone" style="height: 40px;">
+                      </td>
+                      <td>
+                        {{data.titulo}}
+                      </td>
+                      <td>
+                        {{data.descricao}}
+                      </td>
+                      <td>
+                        <button class="btn btn-danger" (click)="delMetodologia(i)">
+                          Excluir
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>

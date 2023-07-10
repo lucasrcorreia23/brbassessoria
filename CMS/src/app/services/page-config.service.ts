@@ -1,12 +1,12 @@
 // Angular
-import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
+import { Injectable } from "@angular/core";
+import { Router } from "@angular/router";
 // RxJS
-import { Subject } from 'rxjs';
+import { Subject } from "rxjs";
 // Object-Path
-import * as objectPath from 'object-path';
+import * as objectPath from "object-path";
 // Lodash
-import { merge } from 'lodash';
+import { merge } from "lodash";
 
 @Injectable()
 export class PageConfigService {
@@ -31,7 +31,7 @@ export class PageConfigService {
     let configPath = this.cleanUrl(this.router.url);
 
     if (path) {
-      configPath += '.' + path;
+      configPath += "." + path;
     }
 
     // get page config by path
@@ -69,22 +69,15 @@ export class PageConfigService {
    * param url
    */
   cleanUrl(url: string): string {
-    // remove first route (demo name) from url router
-    if (new RegExp(/^\/demo/).test(url)) {
-      const urls = url.split('/');
-      urls.splice(0, 2);
-      url = urls.join('/');
-    }
-
-    if (url.charAt(0) === '/') {
+    if (url.charAt(0) === "/") {
       url = url.substr(1);
     }
 
     // we get the page title from config, using url path.
     // we need to remove query from url ?id=1 before we use the path to search in array config.
-    let finalUrl = url.replace(/\//g, '.');
-    if (finalUrl.indexOf('?') !== -1) {
-      finalUrl = finalUrl.substring(0, finalUrl.indexOf('?'));
+    let finalUrl = url.replace(/\//g, ".");
+    if (finalUrl.indexOf("?") !== -1) {
+      finalUrl = finalUrl.substring(0, finalUrl.indexOf("?"));
     }
 
     return finalUrl;

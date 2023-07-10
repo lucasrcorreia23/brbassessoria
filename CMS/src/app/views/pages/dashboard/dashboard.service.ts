@@ -9,4 +9,8 @@ export class DashboardService {
   get(): Observable<any> {
     return this.http.get("site");
   }
+
+  put(data: any): Observable<any> {
+    return this.http.put("crm/dados", data);
+  }
 }

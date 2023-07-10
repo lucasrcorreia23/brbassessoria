@@ -92,61 +92,61 @@ class SiteDao
                 throw new Exception('Não foi possivel selecionar o estabelecimento');
             }
 
-            $query = "DELETE FROM metodologias";
+            // $query = "DELETE FROM metodologias";
 
-            $st = $c->prepare($query);
+            // $st = $c->prepare($query);
 
-            if (!$st->execute()) {
-                throw new Exception('Não foi possivel selecionar o estabelecimento');
-            }
+            // if (!$st->execute()) {
+            //     throw new Exception('Não foi possivel selecionar o estabelecimento');
+            // }
 
-            foreach ($dados["metodologias"] as $dado) {
-                $query = "INSERT INTO metodologias (icone, descricao) VALUES (:icone, :descricao)";
+            // foreach ($dados["metodologias"] as $dado) {
+            //     $query = "INSERT INTO metodologias (icone, descricao) VALUES (:icone, :descricao)";
 
-                $st = $c->prepare($query);
-                $st->bindParam(':icone', $dado["icone"], PDO::PARAM_STR);
-                $st->bindParam(':descricao', $dado["descricao"], PDO::PARAM_STR);
+            //     $st = $c->prepare($query);
+            //     $st->bindParam(':icone', $dado["icone"], PDO::PARAM_STR);
+            //     $st->bindParam(':descricao', $dado["descricao"], PDO::PARAM_STR);
 
-                if (!$st->execute()) {
-                    throw new Exception('Não foi possivel selecionar o estabelecimento');
-                }
-            }
+            //     if (!$st->execute()) {
+            //         throw new Exception('Não foi possivel selecionar o estabelecimento');
+            //     }
+            // }
 
-            $query = "DELETE FROM segmentos";
+            // $query = "DELETE FROM segmentos";
 
-            $st = $c->prepare($query);
+            // $st = $c->prepare($query);
 
-            if (!$st->execute()) {
-                throw new Exception('Não foi possivel selecionar o estabelecimento');
-            }
+            // if (!$st->execute()) {
+            //     throw new Exception('Não foi possivel selecionar o estabelecimento');
+            // }
 
-            foreach ($dados["segmentos"] as $dado) {
-                $query = "INSERT INTO segmentos (nome) VALUES (:nome)";
+            // foreach ($dados["segmentos"] as $dado) {
+            //     $query = "INSERT INTO segmentos (nome) VALUES (:nome)";
 
-                $st = $c->prepare($query);
-                $st->bindParam(':nome', $dado, PDO::PARAM_STR);
+            //     $st = $c->prepare($query);
+            //     $st->bindParam(':nome', $dado, PDO::PARAM_STR);
 
-                if (!$st->execute()) {
-                    throw new Exception('Não foi possivel selecionar o estabelecimento');
-                }
-            }
+            //     if (!$st->execute()) {
+            //         throw new Exception('Não foi possivel selecionar o estabelecimento');
+            //     }
+            // }
 
-            foreach ($dados["planos"] as $dado) {
-                $query = "UPDATE planos SET
-                    nome = :nome,
-                    descricao = :descricao,
-                    topicos = :topicos
-                ";
+            // foreach ($dados["planos"] as $dado) {
+            //     $query = "UPDATE planos SET
+            //         nome = :nome,
+            //         descricao = :descricao,
+            //         topicos = :topicos
+            //     ";
 
-                $st = $c->prepare($query);
-                $st->bindParam(':nome', $dado["nome"], PDO::PARAM_STR);
-                $st->bindParam(':descricao', $dado["descricao"], PDO::PARAM_STR);
-                $st->bindParam(':topicos', $dado["topicos"], PDO::PARAM_STR);
+            //     $st = $c->prepare($query);
+            //     $st->bindParam(':nome', $dado["nome"], PDO::PARAM_STR);
+            //     $st->bindParam(':descricao', $dado["descricao"], PDO::PARAM_STR);
+            //     $st->bindParam(':topicos', $dado["topicos"], PDO::PARAM_STR);
 
-                if (!$st->execute()) {
-                    throw new Exception('Não foi possivel selecionar o estabelecimento');
-                }
-            }
+            //     if (!$st->execute()) {
+            //         throw new Exception('Não foi possivel selecionar o estabelecimento');
+            //     }
+            // }
 
             return $return;
         } catch (Exception $e) {

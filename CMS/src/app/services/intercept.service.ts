@@ -18,9 +18,8 @@ export class InterceptService implements HttpInterceptor {
     request: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
-    const saveToken =
-      request.url.split("/")[0] != "public" &&
-      request.url.split("/")[0] != "auth";
+    const saveToken = request.url.split("/")[0] != "auth";
+
     if (saveToken) {
       request = request.clone({
         setHeaders: {
