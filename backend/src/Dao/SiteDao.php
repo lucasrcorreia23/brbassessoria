@@ -132,22 +132,26 @@ class SiteDao
                 }
             }
 
-            // foreach ($dados["planos"] as $dado) {
-            //     $query = "UPDATE planos SET
-            //         nome = :nome,
-            //         descricao = :descricao,
-            //         topicos = :topicos
-            //     ";
+            foreach ($dados["planos"] as $dado) {
+                $dado->topicos = json_encode($dado->topicos);
 
-            //     $st = $c->prepare($query);
-            //     $st->bindParam(':nome', $dado["nome"], PDO::PARAM_STR);
-            //     $st->bindParam(':descricao', $dado["descricao"], PDO::PARAM_STR);
-            //     $st->bindParam(':topicos', $dado["topicos"], PDO::PARAM_STR);
+                $query = "UPDATE planos SET
+                        nome = :nome,
+                        descricao = :descricao,
+                        topicos = :topicos
+                    WHERE id = :id
+                ";
 
-            //     if (!$st->execute()) {
-            //         throw new Exception('Não foi possivel selecionar o estabelecimento');
-            //     }
-            // }
+                $st = $c->prepare($query);
+                $st->bindParam(':id', $dado->id, PDO::PARAM_STR);
+                $st->bindParam(':nome', $dado->nome, PDO::PARAM_STR);
+                $st->bindParam(':descricao', $dado->descricao, PDO::PARAM_STR);
+                $st->bindParam(':topicos', $dado->topicos, PDO::PARAM_STR);
+
+                if (!$st->execute()) {
+                    throw new Exception('Não foi possivel selecionar o estabelecimento');
+                }
+            }
 
             return $return;
         } catch (Exception $e) {

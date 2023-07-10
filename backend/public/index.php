@@ -69,10 +69,13 @@ $app->add(function ($req, $res, $next) use ($app) {
                     require_once $fileName;
                     return $next($req, $res);
                 } catch (Exception $aa) {
-                    $app->halt('401', 'Token Invalido.');
+                    $ret = headersRetorno($res);
+                    return $ret->withStatus(401)->write('Token Invalido!');
                 }
-            } else
-                $app->halt('401', 'Token Invalido.');
+            } else {
+                $ret = headersRetorno($res);
+                return $ret->withStatus(401)->write('Token Invalido!');
+            }
         } else {
             require_once $fileName;
             return $next($req, $res);

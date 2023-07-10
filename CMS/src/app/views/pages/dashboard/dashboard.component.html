@@ -269,6 +269,224 @@
     </div>
   </div>
   <div class="row">
+    <div class="col-4 order-2 order-xxl-1">
+      <div class="card card-custom card-stretch gutter-b">
+        <div class="card-header">
+          <div class="card-title">
+            <h3 class="card-label">Plano 1</h3>
+          </div>
+        </div>
+        <!-- Body -->
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="mat-form-field-fluid" appearance="fill">
+                <mat-label>Nome</mat-label>
+                <input matInput [(ngModel)]="dados.planos[0].nome" />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="mat-form-field-fluid" appearance="fill">
+                <mat-label>Descrição</mat-label>
+                <textarea matInput cols="30" rows="10" [(ngModel)]="dados.planos[0].descricao"></textarea>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col h4">
+              O que inclue:
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="mat-form-field-fluid" appearance="fill">
+                <mat-label>Nome</mat-label>
+                <input matInput [(ngModel)]="planoin1" />
+              </mat-form-field>
+            </div>
+            <div class="col-auto">
+              <button class="btn btn-primary" type="button" (click)="addPlano(0)">Adicionar</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>
+                        Nome
+                      </th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let data of dados.planos[0].topicos; let i = index">
+                      <td>
+                        {{data}}
+                      </td>
+                      <td>
+                        <button class="btn btn-danger" (click)="delPlano(0, i)">
+                          Excluir
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-4 order-2 order-xxl-1">
+      <div class="card card-custom card-stretch gutter-b">
+        <div class="card-header">
+          <div class="card-title">
+            <h3 class="card-label">Plano 2</h3>
+          </div>
+        </div>
+        <!-- Body -->
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="mat-form-field-fluid" appearance="fill">
+                <mat-label>Nome</mat-label>
+                <input matInput [(ngModel)]="dados.planos[1].nome" />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="mat-form-field-fluid" appearance="fill">
+                <mat-label>Descrição</mat-label>
+                <textarea matInput cols="30" rows="10" [(ngModel)]="dados.planos[1].descricao"></textarea>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col h4">
+              O que inclue:
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="mat-form-field-fluid" appearance="fill">
+                <mat-label>Nome</mat-label>
+                <input matInput [(ngModel)]="planoin2" />
+              </mat-form-field>
+            </div>
+            <div class="col-auto">
+              <button class="btn btn-primary" type="button" (click)="addPlano(1)">Adicionar</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>
+                        Nome
+                      </th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let data of dados.planos[1].topicos; let i = index">
+                      <td>
+                        {{data}}
+                      </td>
+                      <td>
+                        <button class="btn btn-danger" (click)="delPlano(1, i)">
+                          Excluir
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-4 order-2 order-xxl-1">
+      <div class="card card-custom card-stretch gutter-b">
+        <div class="card-header">
+          <div class="card-title">
+            <h3 class="card-label">Plano 3</h3>
+          </div>
+        </div>
+        <!-- Body -->
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="mat-form-field-fluid" appearance="fill">
+                <mat-label>Nome</mat-label>
+                <input matInput [(ngModel)]="dados.planos[2].nome" />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="mat-form-field-fluid" appearance="fill">
+                <mat-label>Descrição</mat-label>
+                <textarea matInput cols="30" rows="10" [(ngModel)]="dados.planos[2].descricao"></textarea>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col h4">
+              O que inclue:
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="mat-form-field-fluid" appearance="fill">
+                <mat-label>Nome</mat-label>
+                <input matInput [(ngModel)]="planoin3" />
+              </mat-form-field>
+            </div>
+            <div class="col-auto">
+              <button class="btn btn-primary" type="button" (click)="addPlano(2)">Adicionar</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>
+                        Nome
+                      </th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let data of dados.planos[2].topicos; let i = index">
+                      <td>
+                        {{data}}
+                      </td>
+                      <td>
+                        <button class="btn btn-danger" (click)="delPlano(2, i)">
+                          Excluir
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
     <div class="col pb-5 text-right">
       <button class="btn btn-success" type="button" (click)="save()">Salvar</button>
     </div>

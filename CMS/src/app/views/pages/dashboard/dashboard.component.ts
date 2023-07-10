@@ -35,6 +35,7 @@ export class DashboardComponent implements OnInit {
     contato_telefone: string;
     metodologias: any[];
     segmentos: any[];
+    planos: { nome: string; descricao: string; topicos: any[] }[];
   } = {
     banner_foto: "",
     banner_frase: "",
@@ -46,6 +47,23 @@ export class DashboardComponent implements OnInit {
     contato_telefone: "",
     metodologias: [],
     segmentos: [],
+    planos: [
+      {
+        nome: "",
+        descricao: "",
+        topicos: [],
+      },
+      {
+        nome: "",
+        descricao: "",
+        topicos: [],
+      },
+      {
+        nome: "",
+        descricao: "",
+        topicos: [],
+      },
+    ],
   };
 
   metodologia = {
@@ -54,6 +72,9 @@ export class DashboardComponent implements OnInit {
   };
 
   segmento = "";
+  planoin1 = "";
+  planoin2 = "";
+  planoin3 = "";
 
   constructor(private dashboardService: DashboardService) {}
 
@@ -202,5 +223,32 @@ export class DashboardComponent implements OnInit {
 
   delSegmento(index: number) {
     this.dados.segmentos.splice(index, 1);
+  }
+
+  addPlano(plano: number) {
+    switch (plano) {
+      case 0:
+        if (this.planoin1) {
+          this.dados.planos[plano].topicos.push(this.planoin1);
+          this.planoin1 = "";
+        }
+        break;
+      case 1:
+        if (this.planoin2) {
+          this.dados.planos[plano].topicos.push(this.planoin2);
+          this.planoin2 = "";
+        }
+        break;
+      case 2:
+        if (this.planoin3) {
+          this.dados.planos[plano].topicos.push(this.planoin3);
+          this.planoin3 = "";
+        }
+        break;
+    }
+  }
+
+  delPlano(plano: number, index: number) {
+    this.dados.planos[plano].topicos.splice(index, 1);
   }
 }
