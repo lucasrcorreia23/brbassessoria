@@ -1,7 +1,7 @@
 <!-- modal.component.html -->
-<h2 mat-dialog-title>Título</h2>
+<h2 mat-dialog-title>Contratação de relatório processual</h2>
 <mat-dialog-content>
-  <p>Subtítulo</p>
+  <p>Preencha o formulário abaixo que analisaremos sua situação e em breve entraremos em contato</p>
   <form [formGroup]="form">
     <mat-form-field *ngFor="let item of form.controls | keyvalue">
       <input matInput [placeholder]="'Campo ' + item.key" [formControlName]="item.key">
