@@ -1981,6 +1981,12 @@ button,
 .card li:last-child{
   border: none;  
 }
+@media only screen and (max-width: 997px){
+  .card{
+    margin-bottom: 3.4rem;
+    padding: 2rem 0;
+  }
+}
 button {
   font-family: "Helvetica LT Std", sans-serif;
   font-size: 15.5px!important;
@@ -2186,6 +2192,7 @@ h4.planos_descricao_incluso {
 .mdc-dialog__content>:first-child{
   margin-bottom: 2rem;
   padding: 0 2rem;
+  text-align: center;
 }
 @media only screen and (max-width: 997px){
   .relatorio__processual__content{

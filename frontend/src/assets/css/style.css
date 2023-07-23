@@ -4,6 +4,12 @@
 @tailwind utilities;
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+.btn-primary.focus, .btn-primary:focus{
+  outline:none !important;
+}
+textarea {
+  white-space: pre-wrap!important; /* or 'normal' */
+}
 
 * {
   padding: 0;
