@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i");
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
 /*
 ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
 */
@@ -2163,6 +2164,28 @@ h4.planos_descricao_incluso {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.mat-mdc-form-field{
+  display: flex !important;
+}
+.mat-mdc-dialog-container .mdc-dialog__title{
+  text-align: center;
+  padding: 1rem 0;
+}
+.mat-mdc-dialog-container .mdc-dialog__surface{
+  border-radius:2rem!important;
+
+}
+.mdc-dialog__actions{
+  padding: 0 !important;
+}
+.mat-mdc-dialog-container .mdc-dialog__content{
+  overflow: overlay;
+    padding: 0 4rem;
+}
+.mdc-dialog__content>:first-child{
+  margin-bottom: 2rem;
+  padding: 0 2rem;
 }
 @media only screen and (max-width: 997px){
   .relatorio__processual__content{

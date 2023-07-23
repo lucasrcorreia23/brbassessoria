@@ -8,6 +8,7 @@ import { ModalComponent } from './modal.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
+
 export class AppComponent implements OnInit, AfterViewInit {
   dados: {
     banner_foto: string;

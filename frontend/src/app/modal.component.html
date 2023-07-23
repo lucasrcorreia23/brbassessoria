@@ -3,8 +3,10 @@
 <mat-dialog-content>
   <p>Preencha o formulário abaixo que analisaremos sua situação e em breve entraremos em contato</p>
   <form [formGroup]="form">
-    <mat-form-field *ngFor="let item of form.controls | keyvalue">
-      <input matInput [placeholder]="'Campo ' + item.key" [formControlName]="item.key">
+    <mat-form-field *ngFor="let field of formFields">
+      <mat-label>{{field.label}}</mat-label> <!-- Aqui utilizamos field.label para o título do campo -->
+      <input matInput [formControlName]="field.controlName" [placeholder]="field.label"> 
+      <textarea *ngIf="field.isTextArea" matInput [formControlName]="field.controlName" [placeholder]="field.label"></textarea><!-- E também como placeholder -->
     </mat-form-field>
   </form>
 </mat-dialog-content>
