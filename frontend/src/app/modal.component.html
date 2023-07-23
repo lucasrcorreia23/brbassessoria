@@ -1,0 +1,13 @@
+<!-- modal.component.html -->
+<h2 mat-dialog-title>Título</h2>
+<mat-dialog-content>
+  <p>Subtítulo</p>
+  <form [formGroup]="form">
+    <mat-form-field *ngFor="let item of form.controls | keyvalue">
+      <input matInput [placeholder]="'Campo ' + item.key" [formControlName]="item.key">
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="submit()">Enviar</button>
+</mat-dialog-actions>

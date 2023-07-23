@@ -1,5 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { AppService } from './app.service';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalComponent } from './modal.component';
 
 @Component({
   selector: 'app-root',
@@ -51,7 +53,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   segmentos: { itens: string[] }[] = [];
 
-  constructor(private appService: AppService) {}
+  constructor(private appService: AppService, public dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.appService.get().subscribe((response) => {
@@ -81,10 +83,18 @@ export class AppComponent implements OnInit, AfterViewInit {
       }
     });
   }
+  
+  
 
   ngAfterViewInit() {
     const script = document.createElement('script');
     script.src = 'assets/js/custom.js';
     document.body.appendChild(script);
   }
+  openDialog() {
+    this.dialog.open(ModalComponent);
+  }
+  
+  
 }
+

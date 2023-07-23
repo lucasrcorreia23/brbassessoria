@@ -4,10 +4,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AppService } from './app.service';
 import { InterceptService } from './intercept.service';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
+import { ModalComponent } from './modal.component';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, HttpClientModule],
+  declarations: [AppComponent,AppComponent,
+    ModalComponent],
+  imports: [BrowserModule, HttpClientModule,
+  MatDialogModule,
+  MatFormFieldModule,
+  MatInputModule,
+  ReactiveFormsModule,
+  ],
   providers: [
     AppService,
     {

@@ -2,6 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 * {
   padding: 0;
   margin: 0;
@@ -274,6 +275,11 @@ body.loaded #preloader {
   background-color: #007aff;
   border: 2px solid #007aff;
   color: #fff;
+}
+
+.nopadding{
+  padding: 0 !important;
+  margin: 0 !important;
 }
 .btnsignup.btn_6:hover {
   background-color: transparent;
@@ -2096,3 +2102,14 @@ button:hover:before {
     -webkit-transform: translate(0, -120px);
   }
 }
+.plans-slider {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.plan {
+  flex: 0 0 auto;
+  width: 250px; /* Ou a largura que você preferir */
+}
+
