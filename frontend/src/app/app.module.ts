@@ -8,23 +8,43 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MatDialogModule } from '@angular/material/dialog';
+import { ModalComponent } from './modal-relatorio/modal.component';
+import {
+  IConfig,
+  NgxMaskDirective,
+  NgxMaskPipe,
+  provideNgxMask,
+} from 'ngx-mask';
 
-import { ModalComponent } from './modal.component';
+import { MatSelectModule } from '@angular/material/select';
+
+const maskConfigFunction: () => Partial<IConfig> = () => {
+  return {
+    validation: false,
+  };
+};
 
 @NgModule({
-  declarations: [AppComponent,AppComponent,
-    ModalComponent],
-  imports: [BrowserModule, HttpClientModule,
-  MatDialogModule,
-  MatFormFieldModule,
-  MatInputModule,
-  ReactiveFormsModule,BrowserAnimationsModule
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgxMaskDirective,
+    NgxMaskPipe,
+    MatSelectModule,
   ],
+  declarations: [AppComponent, AppComponent, ModalComponent],
   providers: [
     AppService,
+    provideNgxMask(maskConfigFunction),
     {
       provide: HTTP_INTERCEPTORS,
       useClass: InterceptService,

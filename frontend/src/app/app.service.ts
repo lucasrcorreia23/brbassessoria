@@ -9,4 +9,8 @@ export class AppService {
   get(): Observable<any> {
     return this.http.get('site');
   }
+
+  pagar(dados: any): Observable<any> {
+    return this.http.post('site/pagar', dados);
+  }
 }

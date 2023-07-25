@@ -1,14 +1,13 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { AppService } from './app.service';
 import { MatDialog } from '@angular/material/dialog';
-import { ModalComponent } from './modal.component';
+import { ModalComponent } from './modal-relatorio/modal.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-
 export class AppComponent implements OnInit, AfterViewInit {
   dados: {
     banner_foto: string;
@@ -84,18 +83,17 @@ export class AppComponent implements OnInit, AfterViewInit {
       }
     });
   }
-  
-  
 
   ngAfterViewInit() {
     const script = document.createElement('script');
     script.src = 'assets/js/custom.js';
     document.body.appendChild(script);
   }
-  openDialog() {
-    this.dialog.open(ModalComponent);
-  }
-  
-  
-}
 
+  openDialog(plano: string, tipo: number) {
+    this.dialog.open(ModalComponent, {
+      width: '80%',
+      data: { plano, tipo },
+    });
+  }
+}

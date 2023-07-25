@@ -138,105 +138,81 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 text-center">
-        <h2 class="mb-4 " data-aos="fade-up" data-aos-offset="200">Planos adaptados <span style="color:#0FB9B1;letter-spacing: 0px!important;">a sua necessidade</span></h2>
+        <h2 class="mb-4 " data-aos="fade-up" data-aos-offset="200">Planos adaptados <span
+            style="color:#0FB9B1;letter-spacing: 0px!important;">a sua necessidade</span></h2>
       </div>
     </div>
     <div class="row">
       <div class="col-lg-4 col-md-4 col-sm-12" data-aos="fade-up" data-aos-offset="200">
         <div class="card">
-          <h3 class="">Plano Ouro</h3>
+          <h3 class="">{{dados.planos[0].nome}}</h3>
           <div class="card__cost">
-            <p>12x de</p>
             <h4 class="text-center">
-              
               <small>R$</small>
-              89
-              <small style="align-self: flex-end;">,50 </small><br>
-              
-              
-            
+              89 <small style="align-self: flex-end;">,50 </small>
+              <br>
             </h4>
-            <p>ou valor anual de R$ 990,00</p>
             <p class="card__cost__intro">
-              Ideal para autônomos necessitando suporte jurídico para prevenção de problemas legais básicos
+              {{dados.planos[0].descricao}}
             </p>
-
           </div>
-          <ul >
-            
-            <li class="px-3 py-5"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Assessoria mensal</li>
-            <li class="px-3 py-5"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> 3 Relatórios processuais por mês</li>
-            <li class="px-3 py-5"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> 1 Elaboração de contrato por mês </li>
-            <li class="px-3 py-5"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> 1 Análise de contrato por mês </li>
-            <li class="px-3 py-5"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Contato e atendimento via email em 24h</li>
-            </ul>
-          <button type="button" class="btn btn-primary btn-block">Adquirir Plano Ouro</button>
+          <ul>
+            <li class="px-3 py-5" *ngFor="let data of dados.planos[0].topicos">
+              <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>
+              {{data}}
+            </li>
+          </ul>
+          <button type="button" class="btn btn-primary btn-block" (click)="openDialog(dados.planos[0].nome, 0)">
+            Adquirir {{dados.planos[0].nome}}
+          </button>
         </div>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12" data-aos="fade-up" data-aos-offset="200">
         <div class="card">
-          <h3 class="">Plano Diamante</h3>
+          <h3 class="">{{dados.planos[1].nome}}</h3>
           <div class="card__cost">
-            <p>12x de</p>
             <h4 class="text-center">
-              
               <small>R$</small>
-              297
-              <small style="align-self: flex-end;">,00 </small><br>
-              
-              
-            
+              297 <small style="align-self: flex-end;">,00 </small>
+              <br>
             </h4>
-            <p>ou valor anual de R$ 3.564,00</p>
             <p class="card__cost__intro">
-              Para quem possui demandas jurídicas constantes e precisa de um contato próximo
+              {{dados.planos[1].descricao}}
             </p>
-
           </div>
-          <ul >
-            
-            <li class="px-3 py-5"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Assessoria mensal</li>
-            <li class="px-3 py-5"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Relatórios processuais ilimitados</li>
-            <li class="px-3 py-5"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> 2 Elaborações de contrato por mês </li>
-            <li class="px-3 py-5"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> 2 Análises de contrato por mês </li>
-            <li class="px-3 py-5"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Contato e atendimento via email em 24h</li>
-            <li class="px-3 py-5"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Contato e atendimento via WhatsApp</li>
-            <li class="px-3 py-5"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> 1 Reunião mensal, cada uma com 30 minutos de duração, através de videochamada com o advogado</li>
+          <ul>
+            <li class="px-3 py-5" *ngFor="let data of dados.planos[1].topicos">
+              <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>
+              {{data}}
+            </li>
           </ul>
-          <button type="button" class="btn btn-primary btn-block">Adquirir Plano Diamante</button>
+          <button type="button" class="btn btn-primary btn-block" (click)="openDialog(dados.planos[1].nome, 1)">
+            Adquirir {{dados.planos[1].nome}}
+          </button>
         </div>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12" data-aos="fade-up" data-aos-offset="200">
         <div class="card">
-          <h3 class="">Plano Platinum</h3>
+          <h3 class="">{{dados.planos[2].nome}}</h3>
           <div class="card__cost">
-            <p>12x de</p>
             <h4 class="text-center">
-              
               <small>R$</small>
-              891
-              <small style="align-self: flex-end;">,00 </small><br>
-              
-              
-            
+              891 <small style="align-self: flex-end;">,00 </small>
+              <br>
             </h4>
-            <p>ou valor anual de R$ 10.692,00</p>
             <p class="card__cost__intro">
-              Negócios com alta demanda jurídica, necessitam atenção total, e um trabalho jurídico constante.
+              {{dados.planos[2].descricao}}
             </p>
-
           </div>
-          <ul >
-            
-            <li class="px-3 py-5"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Assessoria mensal</li>
-            <li class="px-3 py-5"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Relatórios processuais ilimitados</li>
-            <li class="px-3 py-5"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> 8 Elaborações de contrato por mês </li>
-            <li class="px-3 py-5"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> 8 Análises de contrato por mês </li>
-            <li class="px-3 py-5"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Contato e atendimento via email em 24h</li>
-            <li class="px-3 py-5"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Contato e atendimento via WhatsApp</li>
-            <li class="px-3 py-5"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> 4 Reuniões mensais, cada uma com 30 minutos de duração, através de videochamada com o advogado</li>
+          <ul>
+            <li class="px-3 py-5" *ngFor="let data of dados.planos[2].topicos">
+              <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>
+              {{data}}
+            </li>
           </ul>
-          <button type="button" class="btn btn-primary btn-block">Adquirir Plano Platinum</button>
+          <button type="button" class="btn btn-primary btn-block" (click)="openDialog(dados.planos[2].nome, 2)">
+            Adquirir {{dados.planos[2].nome}}
+          </button>
         </div>
       </div>
     </div>
@@ -255,24 +231,16 @@
           Relatório processual
         </h3>
         <p>
-          Tenha controle e clareza em suas questões jurídicas. Faça escolhas informadas e participe efetivamente de sua própria estratégia legal. Descubra a simplicidade na gestão de suas necessidades jurídicas.
+          Tenha controle e clareza em suas questões jurídicas. Faça escolhas informadas e participe efetivamente de sua
+          própria estratégia legal. Descubra a simplicidade na gestão de suas necessidades jurídicas.
         </p>
-        <button (click)="openDialog()">
+        <button (click)="openDialog('Relatório processual', 3)">
           CONTRATAR POR R$ 99,00
         </button>
-
       </div>
-
     </div>
-
   </div>
-  
 </section>
-
-
-
-
-
 
 <!-- End Activity -->
 <section class="section_phrase">

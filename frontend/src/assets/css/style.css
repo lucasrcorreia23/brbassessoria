@@ -2,13 +2,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-.btn-primary.focus, .btn-primary:focus{
-  outline:none !important;
+.btn-primary.focus,
+.btn-primary:focus {
+  outline: none !important;
 }
 textarea {
-  white-space: pre-wrap!important; /* or 'normal' */
+  white-space: pre-wrap !important; /* or 'normal' */
 }
 
 * {
@@ -285,7 +285,7 @@ body.loaded #preloader {
   color: #fff;
 }
 
-.nopadding{
+.nopadding {
   padding: 0 !important;
   margin: 0 !important;
 }
@@ -2120,4 +2120,3 @@ button:hover:before {
   flex: 0 0 auto;
   width: 250px; /* Ou a largura que você preferir */
 }
-
