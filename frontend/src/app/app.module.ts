@@ -12,6 +12,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MatDialogModule } from '@angular/material/dialog';
 import { ModalComponent } from './modal-relatorio/modal.component';
+
+
+
+
 import {
   IConfig,
   NgxMaskDirective,
@@ -29,6 +33,7 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
 
 @NgModule({
   imports: [
+    ReactiveFormsModule,
     BrowserModule,
     HttpClientModule,
     MatDialogModule,
@@ -40,6 +45,10 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
     NgxMaskDirective,
     NgxMaskPipe,
     MatSelectModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDialogModule,
   ],
   declarations: [AppComponent, AppComponent, ModalComponent],
   providers: [
