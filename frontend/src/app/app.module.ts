@@ -13,6 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ModalComponent } from './modal-relatorio/modal.component';
 
+import {MatStepperModule} from '@angular/material/stepper';
+
 
 
 
@@ -44,6 +46,7 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
     ReactiveFormsModule,
     NgxMaskDirective,
     NgxMaskPipe,
+    MatStepperModule,
     MatSelectModule,
     MatSelectModule,
     MatFormFieldModule,

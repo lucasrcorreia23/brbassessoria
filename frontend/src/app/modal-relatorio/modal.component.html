@@ -7,11 +7,15 @@
   <p class="text-success">Pagamento efetuado com sucesso! Aguarde que iremos entrar em contato com você!</p>
 </mat-dialog-content>
 <mat-dialog-content *ngIf="!carregando">
+  <mat-vertical-stepper [linear]="true" #stepper>
+
   <p *ngIf="error" class="text-danger text-center">{{msgerror}}</p>
 
   <p>Preencha o formulário abaixo que em breve entraremos em contato</p>
 
-  <form [formGroup]="form">
+  <mat-step [stepControl]="form">
+    <form [formGroup]="form">
+      <ng-template matStepLabel>Informações Pessoais</ng-template>
     <div class="row">
       <div class="col-md-6">
         <mat-form-field>
@@ -40,8 +44,15 @@
         </mat-form-field>
       </div>
     </div>
+    <div>
+      <button mat-button matStepperNext>Próximo</button>
+    </div>
+  </form>
+</mat-step>
 
-    <p class="text-center">Dados do cartão</p>
+<mat-step [stepControl]="form">
+  <form [formGroup]="form">
+    <ng-template matStepLabel>Informações do Cartão</ng-template>
 
     <div class="row">
       <div class="col-md-12">
@@ -97,8 +108,16 @@
         </mat-form-field>
       </div>
     </div>
+    <div>
+      <button mat-button matStepperPrevious>Anterior</button>
+      <button mat-button matStepperNext>Próximo</button>
+    </div>
+  </form>
+</mat-step>
 
-    <p class="text-center">Endereço de cobrança</p>
+<mat-step [stepControl]="form">
+  <form [formGroup]="form">
+    <ng-template matStepLabel>Endereço de Cobrança</ng-template>
 
     <div class="row">
       <div class="col-md-5">
@@ -182,6 +201,18 @@
         </mat-form-field>
       </div>
     </div>
+    <div>
+      <button mat-button matStepperPrevious>Anterior</button>
+      <button mat-button (click)="submit()">Enviar</button>
+    </div>
+  </form>
+</mat-step>
+</mat-vertical-stepper>
+</mat-dialog-content>
+
+<mat-dialog-actions *ngIf="funcionou">
+  <button mat-button mat-dialog-close>Fechar</button>
+<mat-dialog-actions>
 
     <ng-container *ngIf="mostrarComplementos">
       <p class="text-center">Dados para o relatório</p>
@@ -195,11 +226,11 @@
     </ng-container>
 
     <p *ngIf="error" class="text-danger text-center">{{msgerror}}</p>
-  </form>
-</mat-dialog-content>
-<mat-dialog-actions *ngIf="!carregando">
+ 
+<div mat-dialog-content>
+<div mat-dialog-actions *ngIf="!carregando">
   <button mat-button (click)="submit()">Enviar</button>
-</mat-dialog-actions>
-<mat-dialog-actions *ngIf="funcionou">
+<div mat-dialog-actions>
+<div mat-dialog-actions *ngIf="funcionou">
   <button mat-button mat-dialog-close>Fechar</button>
-</mat-dialog-actions>
+<div mat-dialog-actions>
