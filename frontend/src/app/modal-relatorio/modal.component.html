@@ -9,210 +9,210 @@
 <mat-dialog-content *ngIf="!carregando">
   <mat-vertical-stepper [linear]="true" #stepper>
 
-  <p *ngIf="error" class="text-danger text-center">{{msgerror}}</p>
+    <p *ngIf="error" class="text-danger text-center">{{msgerror}}</p>
 
-  <p>Preencha o formulário abaixo que em breve entraremos em contato</p>
+    <p>Preencha o formulário abaixo que em breve entraremos em contato</p>
 
-  <mat-step [stepControl]="form">
-    <form [formGroup]="form">
-      <ng-template matStepLabel>Informações Pessoais</ng-template>
-    <div class="row">
-      <div class="col-md-6">
-        <mat-form-field>
-          <mat-label>Nome completo</mat-label>
-          <input matInput formControlName="nome">
-        </mat-form-field>
-      </div>
-      <div class="col-md-6">
-        <mat-form-field>
-          <mat-label>Email</mat-label>
-          <input matInput formControlName="email">
-        </mat-form-field>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <mat-form-field>
-          <mat-label>CPF ou CNPJ</mat-label>
-          <input matInput formControlName="cpfcnpj" mask="CPF_CNPJ">
-        </mat-form-field>
-      </div>
-      <div class="col-md-6">
-        <mat-form-field>
-          <mat-label>Celular com ddd</mat-label>
-          <input matInput formControlName="celular" mask="00 00000-0000">
-        </mat-form-field>
-      </div>
-    </div>
-    <div>
-      <button mat-button matStepperNext>Próximo</button>
-    </div>
-  </form>
-</mat-step>
+    <mat-step [stepControl]="pessoal">
+      <form *ngIf="pessoal" [formGroup]="pessoal">
+        <ng-template matStepLabel>Informações Pessoais</ng-template>
+        <div class="row">
+          <div class="col-md-6">
+            <mat-form-field>
+              <mat-label>Nome completo</mat-label>
+              <input matInput formControlName="nome">
+            </mat-form-field>
+          </div>
+          <div class="col-md-6">
+            <mat-form-field>
+              <mat-label>Email</mat-label>
+              <input matInput formControlName="email">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <mat-form-field>
+              <mat-label>CPF ou CNPJ</mat-label>
+              <input matInput formControlName="cpfcnpj" mask="CPF_CNPJ">
+            </mat-form-field>
+          </div>
+          <div class="col-md-6">
+            <mat-form-field>
+              <mat-label>Celular com ddd</mat-label>
+              <input matInput formControlName="celular" mask="00 00000-0000">
+            </mat-form-field>
+          </div>
+        </div>
+        <div>
+          <button mat-button matStepperNext>Próximo</button>
+        </div>
+      </form>
+    </mat-step>
 
-<mat-step [stepControl]="form">
-  <form [formGroup]="form">
-    <ng-template matStepLabel>Informações do Cartão</ng-template>
+    <mat-step [stepControl]="cartao">
+      <form *ngIf="cartao" [formGroup]="cartao">
+        <ng-template matStepLabel>Informações do Cartão</ng-template>
 
-    <div class="row">
-      <div class="col-md-12">
-        <mat-form-field>
-          <mat-label>Nome como está no cartão</mat-label>
-          <input matInput formControlName="nomecartao">
-        </mat-form-field>
-      </div>
-    </div>
+        <div class="row">
+          <div class="col-md-12">
+            <mat-form-field>
+              <mat-label>Nome como está no cartão</mat-label>
+              <input matInput formControlName="nomecartao">
+            </mat-form-field>
+          </div>
+        </div>
 
-    <div class="row">
-      <div class="col-md-10">
-        <mat-form-field>
-          <mat-label>Número do cartão</mat-label>
-          <input matInput formControlName="numerocartao" mask="0000 0000 0000 0000 000">
-        </mat-form-field>
-      </div>
-      <div class="col-md-2">
-        <mat-form-field>
-          <mat-label>Bandeira</mat-label>
-          <mat-select formControlName="bandeira">
-            <mat-option>Nenhum</mat-option>
-            <mat-option value="Visa">Visa</mat-option>
-            <mat-option value="Mastercard">Mastercard</mat-option>
-            <mat-option value="Hipercard">Hipercard</mat-option>
-            <mat-option value="Discover">Discover</mat-option>
-            <mat-option value="Diners">Diners</mat-option>
-            <mat-option value="Amex">Amex</mat-option>
-            <mat-option value="Elo">Elo</mat-option>
-            <mat-option value="JCB">JCB</mat-option>
-            <mat-option value="Credz">Credz</mat-option>
-            <mat-option value="Senff">Senff</mat-option>
-            <mat-option value="Cabal">Cabal</mat-option>
-            <mat-option value="Sorocred">Sorocred</mat-option>
-            <mat-option value="Banescard">Banescard</mat-option>
-            <mat-option value="Cassol">Cassol</mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-    </div>
+        <div class="row">
+          <div class="col-md-10">
+            <mat-form-field>
+              <mat-label>Número do cartão</mat-label>
+              <input matInput formControlName="numerocartao" mask="0000 0000 0000 0000 000">
+            </mat-form-field>
+          </div>
+          <div class="col-md-2">
+            <mat-form-field>
+              <mat-label>Bandeira</mat-label>
+              <mat-select formControlName="bandeira">
+                <mat-option>Nenhum</mat-option>
+                <mat-option value="Visa">Visa</mat-option>
+                <mat-option value="Mastercard">Mastercard</mat-option>
+                <mat-option value="Hipercard">Hipercard</mat-option>
+                <mat-option value="Discover">Discover</mat-option>
+                <mat-option value="Diners">Diners</mat-option>
+                <mat-option value="Amex">Amex</mat-option>
+                <mat-option value="Elo">Elo</mat-option>
+                <mat-option value="JCB">JCB</mat-option>
+                <mat-option value="Credz">Credz</mat-option>
+                <mat-option value="Senff">Senff</mat-option>
+                <mat-option value="Cabal">Cabal</mat-option>
+                <mat-option value="Sorocred">Sorocred</mat-option>
+                <mat-option value="Banescard">Banescard</mat-option>
+                <mat-option value="Cassol">Cassol</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
 
-    <div class="row">
-      <div class="col-md-5">
-        <mat-form-field>
-          <mat-label>Validade</mat-label>
-          <input matInput formControlName="validade" mask="00/00">
-        </mat-form-field>
-      </div>
-      <div class="col-md-5">
-        <mat-form-field>
-          <mat-label>CVV</mat-label>
-          <input matInput formControlName="cvv" mask="0000">
-        </mat-form-field>
-      </div>
-    </div>
-    <div>
-      <button mat-button matStepperPrevious>Anterior</button>
-      <button mat-button matStepperNext>Próximo</button>
-    </div>
-  </form>
-</mat-step>
+        <div class="row">
+          <div class="col-md-5">
+            <mat-form-field>
+              <mat-label>Validade</mat-label>
+              <input matInput formControlName="validade" mask="00/00">
+            </mat-form-field>
+          </div>
+          <div class="col-md-5">
+            <mat-form-field>
+              <mat-label>CVV</mat-label>
+              <input matInput formControlName="cvv" mask="0000">
+            </mat-form-field>
+          </div>
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>Anterior</button>
+          <button mat-button matStepperNext>Próximo</button>
+        </div>
+      </form>
+    </mat-step>
 
-<mat-step [stepControl]="form">
-  <form [formGroup]="form">
-    <ng-template matStepLabel>Endereço de Cobrança</ng-template>
+    <mat-step [stepControl]="cobranca">
+      <form *ngIf="cobranca" [formGroup]="cobranca">
+        <ng-template matStepLabel>Endereço de Cobrança</ng-template>
 
-    <div class="row">
-      <div class="col-md-5">
-        <mat-form-field>
-          <mat-label>CEP</mat-label>
-          <input matInput formControlName="cep" mask="00000-000">
-        </mat-form-field>
-      </div>
-    </div>
+        <div class="row">
+          <div class="col-md-5">
+            <mat-form-field>
+              <mat-label>CEP</mat-label>
+              <input matInput formControlName="cep" mask="00000-000">
+            </mat-form-field>
+          </div>
+        </div>
 
-    <div class="row">
-      <div class="col-md-12">
-        <mat-form-field>
-          <mat-label>Logradouro</mat-label>
-          <input matInput formControlName="logradouro">
-        </mat-form-field>
-      </div>
-    </div>
+        <div class="row">
+          <div class="col-md-12">
+            <mat-form-field>
+              <mat-label>Logradouro</mat-label>
+              <input matInput formControlName="logradouro">
+            </mat-form-field>
+          </div>
+        </div>
 
-    <div class="row">
-      <div class="col-md-3">
-        <mat-form-field>
-          <mat-label>Número</mat-label>
-          <input matInput formControlName="numerocobranca" mask="00000000">
-        </mat-form-field>
-      </div>
-      <div class="col-md-5">
-        <mat-form-field>
-          <mat-label>Complemento</mat-label>
-          <input matInput formControlName="complementocobranca">
-        </mat-form-field>
-      </div>
-      <div class="col-md-4">
-        <mat-form-field>
-          <mat-label>Bairro</mat-label>
-          <input matInput formControlName="bairrocobranca">
-        </mat-form-field>
-      </div>
-    </div>
+        <div class="row">
+          <div class="col-md-3">
+            <mat-form-field>
+              <mat-label>Número</mat-label>
+              <input matInput formControlName="numerocobranca" mask="00000000">
+            </mat-form-field>
+          </div>
+          <div class="col-md-5">
+            <mat-form-field>
+              <mat-label>Complemento</mat-label>
+              <input matInput formControlName="complementocobranca">
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field>
+              <mat-label>Bairro</mat-label>
+              <input matInput formControlName="bairrocobranca">
+            </mat-form-field>
+          </div>
+        </div>
 
-    <div class="row">
-      <div class="col-md-6">
-        <mat-form-field>
-          <mat-label>Cidade</mat-label>
-          <input matInput formControlName="cidadecobranca">
-        </mat-form-field>
-      </div>
-      <div class="col-md-2">
-        <mat-form-field>
-          <mat-label>Estado</mat-label>
-          <mat-select formControlName="estadocobranca">
-            <mat-option>Nenhum</mat-option>
-            <mat-option value="AC">AC</mat-option>
-            <mat-option value="AL">AL</mat-option>
-            <mat-option value="AP">AP</mat-option>
-            <mat-option value="AM">AM</mat-option>
-            <mat-option value="BA">BA</mat-option>
-            <mat-option value="CE">CE</mat-option>
-            <mat-option value="DF">DF</mat-option>
-            <mat-option value="ES">ES</mat-option>
-            <mat-option value="GO">GO</mat-option>
-            <mat-option value="MA">MA</mat-option>
-            <mat-option value="MT">MT</mat-option>
-            <mat-option value="MS">MS</mat-option>
-            <mat-option value="MG">MG</mat-option>
-            <mat-option value="PA">PA</mat-option>
-            <mat-option value="PB">PB</mat-option>
-            <mat-option value="PR">PR</mat-option>
-            <mat-option value="PE">PE</mat-option>
-            <mat-option value="PI">PI</mat-option>
-            <mat-option value="RJ">RJ</mat-option>
-            <mat-option value="RN">RN</mat-option>
-            <mat-option value="RS">RS</mat-option>
-            <mat-option value="RO">RO</mat-option>
-            <mat-option value="RR">RR</mat-option>
-            <mat-option value="SC">SC</mat-option>
-            <mat-option value="SP">SP</mat-option>
-            <mat-option value="SE">SE</mat-option>
-            <mat-option value="TO">TO</mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-    </div>
-    <div>
-      <button mat-button matStepperPrevious>Anterior</button>
-      <button mat-button (click)="submit()">Enviar</button>
-    </div>
-  </form>
-</mat-step>
-</mat-vertical-stepper>
+        <div class="row">
+          <div class="col-md-6">
+            <mat-form-field>
+              <mat-label>Cidade</mat-label>
+              <input matInput formControlName="cidadecobranca">
+            </mat-form-field>
+          </div>
+          <div class="col-md-2">
+            <mat-form-field>
+              <mat-label>Estado</mat-label>
+              <mat-select formControlName="estadocobranca">
+                <mat-option>Nenhum</mat-option>
+                <mat-option value="AC">AC</mat-option>
+                <mat-option value="AL">AL</mat-option>
+                <mat-option value="AP">AP</mat-option>
+                <mat-option value="AM">AM</mat-option>
+                <mat-option value="BA">BA</mat-option>
+                <mat-option value="CE">CE</mat-option>
+                <mat-option value="DF">DF</mat-option>
+                <mat-option value="ES">ES</mat-option>
+                <mat-option value="GO">GO</mat-option>
+                <mat-option value="MA">MA</mat-option>
+                <mat-option value="MT">MT</mat-option>
+                <mat-option value="MS">MS</mat-option>
+                <mat-option value="MG">MG</mat-option>
+                <mat-option value="PA">PA</mat-option>
+                <mat-option value="PB">PB</mat-option>
+                <mat-option value="PR">PR</mat-option>
+                <mat-option value="PE">PE</mat-option>
+                <mat-option value="PI">PI</mat-option>
+                <mat-option value="RJ">RJ</mat-option>
+                <mat-option value="RN">RN</mat-option>
+                <mat-option value="RS">RS</mat-option>
+                <mat-option value="RO">RO</mat-option>
+                <mat-option value="RR">RR</mat-option>
+                <mat-option value="SC">SC</mat-option>
+                <mat-option value="SP">SP</mat-option>
+                <mat-option value="SE">SE</mat-option>
+                <mat-option value="TO">TO</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>Anterior</button>
+          <button mat-button (click)="submit()">Enviar</button>
+        </div>
+      </form>
+    </mat-step>
+  </mat-vertical-stepper>
 </mat-dialog-content>
 
 <mat-dialog-actions *ngIf="funcionou">
   <button mat-button mat-dialog-close>Fechar</button>
-<mat-dialog-actions>
+  <mat-dialog-actions>
 
     <ng-container *ngIf="mostrarComplementos">
       <p class="text-center">Dados para o relatório</p>
@@ -226,11 +226,12 @@
     </ng-container>
 
     <p *ngIf="error" class="text-danger text-center">{{msgerror}}</p>
- 
-<div mat-dialog-content>
-<div mat-dialog-actions *ngIf="!carregando">
-  <button mat-button (click)="submit()">Enviar</button>
-<div mat-dialog-actions>
-<div mat-dialog-actions *ngIf="funcionou">
-  <button mat-button mat-dialog-close>Fechar</button>
-<div mat-dialog-actions>
+
+    <div mat-dialog-content>
+      <div mat-dialog-actions *ngIf="!carregando">
+        <button mat-button (click)="submit()">Enviar</button>
+      </div>
+      <div mat-dialog-actions *ngIf="funcionou">
+        <button mat-button mat-dialog-close>Fechar</button>
+      </div>
+    </div>

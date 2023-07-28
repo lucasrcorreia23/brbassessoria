@@ -1,7 +1,8 @@
 import { Component, Inject } from '@angular/core';
-import { FormBuilder, ValidationErrors, Validators } from '@angular/forms';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AppService } from '../app.service';
+
 
 
 
@@ -11,6 +12,7 @@ import { AppService } from '../app.service';
   selector: 'app-modal',
   templateUrl: './modal.component.html',
 })
+
 export class ModalComponent {
   plano = '';
   tipo = 0;
@@ -21,35 +23,59 @@ export class ModalComponent {
   msgerror = '';
   carregando = false;
 
+  get pessoal(): FormGroup {
+    return this.form.get('pessoal') as FormGroup;
+  }
+
+  get cartao(): FormGroup {
+    return this.form.get('cartao') as FormGroup;
+  }
+
+  get cobranca(): FormGroup {
+    return this.form.get('cobranca') as FormGroup;
+  }
+  
+
   form = this.fb.group({
-    nome: ['', Validators.required],
-    email: ['', Validators.required],
-    cpfcnpj: ['', Validators.required],
-    celular: ['', Validators.required],
-    nomecartao: ['', Validators.required],
-    numerocartao: ['', Validators.required],
-    bandeira: ['', Validators.required],
-    validade: ['', Validators.required],
-    cvv: ['', Validators.required],
-    cep: ['', Validators.required],
-    logradouro: ['', Validators.required],
-    numerocobranca: [0, Validators.required],
-    complementocobranca: [''],
-    bairrocobranca: ['', Validators.required],
-    cidadecobranca: ['', Validators.required],
-    estadocobranca: ['', Validators.required],
-    paiscobranca: ['BR', Validators.required],
-    competencia: [''],
-    naturezaDoDebito: [''],
-    datadoAjuizamento: [''],
-    execucaodaPena: [''],
-    execucaoFiscal: [''],
-    exequente: [''],
-    executado: [''],
-    valordaCausa: [''],
-    sintesedosFatos: [''],
-    situacaodoProcesso: [''],
+    pessoal: this.fb.group({
+      nome: ['', Validators.required],
+      email: ['', Validators.required],
+      cpfcnpj: ['', Validators.required],
+      celular: ['', Validators.required],
+    }),
+    cartao: this.fb.group({
+      nomecartao: ['', Validators.required],
+      numerocartao: ['', Validators.required],
+      bandeira: ['', Validators.required],
+      validade: ['', Validators.required],
+      cvv: ['', Validators.required],
+    }),
+    cobranca: this.fb.group({
+      cep: ['', Validators.required],
+      logradouro: ['', Validators.required],
+      numerocobranca: [0, Validators.required],
+      complementocobranca: [''],
+      bairrocobranca: ['', Validators.required],
+      cidadecobranca: ['', Validators.required],
+      estadocobranca: ['', Validators.required],
+      paiscobranca: ['BR', Validators.required],
+    }),
+    processo: this.fb.group({
+      competencia: [''],
+      naturezaDoDebito: [''],
+      datadoAjuizamento: [''],
+      execucaodaPena: [''],
+      execucaoFiscal: [''],
+      exequente: [''],
+      executado: [''],
+      valordaCausa: [''],
+      sintesedosFatos: [''],
+      situacaodoProcesso: [''],
+    })
+    
   });
+  
+  
 
   formFields = [
     { label: 'Competência', controlName: 'competencia' },

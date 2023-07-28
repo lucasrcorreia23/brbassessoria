@@ -2208,6 +2208,15 @@ h4.planos_descricao_incluso {
   padding: 0 2rem;
   text-align: center;
 }
+.mat-vertical-content-container{
+  margin: 1rem 0 1rem 36px;
+}
+.mat-step-icon-selected{
+  background-color: #0fb9b1 !important;
+}
+.mat-step-icon-state-edit{
+  background-color: #0fb9b1 !important;
+}
 @media only screen and (max-width: 997px) {
   .relatorio__processual__content {
     flex-direction: column;

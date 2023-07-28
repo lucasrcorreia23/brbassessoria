@@ -3,6 +3,7 @@ import { AppService } from './app.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from './modal-relatorio/modal.component';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
