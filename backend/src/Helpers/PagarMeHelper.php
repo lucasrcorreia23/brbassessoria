@@ -1,6 +1,8 @@
 <?php
 define('C_REST_WEB_HOOK_URL', 'https://api.pagar.me/core/v5/'); //url on creat Webhook
-define('C_REST_APPKEY', 'sk_test_9G8Y745sWDcY645a:pk_test_a4MV8RoFXduGWZx8'); //appkey
+// define('C_REST_APPKEY', 'sk_test_9G8Y745sWDcY645a:pk_test_a4MV8RoFXduGWZx8'); //appkey
+
+define('C_REST_APPKEY', 'sk_8xjleMnhyzSrlNVM:pk_LkbVaGONCpHlaqjW'); //appkey
 
 class PagarMeHelper
 {
@@ -23,7 +25,6 @@ class PagarMeHelper
             curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($arParams["params"]));
 
             $response = curl_exec($ch);
-            $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
             if (curl_errno($ch)) {
                 $response['curl_error'] = curl_error($ch);
