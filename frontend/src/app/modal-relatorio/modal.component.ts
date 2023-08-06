@@ -4,16 +4,10 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AppService } from '../app.service';
 import { MatIconModule } from '@angular/material/icon';
 
-
-
-
-
-
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
 })
-
 export class ModalComponent {
   plano = '';
   tipo = 0;
@@ -35,7 +29,10 @@ export class ModalComponent {
   get cobranca(): FormGroup {
     return this.form.get('cobranca') as FormGroup;
   }
-  
+
+  get processo(): FormGroup {
+    return this.form.get('processo') as FormGroup;
+  }
 
   form = this.fb.group({
     pessoal: this.fb.group({
@@ -47,7 +44,6 @@ export class ModalComponent {
     cartao: this.fb.group({
       nomecartao: ['', Validators.required],
       numerocartao: ['', Validators.required],
-      bandeira: ['', Validators.required],
       validade: ['', Validators.required],
       cvv: ['', Validators.required],
     }),
@@ -72,11 +68,8 @@ export class ModalComponent {
       valordaCausa: [''],
       sintesedosFatos: [''],
       situacaodoProcesso: [''],
-    })
-    
+    }),
   });
-  
-  
 
   formFields = [
     { label: 'Competência', controlName: 'competencia' },
@@ -136,4 +129,3 @@ export class ModalComponent {
     }
   }
 }
-
