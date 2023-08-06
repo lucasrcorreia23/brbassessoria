@@ -16,6 +16,11 @@ import { ModalComponent } from './modal-relatorio/modal.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import { MatIconModule } from '@angular/material/icon';
 
+import { FaqComponent } from './faq/faq.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+
+
+
 
 
 
@@ -27,6 +32,7 @@ import {
 } from 'ngx-mask';
 
 import { MatSelectModule } from '@angular/material/select';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 const maskConfigFunction: () => Partial<IConfig> = () => {
   return {
@@ -36,6 +42,7 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
 
 @NgModule({
   imports: [
+    MatExpansionModule,
     ReactiveFormsModule,
     BrowserModule,
     HttpClientModule,
@@ -54,8 +61,10 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
     MatFormFieldModule,
     MatInputModule,
     MatDialogModule,
+    
   ],
-  declarations: [AppComponent, AppComponent, ModalComponent],
+  declarations: [AppComponent, AppComponent, ModalComponent, PrivacyPolicyComponent, FaqComponent],
+  
   providers: [
     AppService,
     provideNgxMask(maskConfigFunction),
@@ -64,7 +73,9 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
       useClass: InterceptService,
       multi: true,
     },
+    
   ],
+  
   bootstrap: [AppComponent],
 })
 export class AppModule {}

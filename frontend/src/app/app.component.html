@@ -242,6 +242,9 @@
   </div>
 </section>
 
+<section class="col-md-8 float-none mx-auto"  id="faq">
+  <app-faq></app-faq>
+</section>
 <!-- End Activity -->
 <section class="section_phrase">
 
@@ -323,7 +326,9 @@
           <li><a href="#about">Sobre nós</a></li>
           <li><a href="#destination">Benefícios</a></li>
           <li><a href="#benefit">Planos</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#client">Contato</a></li>
+          
         </ul>
       </div>
     </div>
@@ -345,7 +350,8 @@
   <div class="col-md-12 col-xs-12 cprights">
     <div class="container">
       <div class="footer_rights_items">
-        <p class="text-center">&copy; BRB Assessoria 2023. Todos os direitos reservados.</p>
+        <p class="text-center">&copy; BRB Assessoria 2023. Todos os direitos reservados. <span><a href="#" (click)="openPrivacyPolicy(); $event.preventDefault()">Políticas de Privacidade.</a></span></p>
+        
 
         <p>
           Desenvolvido por Neodds

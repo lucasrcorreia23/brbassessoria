@@ -1,0 +1,17 @@
+.describe{
+    padding:2rem 0;
+    text-align: center;
+}
+h2{
+    margin-bottom: 9rem;
+    text-align: center;
+}
+h2 span{
+    color:#0FB9B1;
+}
+p a{
+    color: #0FB9B1;
+}
+.mat-accordion .mat-expansion-panel:not(.mat-expanded), .mat-accordion .mat-expansion-panel:not(.mat-expansion-panel-spacing){
+    background: #efffff;
+}

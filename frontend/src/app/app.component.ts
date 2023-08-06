@@ -2,7 +2,7 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { AppService } from './app.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from './modal-relatorio/modal.component';
-
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 @Component({
   selector: 'app-root',
@@ -55,6 +55,10 @@ export class AppComponent implements OnInit, AfterViewInit {
   segmentos: { itens: string[] }[] = [];
 
   constructor(private appService: AppService, public dialog: MatDialog) {}
+
+  openPrivacyPolicy() {
+    this.dialog.open(PrivacyPolicyComponent);
+  }
 
   ngOnInit(): void {
     this.appService.get().subscribe((response) => {

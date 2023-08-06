@@ -2217,6 +2217,16 @@ h4.planos_descricao_incluso {
 .mat-step-icon-state-edit{
   background-color: #0fb9b1 !important;
 }
+.mat-stepper-previous{
+border-radius:1.2rem;
+margin-bottom:1rem;
+}
+.mat-stepper-next{
+  border-radius:1.2rem;
+}
+#cdk-step-content-0-2 > div > form > div:nth-child(5) > button:nth-child(2){
+  border-radius:1.2rem;
+}
 @media only screen and (max-width: 997px) {
   .relatorio__processual__content {
     flex-direction: column;
@@ -2224,6 +2234,21 @@ h4.planos_descricao_incluso {
   }
   .relatorio__processual__content button {
     padding: 2rem 0.8rem !important;
+  }
+  .mat-vertical-content-container{
+    margin: 0;
+  }
+  .mdc-dialog .mdc-dialog__content{
+    padding:0;
+  }
+  .mdc-dialog__content > :first-child{
+    padding:0;
+  }
+  .mat-mdc-dialog-container .mdc-dialog__title{
+    padding:0 3.5rem;
+  }
+  .mdc-dialog .mdc-dialog__content{
+    padding:0!important;
   }
 }
 
