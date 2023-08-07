@@ -13,11 +13,11 @@ class Email extends PHPMailer
         $this->Host = "br1130.hostgator.com.br";
         $this->SMTPAuth = true;
         $this->SMTPSecure = 'ssl';
-        $this->Username = "nao-responda@brbempresarial.com";
+        $this->Username = "atendimento@brbempresarial.com";
         $this->Password = "5Tcx-n!rA7yj";
         $this->Port = 465;
         $this->exceptions = true;
-        $this->setFrom("nao-responda@brbempresarial.com", "Não responda - BRB");
+        $this->setFrom("atendimento@brbempresarial.com", "Atendimento - BRB");
 
         $this->IsHtml(true);
         $this->exceptions = true;
