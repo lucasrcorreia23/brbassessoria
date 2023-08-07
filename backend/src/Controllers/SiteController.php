@@ -150,4 +150,19 @@ class SiteController
 
         return $responseNew;
     }
+
+    public function cep($request, $response)
+    {
+        try {
+            $dado = (array)$request->getQueryParams();
+
+            $data = Utils::getByCep($dado["cep"]);
+
+            $responseNew = $response->withJson($data);
+        } catch (Exception $e) {
+            $responseNew = $response->withStatus(500)->withJson($e->getMessage());
+        }
+
+        return $responseNew;
+    }
 }

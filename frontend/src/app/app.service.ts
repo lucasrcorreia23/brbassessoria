@@ -13,4 +13,12 @@ export class AppService {
   pagar(dados: any): Observable<any> {
     return this.http.post('site/pagar', dados);
   }
+
+  getCorreios(cep: string): Observable<any> {
+    return this.http.get('site/cep', {
+      params: {
+        cep,
+      },
+    });
+  }
 }

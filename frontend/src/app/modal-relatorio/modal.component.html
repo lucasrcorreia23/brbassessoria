@@ -102,7 +102,7 @@
           <div class="col-md-5">
             <mat-form-field>
               <mat-label>CEP</mat-label>
-              <input matInput formControlName="cep" mask="00000-000">
+              <input matInput formControlName="cep" mask="00000-000" (blur)="getCepCorreios()">
             </mat-form-field>
           </div>
         </div>

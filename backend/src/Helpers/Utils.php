@@ -154,4 +154,28 @@ class Utils
 
         return (float)$valor;
     }
+
+    public static function getByCep($cep)
+    {
+        $url = 'https://api.postmon.com.br/v1/cep/' . $cep;
+
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+
+        $response = curl_exec($ch);
+
+        if ($response !== false) {
+            $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+            if ($httpCode === 200) {
+                $data = json_decode($response, true);
+                return $data;
+            }
+        }
+
+        curl_close($ch);
+
+        return null;
+    }
 }

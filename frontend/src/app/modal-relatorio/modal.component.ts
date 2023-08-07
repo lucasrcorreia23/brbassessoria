@@ -128,4 +128,26 @@ export class ModalComponent {
       this.carregando = false;
     }
   }
+
+  getCepCorreios(): void {
+    let cep = this.form.get('cobranca')!.get('cep')!.value!;
+
+    if (cep.length == 8) {
+      this.appService.getCorreios(cep).subscribe((response) => {
+        if (response) {
+          this.form.get('cobranca')!.patchValue({
+            cep: cep,
+            numerocobranca: 0,
+            complementocobranca: '',
+            paiscobranca: 'BR',
+
+            estadocobranca: response.estado,
+            cidadecobranca: response.cidade,
+            bairrocobranca: response.bairro,
+            logradouro: response.logradouro,
+          });
+        }
+      });
+    }
+  }
 }
