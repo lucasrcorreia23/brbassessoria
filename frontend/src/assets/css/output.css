@@ -2217,13 +2217,8 @@ h4.planos_descricao_incluso {
 .mat-step-icon-state-edit{
   background-color: #0fb9b1 !important;
 }
-.mat-stepper-previous{
-border-radius:1.2rem;
-margin-bottom:1rem;
-}
-.mat-stepper-next{
-  border-radius:1.2rem;
-}
+
+
 #cdk-step-content-0-2 > div > form > div:nth-child(5) > button:nth-child(2){
   border-radius:1.2rem;
 }

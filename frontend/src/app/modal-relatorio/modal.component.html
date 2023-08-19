@@ -88,8 +88,9 @@
           </div>
         </div>
         <div>
-          <button mat-button matStepperPrevious>Anterior</button>
           <button mat-button matStepperNext>Próximo</button>
+          <button mat-button matStepperPrevious>Anterior</button>
+          
         </div>
       </form>
     </mat-step>
@@ -181,8 +182,9 @@
           </div>
         </div>
         <div>
-          <button mat-button matStepperPrevious>Anterior</button>
           <button mat-button matStepperNext *ngIf="mostrarComplementos">Próximo</button>
+          <button mat-button matStepperPrevious>Anterior</button>
+          
           <button mat-button (click)="submit()" *ngIf="!mostrarComplementos">Enviar</button>
         </div>
       </form>
