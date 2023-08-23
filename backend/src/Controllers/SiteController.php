@@ -94,9 +94,10 @@ class SiteController
                     $plano = "Relatório processual";
                     $valor = "R$ 99,00";
 
-                    $body = json_decode('{
+                    $string = '{
                         "items": [
                             {
+                                "code": "0001",
                                 "amount": 9900,
                                 "description": "Relatório processual",
                                 "quantity": 1
@@ -120,7 +121,7 @@ class SiteController
                                         "holder_name": "' . $post["cartao"]->nomecartao . '",
                                         "exp_month": ' . (substr($post["cartao"]->validade, 0, 2) * 1) . ',
                                         "exp_year": ' . (substr($post["cartao"]->validade, 2) * 1) . ',
-                                        "cvv": "' . $post["cartao"]->cvv . '"
+                                        "cvv": "' . $post["cartao"]->cvv . '",
                                         "billing_address": {
                                             "line_1": "' . $post["cobranca"]->numerocobranca . ', ' . $post["cobranca"]->logradouro . ', ' . $post["cobranca"]->bairrocobranca . '",
                                             "line_2": "' . $post["cobranca"]->complementocobranca . '",
@@ -128,12 +129,14 @@ class SiteController
                                             "city": "' . $post["cobranca"]->cidadecobranca . '",
                                             "state": "' . $post["cobranca"]->estadocobranca . '",
                                             "country": "BR"
-                                        },
+                                        }
                                     }
                                 }
                             }
                         ]
-                    }');
+                    }';
+
+                    $body = json_decode($string);
 
                     $pagamento = PagarMeHelper::newOrder($body);
                 }
