@@ -2166,6 +2166,13 @@ h4.planos_descricao_incluso {
 .relatorio__processual__content h3 {
   color: #ffffff;
   font-size: 3.2rem;
+  line-height: 3.2rem;
+}
+.relatorio__processual__content small {
+  color: #ffffff;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  
 }
 .relatorio__processual__content p {
   color: #ffffff;
