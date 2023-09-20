@@ -168,7 +168,6 @@ class SiteController
 
                 if ($post["tipo"] < 3) {
                     $email->setAssunto('Nova assinatura');
-                    $email->AddAddress("joao@brbempresarial.com.br", '');
 
                     $Corpo = '
                         <html>
@@ -276,7 +275,7 @@ class SiteController
                         
                                         </div>
                                         <div class="e-mail">
-                                            <p>atendimento@brbempresarial.com.br</p>
+                                            <p>atendimento@brbempresarial.com</p>
                                         </div>
                                     </div>
                                 </div>
@@ -284,12 +283,8 @@ class SiteController
                         </body>
                         </html>
                     ';
-
-                    $email->setMensagem($Corpo);
-                    $email->send();
                 } else {
                     $email->setAssunto('Novo relatório processual');
-                    $email->AddAddress("joao@brbempresarial.com.br", '');
 
                     $Corpo = '
                         <html>
@@ -403,7 +398,7 @@ class SiteController
                         
                                         </div>
                                         <div class="e-mail">
-                                            <p>atendimento@brbempresarial.com.br</p>
+                                            <p>atendimento@brbempresarial.com</p>
                                         </div>
                                     </div>
                                 </div>
@@ -412,11 +407,13 @@ class SiteController
                         
                         </html>
                     ';
-
-                    $email->setMensagem($Corpo);
-                    $email->send();
                 }
 
+                $email->AddAddress("joao@brbempresarial.com", '');
+                $email->setMensagem($Corpo);
+                $email->send();
+
+                $email = new Email();
                 $email->setAssunto('Confirmação de pagamento');
                 $email->AddAddress($post["pessoal"]->email, '');
 
@@ -521,7 +518,7 @@ class SiteController
                                     desafios.<br><br>
                     
                                     Por favor, fique à vontade para entrar em contato conosco através do e-mail <strong
-                                        style="color:#109690">atendimento@brbempresarial.com.br </strong>ou pelo telefone 48 9 8453-8752
+                                        style="color:#109690">atendimento@brbempresarial.com </strong>ou pelo telefone 48 9 8453-8752
                                     para qualquer questão ou necessidade relacionada à sua assessoria jurídica.<br><br>
                     
                                     Mais uma vez, agradecemos a sua confiança em nossos serviços. Estamos comprometidos em oferecer a você
@@ -549,7 +546,7 @@ class SiteController
                     
                                     </div>
                                     <div class="e-mail">
-                                        <p>atendimento@brbempresarial.com.br</p>
+                                        <p>atendimento@brbempresarial.com</p>
                                     </div>
                                 </div>
                             </div>
