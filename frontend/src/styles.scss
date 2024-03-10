@@ -1,10 +1,4 @@
-@font-face {
-  font-family: "HelveticaLTStd-Roman";
-  src: url("assets/fonts/HelveticaLTStd-Roman.otf") format("embedded-opentype");
 
-  font-weight: normal;
-  font-style: normal;
-}
 
 @import url("assets/css/bootstrap.min.css");
 @import url("assets/css/fontawesome-all.min.css");
@@ -18,7 +12,7 @@
 
 
 .mat-stepper-previous{
-  border-radius:1.2rem;  
+  border-radius:1.2rem;
   background:#b3e1df!important;
   }
   .mat-stepper-next{
