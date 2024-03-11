@@ -1397,10 +1397,7 @@ button span {
 /*------------------------------------------------|
 9. Client Section
 --------------------------------|*/
-.client {
-  padding: 100px 0;
-  background: #efffff;
-}
+
 .client h2 {
   margin-bottom: 64px;
   text-align: center;
@@ -1417,10 +1414,7 @@ button span {
 }
 .client p {
   margin: 0;
-  font-size: 12px;
-  font-weight: lighter;
-  margin: 0;
-  text-align: center;
+
 }
 .client .line {
   width: 50px;

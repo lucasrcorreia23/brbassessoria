@@ -243,6 +243,10 @@ textarea {
   padding: 0;
   /* 3 */
 }
+main {
+top:96px;
+position:relative;
+}
 
 /*
 Remove the inheritance of text transform in Edge and Firefox.
@@ -1004,6 +1008,8 @@ h4 {
 
 h3 {
   font-size: 40px;
+  font-family: "Poppins Bold", sans-serif;
+  color:#0F526C;
 }
 
 h4 {
@@ -1090,13 +1096,13 @@ button {
   text-align: center;
   text-transform: uppercase;
   bottom: 0;
+  border: 1px solid #0F526C;
 
-  border: none;
   z-index: 99 !important;
 }
 
 button:hover {
-  background:none;
+  background:transparent;
   border: 1px solid #0F526C;
   color: #0F526C;
   transition: cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -1725,7 +1731,7 @@ button,
 
 .herobanner {
   position: relative;
-  top:96px;
+
   height: 540px;
   background-size: cover;
   width: 100%;
@@ -1832,9 +1838,7 @@ button,
 4. About Section
 --------------------------------|*/
 
-.about_section{
-  top:96px;
-}
+
 
 .about_section .imgposabout {
   position: absolute;
@@ -2691,8 +2695,13 @@ button span {
 --------------------------------|*/
 
 .client {
-  padding: 100px 0;
-  background: #efffff;
+
+
+}
+
+.p-0{
+  padding:0 !important;
+  max-width: 100%;
 }
 
 .client h2 {
@@ -2707,16 +2716,24 @@ button span {
 
 .client h3 {
   margin-bottom: 20px;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bolder;
-  text-align: center;
+  text-align: right;
 }
 
 .client p {
-  font-size: 12px;
+    font-size: 14px;
   font-weight: lighter;
   margin: 0;
-  text-align: center;
+
+}
+.client h4 {
+  font-size: 20px;
+font-weight: lighter;
+margin: 0;
+font-weight: bolder;
+font-family: "Poppins Bold", sans-serif;
+
 }
 
 .client .line {

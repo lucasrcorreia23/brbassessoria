@@ -53,8 +53,8 @@
   <!-- End Banner -->
 
   <!-- About -->
-  <section id="about" class="about_section about overlay p-20">
-    <div class="container flex">
+  <section id="about" class="about_section about overlay">
+    <div class="container p-20 flex">
       <div class="w-1/3">
         <img
           class="imgposabout"
@@ -65,94 +65,164 @@
       </div>
 
       <div class="w-2/3">
-        <h3>
+        <h3 class="py-10">
           Primeira plataforma de serviços digitais para Defesa ética
           administrativa junto ao CRO
         </h3>
 
-        <div data-aos="fade-up" data-aos-offset="200" class="line"></div>
         <div class="flex w-full">
-        <p>A OdontoGuard surge como uma inovação disruptiva no cenário jurídico e contábil, dedicando-se exclusivamente ao nicho de dentistas nos estados de Santa Catarina, Paraná e Rio Grande do Sul.
-          Com uma equipe multidisciplinar formada por juristas e dentistas, prometemos facilidade e celeridade na contratação de serviços, garantindo segurança jurídica de maneira prática e eficiente.
-        </p>
-        <p>
-          Nossa abordagem digital, com contratação via plataforma online e comunicação pelo WhatsApp, reflete nosso compromisso com amodernidade. OdontoGuard oferece defesa junto ao CRO, acompanhamento processual e documentações prontas, destacando-se pela agilidade e expertise.
-Nossa visão é além do tradicional, proporcionando uma experiência exclusiva,transparente e ética.
-“Segurança e facilidade para sua carreira odontológica’
-        </p>
-
-      </div>
-      </div>
-      <div [innerHTML]="dados.quemsomos_frase">
-
+          <p class="pr-10">
+            A OdontoGuard surge como uma inovação disruptiva no cenário jurídico
+            e contábil, dedicando-se exclusivamente ao nicho de dentistas nos
+            estados de Santa Catarina, Paraná e Rio Grande do Sul. Com uma
+            equipe multidisciplinar formada por juristas e dentistas, prometemos
+            facilidade e celeridade na contratação de serviços, garantindo
+            segurança jurídica de maneira prática e eficiente.
+          </p>
+          <p>
+            Nossa abordagem digital, com contratação via plataforma online e
+            comunicação pelo WhatsApp, reflete nosso compromisso com
+            amodernidade. OdontoGuard oferece defesa junto ao CRO,
+            acompanhamento processual e documentações prontas, destacando-se
+            pela agilidade e expertise. Nossa visão é além do tradicional,
+            proporcionando uma experiência exclusiva,transparente e ética.
+            “Segurança e facilidade para suacarreira odontológica’
+          </p>
         </div>
+      </div>
+      <div [innerHTML]="dados.quemsomos_frase"></div>
     </div>
   </section>
   <!-- End About -->
   <!-- Metodologias -->
-  <section id="atuacao" class="client">
-    <div class="container">
-      <div data-aos="fade-up" data-aos-offset="200" class="col-md-12">
-        <h2>Metodologias de Atuação</h2>
-      </div>
-
-      <div class="col-md-12" data-aos="fade-up" data-aos-offset="200">
+  <section id="atuacao" class="client py-20">
+    <div class="container p-0">
+      <div class="flex">
+        <!-- Parte esquerda (1/3) com texto centralizado -->
         <div
-          class="col-md-3 col-sm-6 clientwrap"
-          x-data="{ expanded: false }"
-          *ngFor="let data of dados.metodologias; let i = index"
+          class="w-1/3 px-24 flex flex-col justify-center items-center bg-gray-200 text-right py-20"
         >
-          <div>
-            <img [src]="data.icone" class="img-responsive" />
-            <h3>#{{ i + 1 }} - {{ data.titulo }}</h3>
-            <p
-              x-show="expanded"
-              x-transition:enter="transition ease-out duration-300"
-              x-transition:enter-start="opacity-0 scale-90"
-              x-transition:enter-end="opacity-100 scale-100"
-              x-transition:leave="transition ease-in duration-300"
-              x-transition:leave-start="opacity-100 scale-100"
-              x-transition:leave-end="opacity-0 scale-90"
-            >
-              {{ data.descricao }}
-            </p>
-          </div>
+          <h3 class="text-right">
+            Preparados para enfrentar todo e qualquer desafio ético de dentistas
+          </h3>
         </div>
 
-        <div class="clearfix"></div>
-      </div>
-    </div>
-  </section>
-  <!--  End Metodologias -->
-  <!-- Destination -->
-  <section id="destination" class="destination_section overlay">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-12">
-          <div class="display-table wrapdestination">
-            <div class="table-cell">
-              <div data-aos="fade-up" data-aos-offset="200" class="col-md-12">
-                <h2>
-                  Assessoria jurídica Ideal para empresas e profissionais como:
-                </h2>
-              </div>
-              <div class="row" data-aos="fade-up" data-aos-offset="200">
-                <div class="row-margin">
-                  <ul
-                    class="col-md-3 col-sm-12 col-xs-6 destination_list-group"
-                    data-aos="fade-up"
-                    data-aos-offset="200"
-                    *ngFor="let data of segmentos"
-                  >
-                    <li
-                      class="destination_list-group-item"
-                      *ngFor="let item of data.itens"
-                    >
-                      {{ item }}
-                    </li>
-                  </ul>
+        <!-- Parte direita (2/3) com frases e ícones -->
+        <div class="w-2/3 bg-gray-300 p-8 space-y-4 py-10 ">
+
+          <div class="column">
+
+
+              <div class=" items-center flex-col flex">
+                <div class="flex flex-row items-center pb-10">
+                <svg
+                  width="57"
+                  height="59"
+                  viewBox="0 0 57 59"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.56927 22.7118C8.56927 10.9973 17.1039 1.5 28.762 1.5C40.4202 1.5 48.4307 10.9973 48.4307 22.7118M24.1129 53.9664C14.9905 52.4664 10.8326 47.3479 9.30533 40.8853M21.9461 47.9213C16.7746 45.9657 14.101 42.4269 14.101 36.9395C14.101 36.9395 13.839 25.5594 13.839 21.0472H13.8459C18.102 21.0472 20.8463 19.7307 22.6304 17.0096M33.8645 48.874C39.5721 47.2821 43.4213 43.4195 43.4213 36.9413L43.6834 19.8762C32.32 20.6159 26.4245 16.1331 23.5906 12.2652M35.0281 36.6537C34.4368 38.9731 31.8563 40.7208 28.762 40.7208C25.6678 40.7208 23.0958 38.98 22.4994 36.6641M30.7496 54.1864C30.7496 56.0165 29.2732 57.5 27.4519 57.5C25.6307 57.5 24.1543 56.0165 24.1543 54.1864C24.1543 52.3564 25.6307 50.8728 27.4519 50.8728C29.2732 50.8728 30.7496 52.3564 30.7496 54.1864ZM48.4307 22.4502H48.7186C52.7368 22.4502 56 25.7291 56 29.7667C56 33.8044 52.7368 37.0833 48.7186 37.0833H48.4307V22.4502ZM8.56927 37.0816H8.28139C4.26318 37.0816 1 33.8026 1 29.765C1 25.7274 4.26318 22.4485 8.28139 22.4485H8.56927V37.0816ZM35.5125 27.3314C35.5125 27.7453 35.1781 28.0831 34.7643 28.0831C34.3506 28.0831 34.0162 27.7471 34.0162 27.3314C34.0162 26.9157 34.3506 26.5796 34.7643 26.5796C35.1781 26.5796 35.5125 26.9157 35.5125 27.3314ZM23.5096 27.3314C23.5096 27.7453 23.1751 28.0831 22.7614 28.0831C22.3477 28.0831 22.0133 27.7471 22.0133 27.3314C22.0133 26.9157 22.3477 26.5796 22.7614 26.5796C23.1751 26.5796 23.5096 26.9157 23.5096 27.3314Z"
+                    stroke="#0F526C"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                <div class="column ml-5">
+                  <h4 class="font-semibold">Canal de Atendimento Direto</h4>
+                  <p class="ml-4 w-2/3 text-left">
+                    Atuamos de forma remota, proporcionando conveniência e
+                    eficiência, permitindo que os profissionais se concentrem em
+                    suas práticas.
+                  </p>
                 </div>
               </div>
+              <div class="flex flex-row items-center pb-10">
+                <svg
+                  width="57"
+                  height="59"
+                  viewBox="0 0 57 59"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.56927 22.7118C8.56927 10.9973 17.1039 1.5 28.762 1.5C40.4202 1.5 48.4307 10.9973 48.4307 22.7118M24.1129 53.9664C14.9905 52.4664 10.8326 47.3479 9.30533 40.8853M21.9461 47.9213C16.7746 45.9657 14.101 42.4269 14.101 36.9395C14.101 36.9395 13.839 25.5594 13.839 21.0472H13.8459C18.102 21.0472 20.8463 19.7307 22.6304 17.0096M33.8645 48.874C39.5721 47.2821 43.4213 43.4195 43.4213 36.9413L43.6834 19.8762C32.32 20.6159 26.4245 16.1331 23.5906 12.2652M35.0281 36.6537C34.4368 38.9731 31.8563 40.7208 28.762 40.7208C25.6678 40.7208 23.0958 38.98 22.4994 36.6641M30.7496 54.1864C30.7496 56.0165 29.2732 57.5 27.4519 57.5C25.6307 57.5 24.1543 56.0165 24.1543 54.1864C24.1543 52.3564 25.6307 50.8728 27.4519 50.8728C29.2732 50.8728 30.7496 52.3564 30.7496 54.1864ZM48.4307 22.4502H48.7186C52.7368 22.4502 56 25.7291 56 29.7667C56 33.8044 52.7368 37.0833 48.7186 37.0833H48.4307V22.4502ZM8.56927 37.0816H8.28139C4.26318 37.0816 1 33.8026 1 29.765C1 25.7274 4.26318 22.4485 8.28139 22.4485H8.56927V37.0816ZM35.5125 27.3314C35.5125 27.7453 35.1781 28.0831 34.7643 28.0831C34.3506 28.0831 34.0162 27.7471 34.0162 27.3314C34.0162 26.9157 34.3506 26.5796 34.7643 26.5796C35.1781 26.5796 35.5125 26.9157 35.5125 27.3314ZM23.5096 27.3314C23.5096 27.7453 23.1751 28.0831 22.7614 28.0831C22.3477 28.0831 22.0133 27.7471 22.0133 27.3314C22.0133 26.9157 22.3477 26.5796 22.7614 26.5796C23.1751 26.5796 23.5096 26.9157 23.5096 27.3314Z"
+                    stroke="#0F526C"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                <div class="column ml-5">
+                  <h4 class="font-semibold">Canal de Atendimento Direto</h4>
+                  <p class="ml-4 w-2/3 text-left">
+                    Atuamos de forma remota, proporcionando conveniência e
+                    eficiência, permitindo que os profissionais se concentrem em
+                    suas práticas.
+                  </p>
+                </div>
+              </div>
+              <div class="flex flex-row items-center pb-10">
+                <svg
+                  width="57"
+                  height="59"
+                  viewBox="0 0 57 59"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.56927 22.7118C8.56927 10.9973 17.1039 1.5 28.762 1.5C40.4202 1.5 48.4307 10.9973 48.4307 22.7118M24.1129 53.9664C14.9905 52.4664 10.8326 47.3479 9.30533 40.8853M21.9461 47.9213C16.7746 45.9657 14.101 42.4269 14.101 36.9395C14.101 36.9395 13.839 25.5594 13.839 21.0472H13.8459C18.102 21.0472 20.8463 19.7307 22.6304 17.0096M33.8645 48.874C39.5721 47.2821 43.4213 43.4195 43.4213 36.9413L43.6834 19.8762C32.32 20.6159 26.4245 16.1331 23.5906 12.2652M35.0281 36.6537C34.4368 38.9731 31.8563 40.7208 28.762 40.7208C25.6678 40.7208 23.0958 38.98 22.4994 36.6641M30.7496 54.1864C30.7496 56.0165 29.2732 57.5 27.4519 57.5C25.6307 57.5 24.1543 56.0165 24.1543 54.1864C24.1543 52.3564 25.6307 50.8728 27.4519 50.8728C29.2732 50.8728 30.7496 52.3564 30.7496 54.1864ZM48.4307 22.4502H48.7186C52.7368 22.4502 56 25.7291 56 29.7667C56 33.8044 52.7368 37.0833 48.7186 37.0833H48.4307V22.4502ZM8.56927 37.0816H8.28139C4.26318 37.0816 1 33.8026 1 29.765C1 25.7274 4.26318 22.4485 8.28139 22.4485H8.56927V37.0816ZM35.5125 27.3314C35.5125 27.7453 35.1781 28.0831 34.7643 28.0831C34.3506 28.0831 34.0162 27.7471 34.0162 27.3314C34.0162 26.9157 34.3506 26.5796 34.7643 26.5796C35.1781 26.5796 35.5125 26.9157 35.5125 27.3314ZM23.5096 27.3314C23.5096 27.7453 23.1751 28.0831 22.7614 28.0831C22.3477 28.0831 22.0133 27.7471 22.0133 27.3314C22.0133 26.9157 22.3477 26.5796 22.7614 26.5796C23.1751 26.5796 23.5096 26.9157 23.5096 27.3314Z"
+                    stroke="#0F526C"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                <div class="column ml-5">
+                  <h4 class="font-semibold">Canal de Atendimento Direto</h4>
+                  <p class="ml-4 w-2/3 text-left">
+                    Atuamos de forma remota, proporcionando conveniência e
+                    eficiência, permitindo que os profissionais se concentrem em
+                    suas práticas.
+                  </p>
+                </div>
+              </div>
+              <div class="flex flex-row items-center ">
+                <svg
+                  width="57"
+                  height="59"
+                  viewBox="0 0 57 59"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.56927 22.7118C8.56927 10.9973 17.1039 1.5 28.762 1.5C40.4202 1.5 48.4307 10.9973 48.4307 22.7118M24.1129 53.9664C14.9905 52.4664 10.8326 47.3479 9.30533 40.8853M21.9461 47.9213C16.7746 45.9657 14.101 42.4269 14.101 36.9395C14.101 36.9395 13.839 25.5594 13.839 21.0472H13.8459C18.102 21.0472 20.8463 19.7307 22.6304 17.0096M33.8645 48.874C39.5721 47.2821 43.4213 43.4195 43.4213 36.9413L43.6834 19.8762C32.32 20.6159 26.4245 16.1331 23.5906 12.2652M35.0281 36.6537C34.4368 38.9731 31.8563 40.7208 28.762 40.7208C25.6678 40.7208 23.0958 38.98 22.4994 36.6641M30.7496 54.1864C30.7496 56.0165 29.2732 57.5 27.4519 57.5C25.6307 57.5 24.1543 56.0165 24.1543 54.1864C24.1543 52.3564 25.6307 50.8728 27.4519 50.8728C29.2732 50.8728 30.7496 52.3564 30.7496 54.1864ZM48.4307 22.4502H48.7186C52.7368 22.4502 56 25.7291 56 29.7667C56 33.8044 52.7368 37.0833 48.7186 37.0833H48.4307V22.4502ZM8.56927 37.0816H8.28139C4.26318 37.0816 1 33.8026 1 29.765C1 25.7274 4.26318 22.4485 8.28139 22.4485H8.56927V37.0816ZM35.5125 27.3314C35.5125 27.7453 35.1781 28.0831 34.7643 28.0831C34.3506 28.0831 34.0162 27.7471 34.0162 27.3314C34.0162 26.9157 34.3506 26.5796 34.7643 26.5796C35.1781 26.5796 35.5125 26.9157 35.5125 27.3314ZM23.5096 27.3314C23.5096 27.7453 23.1751 28.0831 22.7614 28.0831C22.3477 28.0831 22.0133 27.7471 22.0133 27.3314C22.0133 26.9157 22.3477 26.5796 22.7614 26.5796C23.1751 26.5796 23.5096 26.9157 23.5096 27.3314Z"
+                    stroke="#0F526C"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                <div class="column ml-5">
+                  <h4 class="font-semibold">Canal de Atendimento Direto</h4>
+                  <p class="ml-4 w-2/3 text-left">
+                    Atuamos de forma remota, proporcionando conveniência e
+                    eficiência, permitindo que os profissionais se concentrem em
+                    suas práticas.
+                  </p>
+                </div>
+              </div>
+
+
+
+
+
             </div>
           </div>
         </div>
@@ -490,7 +560,9 @@ Nossa visão é além do tradicional, proporcionando uma experiência exclusiva,
           >
         </p>
 
-        <a href="https://www.estudionakama.com.br" target="_blank">Desenvolvido por Estudio Nákama</a>
+        <a href="https://www.estudionakama.com.br" target="_blank"
+          >Desenvolvido por Estudio Nákama</a
+        >
       </div>
     </div>
   </div>
