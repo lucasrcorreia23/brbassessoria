@@ -14,7 +14,7 @@
   src: url('../fonts/Poppins-Bold.woff2') format('woff2'),
       url('../fonts/Poppins-Bold.woff') format('woff'),
       url('../fonts/Poppins-Bold.ttf') format('truetype');
-  font-weight: bold;
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
@@ -24,7 +24,7 @@
   src: url('../fonts/Poppins-Light.woff2') format('woff2'),
       url('../fonts/Poppins-Light.woff') format('woff'),
       url('../fonts/Poppins-Light.ttf') format('truetype');
-  font-weight: 300;
+  font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
@@ -34,7 +34,7 @@
   src: url('../fonts/Poppins-Regular.woff2') format('woff2'),
       url('../fonts/Poppins-Regular.woff') format('woff'),
       url('../fonts/Poppins-Regular.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -2716,10 +2716,33 @@ button span {
 
 .client h3 {
   margin-bottom: 20px;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bolder;
   text-align: right;
+  max-width: 40rem;
 }
+
+svg{
+  overflow: initial!important;
+}
+
+.steps .steps-item{
+  background: rgb(131,199,172);
+background: -moz-linear-gradient(45deg, rgba(131,199,172,0.5) 0%, rgba(15,82,108,0.01) 100%);
+background: -webkit-linear-gradient(45deg, rgba(131,199,172,0.5) 0%, rgba(15,82,108,0.01) 100%);
+background: linear-gradient(45deg, rgba(131,199,172,0.5) 0%, rgba(15,82,108,0.01) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#83c7ac",endColorstr="#0f526c",GradientType=1);
+border-radius: 24px;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+
+
+}
+.steps .steps-item h4{
+  font-weight: 600!important;
+  font-family: "Poppins Bold", sans-serif;
+  font-size: 2rem;
+}
+
 
 .client p {
     font-size: 14px;

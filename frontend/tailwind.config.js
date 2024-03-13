@@ -2,7 +2,9 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {colors: {
+      branddark: '#0F526C', // Exemplo de cor personalizada
+    },},
   },
   plugins: [],
 }
