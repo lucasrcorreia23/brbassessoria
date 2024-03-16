@@ -1109,6 +1109,94 @@ button:hover {
 
 }
 
+#planos .a button {
+  font-size: 15.5px !important;
+  letter-spacing: 1px !important;
+  font-weight: 700 !important;
+  line-height: 1;
+  color: #fff;
+  letter-spacing: 0.025em;
+  background: #474747 ;
+  padding: 16px 40px!important;
+  cursor: pointer;
+  border-radius: 48px;
+  min-width: 40px;
+  overflow: hidden;
+right: 0;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  bottom: 0;
+  border: 1px solid #474747;
+
+  z-index: 99 !important;
+}
+
+#planos .a button:hover {
+  background:transparent;
+  border: 1px solid #474747;
+  color: #474747;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+
+#planos li{
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+#planos .b button {
+  font-size: 15.5px !important;
+  letter-spacing: 1px !important;
+  font-weight: 700 !important;
+  line-height: 1;
+  color: #2E2E2E;
+  letter-spacing: 0.025em;
+  background: #B9FFE3 ;
+  padding: 16px 40px!important;
+  cursor: pointer;
+  border-radius: 48px;
+  min-width: 120px;
+  overflow: hidden;
+
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  bottom: 0;
+  right: 0;
+  border: 1px solid #B9FFE3;
+
+  z-index: 99 !important;
+}
+
+#planos .b button:hover {
+  background:transparent;
+  border: 1px solid #B9FFE3;
+  color: #B9FFE3;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+
+/* Banner Contato */
+
+#banner-contato {
+margin: 120px 0 120px 0;
+  width: 100%;
+  background: rgb(131,199,172);
+background: -moz-linear-gradient(219deg, rgba(131, 199, 172, 0.5) 0%, rgba(15, 82, 108, 0.10) 100%);
+background: -webkit-linear-gradient(219deg, rgba(131, 199, 172, 0.5) 0%, rgba(15, 82, 108, 0.10) 100%);
+background: linear-gradient(219deg, rgba(131, 199, 172, 0.5) 0%, rgba(15, 82, 108, 0.10) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#83c7ac",endColorstr="#0f526c",GradientType=1);
+}
+#banner-contato img {
+
+ width:360px
+}
+
+#banner-contato span {
+font-weight: 200;
+font-family: 'Poppins Light',sans-serif;
+}
 /* Helper Class */
 
 .padding {
@@ -1177,7 +1265,7 @@ button:hover {
 
 .text-white {
   color: #fff;
-  margin-bottom: 16px;
+
 }
 
 .align-left {
@@ -2661,7 +2749,7 @@ button span {
 
 .customerexperience {
   margin: 70px 0;
-  padding: 30px 0;
+  padding: 30px 80px;
   background-color: #f7f7f7;
 }
 
@@ -2728,15 +2816,40 @@ svg{
 
 .steps .steps-item{
   background: rgb(131,199,172);
-background: -moz-linear-gradient(45deg, rgba(131,199,172,0.5) 0%, rgba(15,82,108,0.01) 100%);
-background: -webkit-linear-gradient(45deg, rgba(131,199,172,0.5) 0%, rgba(15,82,108,0.01) 100%);
-background: linear-gradient(45deg, rgba(131,199,172,0.5) 0%, rgba(15,82,108,0.01) 100%);
+background: -moz-linear-gradient(219deg, rgba(131, 199, 172, 0.5) 0%, rgba(15, 82, 108, 0.10) 100%);
+background: -webkit-linear-gradient(219deg, rgba(131, 199, 172, 0.5) 0%, rgba(15, 82, 108, 0.10) 100%);
+background: linear-gradient(219deg, rgba(131, 199, 172, 0.5) 0%, rgba(15, 82, 108, 0.10) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#83c7ac",endColorstr="#0f526c",GradientType=1);
 border-radius: 24px;
-box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+box-shadow: rgba(0, 0, 0, 0.1) 10px 10px 25px -5px, rgba(0, 0, 0, 0.003) 0px 10px 10px -5px;
 
 
 }
+
+#planos .steps .steps-item{
+  background: rgb(131,199,172);
+background: -moz-linear-gradient(219deg, rgba(131, 199, 172, 0.5) 0%, rgba(15, 82, 108, 0.10) 100%);
+background: -webkit-linear-gradient(219deg, rgba(131, 199, 172, 0.5) 0%, rgba(15, 82, 108, 0.10) 100%);
+background: linear-gradient(219deg, rgba(131, 199, 172, 0.5) 0%, rgba(15, 82, 108, 0.10) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#83c7ac",endColorstr="#0f526c",GradientType=1);
+border-radius: 24px;
+
+height: 480px;
+}
+
+.steps-item-two{
+  background:#393939;
+
+  border-radius: 24px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  height: 480px;
+}
+.steps-item-two h4{
+  font-weight: 600!important;
+  font-family: "Poppins Bold", sans-serif;
+  font-size: 2rem;
+}
+
 .steps .steps-item h4{
   font-weight: 600!important;
   font-family: "Poppins Bold", sans-serif;
@@ -2919,7 +3032,7 @@ font-family: "Poppins Bold", sans-serif;
   line-height: 38px;
   font-size: 32px;
   color: #fff;
-  background: linear-gradient(180deg, #0fb9b1 0%, #0fa7a0 100%);
+  background: #0F526C;
   border-radius: 50px;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
@@ -2928,7 +3041,7 @@ font-family: "Poppins Bold", sans-serif;
 }
 
 .sosmed ul li a:hover {
-  background: #10e0cf;
+  background: #177398;
 }
 
 /*------------------------------------------------|
@@ -2936,8 +3049,8 @@ font-family: "Poppins Bold", sans-serif;
 --------------------------------|*/
 
 .footer {
-  padding: 80px 0 120px 0;
-  background: linear-gradient(90deg, #109690 0%, #14bcb4 98.96%);
+  padding: 80px 80px 120px 80px;
+  background: #0F526C;
 }
 
 .footer img {
