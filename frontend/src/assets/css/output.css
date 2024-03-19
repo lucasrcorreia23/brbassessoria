@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i");
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /*
 ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
 */
@@ -268,7 +270,7 @@ button,
 [type="submit"] {
   -webkit-appearance: button;
   /* 1 */
-  background-color: transparent;
+  background-color: #0F526C;
   /* 2 */
   background-image: none;
   /* 2 */
@@ -713,6 +715,7 @@ video {
   width: 100%;
 }
 
+
 .w-40 {
   width: 10rem;
 }
@@ -1012,6 +1015,8 @@ h3 {
   color:#0F526C;
 }
 
+
+
 h4 {
   font-size: 15px;
 }
@@ -1176,6 +1181,102 @@ right: 0;
   transition: cubic-bezier(0.165, 0.84, 0.44, 1);
 
 }
+@media only screen and (max-width: 997px) {
+  button {
+    font-size: 15.5px !important;
+    letter-spacing: 1px !important;
+    font-weight: 700 !important;
+    line-height: 1;
+    color: #fff;
+    letter-spacing: 0.025em;
+    background: #0F526C ;
+    padding: 20px 40px !important;
+    cursor: pointer;
+    border-radius: 10px;
+    min-width: 120px;
+    overflow: hidden;
+    position: relative;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    bottom: 0;
+    border: 1px solid #0F526C;
+
+    z-index: 99 !important;
+  }
+
+  button:hover {
+    background:transparent;
+    border: 1px solid #0F526C;
+    color: #0F526C;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  }
+
+  #planos .a button {
+    font-size: 15.5px !important;
+    letter-spacing: 1px !important;
+    font-weight: 700 !important;
+    line-height: 1;
+    color: #fff;
+    letter-spacing: 0.025em;
+    background: #474747 ;
+    padding: 16px 40px!important;
+    cursor: pointer;
+    border-radius: 48px;
+    min-width: none!important;
+    overflow: hidden;
+  right: 0;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    bottom: 0;
+    left: 0;
+    border: 1px solid #474747;
+
+    z-index: 99 !important;
+  }
+
+  #planos .a button:hover {
+    background:transparent;
+    border: 1px solid #474747;
+    color: #474747;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  }
+
+  #planos li{
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  #planos .b button {
+    font-size: 15.5px !important;
+    letter-spacing: 1px !important;
+    font-weight: 700 !important;
+    line-height: 1;
+    color: #2E2E2E;
+    letter-spacing: 0.025em;
+    background: #B9FFE3 ;
+    padding: 16px 40px!important;
+    cursor: pointer;
+    border-radius: 48px;
+    min-width: 120px;
+    overflow: hidden;
+
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    bottom: 0;
+    left: 0;
+    border: 1px solid #B9FFE3;
+
+    z-index: 99 !important;
+  }
+
+
+
+}
 
 /* Banner Contato */
 
@@ -1191,6 +1292,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#83c7ac",endCo
 #banner-contato img {
 
  width:360px
+}
+
+#mat-mdc-dialog-1 > div > div > app-privacy-policy > mat-dialog-actions > button{
+  background-color: inherit!important;
 }
 
 #banner-contato span {
@@ -2161,7 +2266,28 @@ button,
     margin-bottom: 3.4rem;
     padding: 2rem 0;
   }
+  h3{
+    font-size:20px
+  }
 }
+@media only screen and (min-width: 768px) {
+  .w-2\/3 {
+    width: 66.66666%;
+  }
+  .w-1\/3{
+    width: 33.333333%;
+  }
+
+}
+@media only screen and (max-width: 768px) {
+
+  #atuacao p{
+   text-align:center;
+   justify-content: center;
+   align-self: center;
+  }
+}
+
 
 
 
@@ -2806,7 +2932,7 @@ button span {
   margin-bottom: 20px;
   font-size: 32px;
   font-weight: bolder;
-  text-align: right;
+text-align: right;
   max-width: 40rem;
 }
 
@@ -2822,6 +2948,7 @@ background: linear-gradient(219deg, rgba(131, 199, 172, 0.5) 0%, rgba(15, 82, 10
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#83c7ac",endColorstr="#0f526c",GradientType=1);
 border-radius: 24px;
 box-shadow: rgba(0, 0, 0, 0.1) 10px 10px 25px -5px, rgba(0, 0, 0, 0.003) 0px 10px 10px -5px;
+margin: 0 24px;
 
 
 }
@@ -2854,6 +2981,47 @@ height: 480px;
   font-weight: 600!important;
   font-family: "Poppins Bold", sans-serif;
   font-size: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  #planos .steps .steps-item{
+  height: 640px;
+  }
+  .client h2 {
+    margin-bottom: 64px;
+    text-align: center;
+  }
+
+  .client img {
+    display: block;
+    margin: 0 auto 20px;
+  }
+
+  .client h3 {
+    padding: 3rem 2rem;
+    font-size: 24px;
+    font-weight: bolder;
+  text-align: right;
+    max-width: 40rem;
+    margin:0;
+  }
+  .steps .steps-item{
+    margin:0;
+  }
+
+  .steps-item-two{
+
+    height: 640px;
+  }
+  .steps .steps-item{
+    margin-bottom: 20px;
+  }
+  .steps h3{
+    font-size:32px
+  }
+  #planos p {
+    font-size: 8px;
+  }
 }
 
 
@@ -3297,7 +3465,7 @@ font-family: "Poppins Bold", sans-serif;
   .benefit_section,
   .testimonial,
   .footer {
-    padding: 50px 0;
+    padding: 0px 0;
   }
 
   .row-margin {
@@ -3336,12 +3504,23 @@ font-family: "Poppins Bold", sans-serif;
     object-fit: cover;
     max-width: 100%;
   }
+  main{
+    top:0px!important;
+  }
+  button{
+    min-width: 300px;
+    padding: 12px 3px !important;
+    font-size: 12px !important;
+  }
 
   .herobanner h1 {
 
-    font-size: 36px;
-    line-height: 40px;
-    padding: 0px 64px;
+    font-size: 24px;
+    line-height: 28px;
+    padding: 8px 0
+  }
+  .herobanner h2{
+    font-size:1.6rem;
   }
 
   .herobanner .hero_content {
