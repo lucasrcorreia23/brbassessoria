@@ -1227,6 +1227,7 @@ right: 0;
     min-width: none!important;
     overflow: hidden;
   right: 0;
+
     line-height: 24px;
     text-align: center;
     text-transform: uppercase;
@@ -1273,6 +1274,24 @@ right: 0;
 
     z-index: 99 !important;
   }
+  #banner-contato {
+    margin: 40px 0!important;
+      width: 100%;
+
+    }
+    #banner-contato img {
+
+     width:440px;
+    }
+
+    #mat-mdc-dialog-1 > div > div > app-privacy-policy > mat-dialog-actions > button{
+      background-color: inherit!important;
+    }
+
+    #banner-contato span {
+    font-weight: 200;
+    font-family: 'Poppins Light',sans-serif;
+    }
 
 
 
@@ -1872,7 +1891,7 @@ button,
 .menu .navigation .navbarmenumobile {
   position: absolute;
   right: 15px;
-  top: 50px;
+  top: 36px;
   display: none;
 }
 
@@ -2948,7 +2967,7 @@ background: linear-gradient(219deg, rgba(131, 199, 172, 0.5) 0%, rgba(15, 82, 10
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#83c7ac",endColorstr="#0f526c",GradientType=1);
 border-radius: 24px;
 box-shadow: rgba(0, 0, 0, 0.1) 10px 10px 25px -5px, rgba(0, 0, 0, 0.003) 0px 10px 10px -5px;
-margin: 0 24px;
+
 
 
 }
@@ -2985,7 +3004,12 @@ height: 480px;
 
 @media only screen and (max-width: 768px) {
   #planos .steps .steps-item{
-  height: 640px;
+  height: auto;
+  }
+  .steps .steps-item{
+  margin: 0 24px;
+
+
   }
   .client h2 {
     margin-bottom: 64px;
@@ -3011,7 +3035,7 @@ height: 480px;
 
   .steps-item-two{
 
-    height: 640px;
+    height: auto;
   }
   .steps .steps-item{
     margin-bottom: 20px;
@@ -3020,7 +3044,14 @@ height: 480px;
     font-size:32px
   }
   #planos p {
-    font-size: 8px;
+    font-size: 12px;
+  }
+  #planos .subtitle {
+    font-size: 10px;
+    margin-bottom: 24px;
+  }
+  #planos > div > div.flex-col.md\:flex-row.flex.p-0.md\:px-32 > div.w-full.md\:w-2\/3.md\:ml-10 > div > div > div > div > p{
+
   }
 }
 
@@ -3361,7 +3392,7 @@ font-family: "Poppins Bold", sans-serif;
     display: flex;
     justify-content: right;
     right: 0;
-    top: 50px;
+    top: 36px;
     position: absolute;
     width: 100%;
     padding: 0 20px;
@@ -3413,7 +3444,7 @@ font-family: "Poppins Bold", sans-serif;
   }
 
   .menu .navigation ul.open {
-    margin-top: 61px;
+    margin-top: 49px;
     opacity: 1;
     visibility: visible;
     transition: all 0.1s ease-in-out;
