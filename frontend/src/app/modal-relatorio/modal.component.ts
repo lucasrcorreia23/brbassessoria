@@ -10,7 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class ModalComponent {
   plano = '';
-  tipo = 0;
+  tipo = 4;
   mostrarComplementos = false;
   error = false;
   funcionou = false;
@@ -100,7 +100,7 @@ export class ModalComponent {
     this.plano = this.data.plano;
     this.tipo = this.data.tipo;
 
-    this.mostrarComplementos = this.data.tipo > 2;
+
   }
 
   submit() {

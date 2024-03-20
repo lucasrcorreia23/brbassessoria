@@ -13,14 +13,24 @@
 
 .mat-stepper-previous{
   border-radius:1.2rem;
-  background:#b3e1df!important;
+  background:transparent!important;
+  color: #0F526C;
+  width:100%;
+
   }
   .mat-stepper-next{
     border-radius:1.2rem;
     margin-bottom:1rem;
+    width: 100%;
   }
 
   .mat-mdc-dialog-actions{
     justify-content:center!important;
     margin: 2rem 0 2rem 0!important;
+  }
+
+  .mat-stepper-previous:hover{
+    background:#0F526C!important;
+    color: #ffffff;
+    width:100%;
   }

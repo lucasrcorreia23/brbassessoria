@@ -1825,7 +1825,7 @@ button,
   position: fixed;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 96px;
   z-index: 999;
   max-width: 1920px;
@@ -2054,9 +2054,9 @@ button,
 
 .about_section .imgposabout {
   position: absolute;
-  top: -40px;
-  width: 350px;
-  height: 550px;
+  top: -60px;
+  width: auto;
+  height: 480px;
   background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
@@ -2499,15 +2499,17 @@ h4.planos_descricao_incluso {
   margin: 1rem 0 1rem 36px;
 }
 .mat-step-icon-selected{
-  background-color: #0fb9b1 !important;
+  background-color: #0F526C !important;
 }
 .mat-step-icon-state-edit{
-  background-color: #0fb9b1 !important;
+  background-color: #0F526C !important;
 }
 
 
 #cdk-step-content-0-2 > div > form > div:nth-child(5) > button:nth-child(2){
   border-radius:1.2rem;
+  width:100%;
+  margin-top:8px;
 }
 @media only screen and (max-width: 997px) {
   .relatorio__processual__content {
@@ -3166,6 +3168,11 @@ font-family: "Poppins Bold", sans-serif;
   z-index: 10;
   text-align: center;
   color: #020f3b;
+}
+
+#cdk-step-content-3-3 > div > form > div > button:nth-child(2){
+  width:100%!important;
+  margin-top:8px
 }
 
 /*--------Banner WhatsApp--------*/

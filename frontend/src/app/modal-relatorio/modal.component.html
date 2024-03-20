@@ -90,7 +90,7 @@
         <div>
           <button mat-button matStepperNext>Próximo</button>
           <button mat-button matStepperPrevious>Anterior</button>
-          
+
         </div>
       </form>
     </mat-step>
@@ -182,15 +182,15 @@
           </div>
         </div>
         <div>
-          <button mat-button matStepperNext *ngIf="mostrarComplementos">Próximo</button>
+          <button mat-button matStepperNext >Próximo</button>
           <button mat-button matStepperPrevious>Anterior</button>
-          
+
           <button mat-button (click)="submit()" *ngIf="!mostrarComplementos">Enviar</button>
         </div>
       </form>
     </mat-step>
 
-    <mat-step *ngIf="mostrarComplementos" [stepControl]="processo">
+    <mat-step  [stepControl]="processo">
       <form [formGroup]="processo">
         <ng-template matStepLabel>Dados para o relatório</ng-template>
 
@@ -203,7 +203,7 @@
 
         <div>
           <button mat-button matStepperPrevious>Anterior</button>
-          <button mat-button (click)="submit()">Enviar</button>
+          <button class="w-full mt-5" mat-button (click)="submit()">Enviar</button>
         </div>
       </form>
     </mat-step>
