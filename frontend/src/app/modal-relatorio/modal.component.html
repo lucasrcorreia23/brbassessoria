@@ -189,16 +189,16 @@
         </div>
       </form>
     </mat-step>
-
+<!--
     <mat-step  [stepControl]="processo">
       <form [formGroup]="processo">
         <ng-template matStepLabel>Dados para o relatório</ng-template>
 
         <mat-form-field *ngFor="let field of formFields">
-          <mat-label>{{field.label}}</mat-label> <!-- Aqui utilizamos field.label para o título do campo -->
+          <mat-label>{{field.label}}</mat-label>
           <input matInput [formControlName]="field.controlName" [placeholder]="field.label">
           <textarea *ngIf="field.isTextArea" matInput [formControlName]="field.controlName"
-            [placeholder]="field.label"></textarea><!-- E também como placeholder -->
+            [placeholder]="field.label"></textarea>
         </mat-form-field>
 
         <div>
@@ -206,7 +206,7 @@
           <button class="w-full mt-5" mat-button (click)="submit()">Enviar</button>
         </div>
       </form>
-    </mat-step>
+    </mat-step>-->
   </mat-vertical-stepper>
 
   <p *ngIf="error" class="text-danger text-center">{{msgerror}}</p>
