@@ -21,7 +21,7 @@ class TokenHelper
 
             $token = array(
                 "iat"       => $issuedAt,
-                "iss"       => "http://adm.brbempresarial.com",
+                "iss"       => "http://adm.odontoguard.com.br",
                 "exp"       => $d->getTimestamp(),
                 "host"      => $_SERVER['REMOTE_ADDR'],
                 "data"      => $data
