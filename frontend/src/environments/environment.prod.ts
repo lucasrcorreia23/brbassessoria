@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  serverUrl: 'https://api.brbempresarial.com/',
+  serverUrl: "https://api.odontoguard.com.br/",
 };
