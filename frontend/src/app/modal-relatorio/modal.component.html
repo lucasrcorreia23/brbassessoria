@@ -1,15 +1,15 @@
 <!-- modal.component.html -->
 <h2 mat-dialog-title>Contratação {{plano}}</h2>
-<mat-dialog-content *ngIf="carregando && !funcionou">
+<mat-dialog-content *ngIf="carregando">
   <p>Por favor aguarde, processando pagamento...</p>
 </mat-dialog-content>
-<mat-dialog-content *ngIf="funcionou">
+<mat-dialog-content *ngIf="!carregando && funcionou">
   <p class="text-success">Sua compra foi efetuada com sucesso. Até 24h, iremos entrar em contato através do E-mail e
     telefone cadastrado. Em caso de dúvidas entrar em contato pelo e-mail: atendimento@odontoguard.com.br ou nosso
     WhatsApp: 48 9 9151-7570.</p>
 </mat-dialog-content>
 <mat-dialog-content *ngIf="!carregando">
-  <p *ngIf="error" class="text-danger text-center">{{msgerror}}</p>
+  <p *ngIf="!carregando && !funcionou && msgerror" class="text-danger text-center">{{msgerror}}</p>
 
   <mat-vertical-stepper [linear]="true" #stepper>
     <p>Preencha o formulário abaixo que em breve entraremos em contato</p>
@@ -182,10 +182,10 @@
           </div>
         </div>
         <div>
-          <button mat-button matStepperNext >Próximo</button>
-          <button mat-button matStepperPrevious>Anterior</button>
-
           <button mat-button (click)="submit()" *ngIf="!mostrarComplementos">Enviar</button>
+
+
+
         </div>
       </form>
     </mat-step>
@@ -209,7 +209,7 @@
     </mat-step>-->
   </mat-vertical-stepper>
 
-  <p *ngIf="error" class="text-danger text-center">{{msgerror}}</p>
+  <p *ngIf="!carregando && !funcionou && msgerror" class="text-danger text-center">{{msgerror}}</p>
 </mat-dialog-content>
 
 <mat-dialog-actions *ngIf="funcionou">
