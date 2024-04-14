@@ -1,16 +1,20 @@
 <!-- modal.component.html -->
-<h2 mat-dialog-title>Contratação {{plano}}</h2>
+<h2 mat-dialog-title>Contratação {{ plano }}</h2>
 <mat-dialog-content *ngIf="carregando">
   <p>Por favor aguarde, processando pagamento...</p>
 </mat-dialog-content>
 <mat-dialog-content *ngIf="!carregando && funcionou">
-  <p class="text-success">Sua compra foi efetuada com sucesso. Até 24h, iremos entrar em contato através do E-mail e
-    telefone cadastrado. Em caso de dúvidas entrar em contato pelo e-mail: atendimento@odontoguard.com.br ou nosso
-    WhatsApp: 48 9 9151-7570.</p>
+  <p class="text-success">
+    Sua compra foi efetuada com sucesso. Até 24h, iremos entrar em contato
+    através do E-mail e telefone cadastrado. Em caso de dúvidas entrar em
+    contato pelo e-mail: atendimento@odontoguard.com.br ou nosso WhatsApp: 48 9
+    9151-7570.
+  </p>
 </mat-dialog-content>
-<mat-dialog-content *ngIf="!carregando">
-  <p *ngIf="!carregando && !funcionou && msgerror" class="text-danger text-center">{{msgerror}}</p>
-
+<mat-dialog-content *ngIf="!carregando && error">
+  <p class="text-danger">{{ msgerror }}</p>
+</mat-dialog-content>
+<mat-dialog-content *ngIf="!carregando && !error && !funcionou">
   <mat-vertical-stepper [linear]="true" #stepper>
     <p>Preencha o formulário abaixo que em breve entraremos em contato</p>
 
@@ -21,13 +25,13 @@
           <div class="col-md-6">
             <mat-form-field>
               <mat-label>Nome completo</mat-label>
-              <input matInput formControlName="nome">
+              <input matInput formControlName="nome" />
             </mat-form-field>
           </div>
           <div class="col-md-6">
             <mat-form-field>
               <mat-label>Email</mat-label>
-              <input matInput formControlName="email">
+              <input matInput formControlName="email" />
             </mat-form-field>
           </div>
         </div>
@@ -35,13 +39,13 @@
           <div class="col-md-6">
             <mat-form-field>
               <mat-label>CPF ou CNPJ</mat-label>
-              <input matInput formControlName="cpfcnpj" mask="CPF_CNPJ">
+              <input matInput formControlName="cpfcnpj" mask="CPF_CNPJ" />
             </mat-form-field>
           </div>
           <div class="col-md-6">
             <mat-form-field>
               <mat-label>Celular com ddd</mat-label>
-              <input matInput formControlName="celular" mask="00 00000-0000">
+              <input matInput formControlName="celular" mask="00 00000-0000" />
             </mat-form-field>
           </div>
         </div>
@@ -59,7 +63,7 @@
           <div class="col-md-12">
             <mat-form-field>
               <mat-label>Nome como está no cartão</mat-label>
-              <input matInput formControlName="nomecartao">
+              <input matInput formControlName="nomecartao" />
             </mat-form-field>
           </div>
         </div>
@@ -68,7 +72,11 @@
           <div class="col-md-12">
             <mat-form-field>
               <mat-label>Número do cartão</mat-label>
-              <input matInput formControlName="numerocartao" mask="0000 0000 0000 0000 000">
+              <input
+                matInput
+                formControlName="numerocartao"
+                mask="0000 0000 0000 0000 000"
+              />
             </mat-form-field>
           </div>
         </div>
@@ -77,20 +85,19 @@
           <div class="col-md-5">
             <mat-form-field>
               <mat-label>Validade</mat-label>
-              <input matInput formControlName="validade" mask="00/00">
+              <input matInput formControlName="validade" mask="00/00" />
             </mat-form-field>
           </div>
           <div class="col-md-5">
             <mat-form-field>
               <mat-label>CVV</mat-label>
-              <input matInput formControlName="cvv" mask="0000">
+              <input matInput formControlName="cvv" mask="0000" />
             </mat-form-field>
           </div>
         </div>
         <div>
           <button mat-button matStepperNext>Próximo</button>
           <button mat-button matStepperPrevious>Anterior</button>
-
         </div>
       </form>
     </mat-step>
@@ -103,7 +110,12 @@
           <div class="col-md-5">
             <mat-form-field>
               <mat-label>CEP</mat-label>
-              <input matInput formControlName="cep" mask="00000-000" (blur)="getCepCorreios()">
+              <input
+                matInput
+                formControlName="cep"
+                mask="00000-000"
+                (blur)="getCepCorreios()"
+              />
             </mat-form-field>
           </div>
         </div>
@@ -112,7 +124,7 @@
           <div class="col-md-12">
             <mat-form-field>
               <mat-label>Logradouro</mat-label>
-              <input matInput formControlName="logradouro">
+              <input matInput formControlName="logradouro" />
             </mat-form-field>
           </div>
         </div>
@@ -121,19 +133,23 @@
           <div class="col-md-3">
             <mat-form-field>
               <mat-label>Número</mat-label>
-              <input matInput formControlName="numerocobranca" mask="00000000">
+              <input
+                matInput
+                formControlName="numerocobranca"
+                mask="00000000"
+              />
             </mat-form-field>
           </div>
           <div class="col-md-5">
             <mat-form-field>
               <mat-label>Complemento</mat-label>
-              <input matInput formControlName="complementocobranca">
+              <input matInput formControlName="complementocobranca" />
             </mat-form-field>
           </div>
           <div class="col-md-4">
             <mat-form-field>
               <mat-label>Bairro</mat-label>
-              <input matInput formControlName="bairrocobranca">
+              <input matInput formControlName="bairrocobranca" />
             </mat-form-field>
           </div>
         </div>
@@ -142,7 +158,7 @@
           <div class="col-md-6">
             <mat-form-field>
               <mat-label>Cidade</mat-label>
-              <input matInput formControlName="cidadecobranca">
+              <input matInput formControlName="cidadecobranca" />
             </mat-form-field>
           </div>
           <div class="col-md-2">
@@ -182,14 +198,13 @@
           </div>
         </div>
         <div>
-          <button mat-button (click)="submit()" *ngIf="!mostrarComplementos">Enviar</button>
-
-
-
+          <button mat-button (click)="submit()" *ngIf="!mostrarComplementos">
+            Enviar
+          </button>
         </div>
       </form>
     </mat-step>
-<!--
+    <!--
     <mat-step  [stepControl]="processo">
       <form [formGroup]="processo">
         <ng-template matStepLabel>Dados para o relatório</ng-template>
@@ -208,8 +223,6 @@
       </form>
     </mat-step>-->
   </mat-vertical-stepper>
-
-  <p *ngIf="!carregando && !funcionou && msgerror" class="text-danger text-center">{{msgerror}}</p>
 </mat-dialog-content>
 
 <mat-dialog-actions *ngIf="funcionou">
