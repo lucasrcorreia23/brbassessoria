@@ -242,7 +242,7 @@ class SiteController
                 $email->setMensagem($Corpo);
                 $email->send();
             } catch (Exception $a) {
-                throw new Exception("Não foi possivel enviar o e-mail para contato@odontoguard.com.br");
+                throw new Exception("Não foi possivel enviar o e-mail para contato@odontoguard.com.br. Mas o pagamento foi processado, por favor aguarde nosso contato");
             }
 
             $Corpo = '
@@ -371,7 +371,7 @@ class SiteController
                 $email->setMensagem($Corpo);
                 $email->send();
             } catch (Exception $a) {
-                throw new Exception("Não foi possivel enviar o e-mail para " . $post["pessoal"]->email);
+                throw new Exception("Não foi possivel enviar o e-mail para " . $post["pessoal"]->email . ". Mas o pagamento foi processado, por favor aguarde nosso contato");
             }
 
             $responseNew = $response->withStatus(200);
