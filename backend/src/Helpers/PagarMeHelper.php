@@ -2,7 +2,7 @@
 define('C_REST_WEB_HOOK_URL', 'https://api.pagar.me/core/v5/'); //url on creat Webhook
 // define('C_REST_APPKEY', 'sk_test_9G8Y745sWDcY645a:pk_test_a4MV8RoFXduGWZx8'); //appkey
 
-define('C_REST_APPKEY', 'sk_8xjleMnhyzSrlNVM:pk_LkbVaGONCpHlaqjW'); //appkey
+define('C_REST_APPKEY', 'sk_2af0f8df11554f098a322606f4541480'); //appkey
 
 class PagarMeHelper
 {
