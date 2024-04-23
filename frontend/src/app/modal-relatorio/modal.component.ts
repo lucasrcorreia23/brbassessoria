@@ -46,6 +46,7 @@ export class ModalComponent {
       numerocartao: ["", Validators.required],
       validade: ["", Validators.required],
       cvv: ["", Validators.required],
+      parcelas: ["", Validators.required],
     }),
     cobranca: this.fb.group({
       cep: ["", Validators.required],

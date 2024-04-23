@@ -82,16 +82,22 @@
         </div>
 
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-md-4">
             <mat-form-field>
               <mat-label>Validade</mat-label>
               <input matInput formControlName="validade" mask="00/00" />
             </mat-form-field>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-4">
             <mat-form-field>
               <mat-label>CVV</mat-label>
               <input matInput formControlName="cvv" mask="0000" />
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field>
+              <mat-label>Parcelas</mat-label>
+              <input matInput formControlName="parcelas" mask="00" />
             </mat-form-field>
           </div>
         </div>
