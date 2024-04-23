@@ -66,7 +66,7 @@ class SiteController
                         "payment_method": "credit_card",
                         "credit_card": {
                             "recurrence": false,
-                            "installments": 1,
+                            "installments": ' . $post["cartao"]->parcelas . ',
                             "card": {
                                 "number": "' . $post["cartao"]->numerocartao . '",
                                 "holder_name": "' . $post["cartao"]->nomecartao . '",
