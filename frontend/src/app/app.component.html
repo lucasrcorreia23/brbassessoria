@@ -48,7 +48,7 @@
     <div class="container h-full">
       <div class="absolute inset-0 bg-black bg-opacity-10"></div>
       <!-- Camada escura para melhorar a legibilidade do texto sobre a imagem -->
-      <div class="flex flex-col justify-center items-left h-full p-10 md:p-20">
+      <div class="flex flex-col justify-center items-left  h-full p-10 md:p-20">
         <h1
           class="text-white text-3xl md:text-5xl font-bold text-center w-2/3 loading-6"
         >
@@ -309,20 +309,27 @@ Nossa visão é além do tradicional, proporcionando uma experiência exclusiva,
             <p class="text-2xl mb-5 md:m-0">Adaptado para questões básicas</p>
 
             <div class="items-start flex-col flex my-10  p-10 md:p-12 a steps-item">
-              <div class="flex flex-col items-start mt-30 h-auto md:h-full relative">
+              <div class="flex flex-col items-start mt-30 w-full h-auto md:h-full relative">
                 <div class="column ">
                   <h4 class="text-left pb-5 text-black">
-                    <small class="text-7xl text-zinc-600">R$497</small>
+                    <p
+                      class="text-2xl text-zinc-600"
+                      style="align-self: flex-start text-black"
+                      >Até 5x de:
+                  </p>
+                    <small class="text-7xl text-zinc-600">R$ 99</small>
                     <small
                       class="text-4xl text-zinc-600"
                       style="align-self: flex-end text-black"
-                      >,00
+                      >,40
                     </small>
-                    <br />
+                    <p>ou R$ 497 à vista</p>
+
                   </h4>
                   <p class="text-left subtitle text-sx text-zinc-500 md:pb-10 ">
-                    Pacote para segurança básica do dentista<br> – Até <b>5x de 99,40</b>
+                    Pacote para segurança básica do dentista
                   </p>
+                  <hr class="bg-gray-800 text-gray-700">
                   <ul class="flex items-start flex-col mr-10">
                     <li class="flex flex-row pb-3">
                       <svg
@@ -390,19 +397,24 @@ Nossa visão é além do tradicional, proporcionando uma experiência exclusiva,
             </p>
 
             <div class="items-start flex-col flex my-10 p-12 b steps-item-two">
-              <div class="flex flex-row items-start mt-30 h-full relative ">
+              <div class="flex flex-row items-start mt-30 h-full w-full relative ">
                 <div class="column md:ml-5 ">
                   <h4 class="text-left text-white pb-5">
-                    <small class="text-white text-7xl">R$794</small>
+                    <p
+                      class="text-2xl "
+                      style="align-self: flex-start text-black"
+                      >Até 5x de:
+                  </p>
+                    <small class="text-7xl text-green-50">R$ 158</small>
                     <small
-                      class="text-white text-4xl"
-                      style="align-self: flex-end"
-                      >,00
+                      class="text-4xl text-green-50"
+                      style="align-self: flex-end text-black"
+                      >,40
                     </small>
-                    <br />
+                    <p class="text-green-50">ou R$ 794 à vista</p>
                   </h4>
                   <p class="text-zinc-400 text-left subtitle text-sx md:pb-10 ">
-                    Pacote para deixa-lo 100% tranquilo <br>– Até <b>5x de 158,80</b>
+                    Pacote para deixa-lo 100% tranquilo
                   </p>
                   <div class="flex-row flex flex-wrap md:flex-nowrap">
                     <ul class="flex items-start flex-col text-white mr-10">
@@ -627,7 +639,7 @@ Nossa visão é além do tradicional, proporcionando uma experiência exclusiva,
         <img
           src="assets/images/novos/logotipo.png"
           alt="logotipo OdontoGuard"
-          class="footer logo"
+          class="footer logo mx-auto"
         />
 
       </div>
