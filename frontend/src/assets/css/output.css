@@ -2584,7 +2584,7 @@ button span {
 
 .sosmed-align ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .planos:hover {
