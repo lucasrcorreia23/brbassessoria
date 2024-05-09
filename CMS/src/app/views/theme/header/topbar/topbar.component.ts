@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { User } from "../../../../models/user.model";
-import { Router } from "@angular/router";
+// import { Router } from "@angular/router";
 import { AuthService } from "../../../pages/auth/services/auth.service";
 
 @Component({
@@ -16,7 +16,7 @@ export class TopbarComponent implements OnInit {
   @Input() badge!: boolean;
   @Input() icon!: boolean;
 
-  constructor(private auth: AuthService, private router: Router) {}
+  constructor(private auth: AuthService /*, private router: Router*/) {}
 
   ngOnInit(): void {
     this.user = this.auth.usuario;
@@ -25,6 +25,6 @@ export class TopbarComponent implements OnInit {
   logout(): void {
     localStorage.removeItem("usuario");
     localStorage.removeItem("token");
-    this.router.navigate(["auth"]);
+    // this.router.navigate(["auth"]);
   }
 }
