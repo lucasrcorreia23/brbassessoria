@@ -12,30 +12,30 @@
 */
 
 @font-face {
-  font-family: 'Poppins Bold';
-  src: url('../fonts/Poppins-Bold.woff2') format('woff2'),
-      url('../fonts/Poppins-Bold.woff') format('woff'),
-      url('../fonts/Poppins-Bold.ttf') format('truetype');
+  font-family: "Poppins Bold";
+  src: url("../fonts/Poppins-Bold.woff2") format("woff2"),
+    url("../fonts/Poppins-Bold.woff") format("woff"),
+    url("../fonts/Poppins-Bold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Poppins Light';
-  src: url('../fonts/Poppins-Light.woff2') format('woff2'),
-      url('../fonts/Poppins-Light.woff') format('woff'),
-      url('../fonts/Poppins-Light.ttf') format('truetype');
+  font-family: "Poppins Light";
+  src: url("../fonts/Poppins-Light.woff2") format("woff2"),
+    url("../fonts/Poppins-Light.woff") format("woff"),
+    url("../fonts/Poppins-Light.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Poppins Regular';
-  src: url('../fonts/Poppins-Regular.woff2') format('woff2'),
-      url('../fonts/Poppins-Regular.woff') format('woff'),
-      url('../fonts/Poppins-Regular.ttf') format('truetype');
+  font-family: "Poppins Regular";
+  src: url("../fonts/Poppins-Regular.woff2") format("woff2"),
+    url("../fonts/Poppins-Regular.woff") format("woff"),
+    url("../fonts/Poppins-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -78,9 +78,10 @@ html {
   -o-tab-size: 4;
   tab-size: 4;
   /* 3 */
-  font-family: Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Poppins, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -246,8 +247,8 @@ textarea {
   /* 3 */
 }
 main {
-top:96px;
-position:relative;
+  top: 96px;
+  position: relative;
 }
 
 /*
@@ -270,7 +271,7 @@ button,
 [type="submit"] {
   -webkit-appearance: button;
   /* 1 */
-  background-color: #0F526C;
+  background-color: #0f526c;
   /* 2 */
   background-image: none;
   /* 2 */
@@ -715,7 +716,6 @@ video {
   width: 100%;
 }
 
-
 .w-40 {
   width: 10rem;
 }
@@ -980,7 +980,7 @@ h5,
 h6 {
   font-family: "Poppins Regular", sans-serif;
   -webkit-font-smoothing: antialiased;
-  color: #0F526C;
+  color: #0f526c;
 }
 
 h1 {
@@ -997,8 +997,7 @@ h2 {
 
   line-height: 1;
   font-family: "Poppins Light", sans-serif;
-  color:
-
+  color: ;
 }
 
 h3,
@@ -1012,10 +1011,8 @@ h4 {
 h3 {
   font-size: 40px;
   font-family: "Poppins Bold", sans-serif;
-  color:#0F526C;
+  color: #0f526c;
 }
-
-
 
 h4 {
   font-size: 15px;
@@ -1090,7 +1087,7 @@ button {
   line-height: 1;
   color: #fff;
   letter-spacing: 0.025em;
-  background: #0F526C ;
+  background: #0f526c;
   padding: 20px 40px !important;
   cursor: pointer;
   border-radius: 10px;
@@ -1101,17 +1098,16 @@ button {
   text-align: center;
   text-transform: uppercase;
   bottom: 0;
-  border: 1px solid #0F526C;
+  border: 1px solid #0f526c;
 
   z-index: 99 !important;
 }
 
 button:hover {
-  background:transparent;
-  border: 1px solid #0F526C;
-  color: #0F526C;
+  background: transparent;
+  border: 1px solid #0f526c;
+  color: #0f526c;
   transition: cubic-bezier(0.165, 0.84, 0.44, 1);
-
 }
 
 #planos .a button {
@@ -1121,13 +1117,13 @@ button:hover {
   line-height: 1;
   color: #fff;
   letter-spacing: 0.025em;
-  background: #474747 ;
-  padding: 16px 40px!important;
+  background: #474747;
+  padding: 16px 40px !important;
   cursor: pointer;
   border-radius: 48px;
   min-width: 40px;
   overflow: hidden;
-right: 0;
+  right: 0;
   line-height: 24px;
   text-align: center;
   text-transform: uppercase;
@@ -1138,14 +1134,13 @@ right: 0;
 }
 
 #planos .a button:hover {
-  background:transparent;
+  background: transparent;
   border: 1px solid #474747;
   color: #474747;
   transition: cubic-bezier(0.165, 0.84, 0.44, 1);
-
 }
 
-#planos li{
+#planos li {
   align-items: center;
   margin-bottom: 12px;
 }
@@ -1155,10 +1150,10 @@ right: 0;
   letter-spacing: 1px !important;
   font-weight: 700 !important;
   line-height: 1;
-  color: #2E2E2E;
+  color: #2e2e2e;
   letter-spacing: 0.025em;
-  background: #B9FFE3 ;
-  padding: 16px 40px!important;
+  background: #b9ffe3;
+  padding: 16px 40px !important;
   cursor: pointer;
   border-radius: 48px;
   min-width: 120px;
@@ -1169,17 +1164,16 @@ right: 0;
   text-transform: uppercase;
   bottom: 0;
   right: 0;
-  border: 1px solid #B9FFE3;
+  border: 1px solid #b9ffe3;
 
   z-index: 99 !important;
 }
 
 #planos .b button:hover {
-  background:transparent;
-  border: 1px solid #B9FFE3;
-  color: #B9FFE3;
+  background: transparent;
+  border: 1px solid #b9ffe3;
+  color: #b9ffe3;
   transition: cubic-bezier(0.165, 0.84, 0.44, 1);
-
 }
 @media only screen and (max-width: 997px) {
   button {
@@ -1189,7 +1183,7 @@ right: 0;
     line-height: 1;
     color: #fff;
     letter-spacing: 0.025em;
-    background: #0F526C ;
+    background: #0f526c;
     padding: 20px 40px !important;
     cursor: pointer;
     border-radius: 10px;
@@ -1200,17 +1194,16 @@ right: 0;
     text-align: center;
     text-transform: uppercase;
     bottom: 0;
-    border: 1px solid #0F526C;
+    border: 1px solid #0f526c;
 
     z-index: 99 !important;
   }
 
   button:hover {
-    background:transparent;
-    border: 1px solid #0F526C;
-    color: #0F526C;
+    background: transparent;
+    border: 1px solid #0f526c;
+    color: #0f526c;
     transition: cubic-bezier(0.165, 0.84, 0.44, 1);
-
   }
 
   #planos .a button {
@@ -1220,13 +1213,13 @@ right: 0;
     line-height: 1;
     color: #fff;
     letter-spacing: 0.025em;
-    background: #474747 ;
-    padding: 16px 40px!important;
+    background: #474747;
+    padding: 16px 40px !important;
     cursor: pointer;
     border-radius: 48px;
-    min-width: none!important;
+    min-width: none !important;
     overflow: hidden;
-  right: 0;
+    right: 0;
 
     line-height: 24px;
     text-align: center;
@@ -1239,14 +1232,13 @@ right: 0;
   }
 
   #planos .a button:hover {
-    background:transparent;
+    background: transparent;
     border: 1px solid #474747;
     color: #474747;
     transition: cubic-bezier(0.165, 0.84, 0.44, 1);
-
   }
 
-  #planos li{
+  #planos li {
     align-items: center;
     margin-bottom: 12px;
   }
@@ -1256,10 +1248,10 @@ right: 0;
     letter-spacing: 1px !important;
     font-weight: 700 !important;
     line-height: 1;
-    color: #2E2E2E;
+    color: #2e2e2e;
     letter-spacing: 0.025em;
-    background: #B9FFE3 ;
-    padding: 16px 40px!important;
+    background: #b9ffe3;
+    padding: 16px 40px !important;
     cursor: pointer;
     border-radius: 48px;
     min-width: 120px;
@@ -1270,56 +1262,72 @@ right: 0;
     text-transform: uppercase;
     bottom: 0;
     left: 0;
-    border: 1px solid #B9FFE3;
+    border: 1px solid #b9ffe3;
 
     z-index: 99 !important;
   }
   #banner-contato {
-    margin: 40px 0!important;
-      width: 100%;
+    margin: 40px 0 !important;
+    width: 100%;
+  }
+  #banner-contato img {
+    width: 440px;
+  }
 
-    }
-    #banner-contato img {
+  #mat-mdc-dialog-1
+    > div
+    > div
+    > app-privacy-policy
+    > mat-dialog-actions
+    > button {
+    background-color: inherit !important;
+  }
 
-     width:440px;
-    }
-
-    #mat-mdc-dialog-1 > div > div > app-privacy-policy > mat-dialog-actions > button{
-      background-color: inherit!important;
-    }
-
-    #banner-contato span {
+  #banner-contato span {
     font-weight: 200;
-    font-family: 'Poppins Light',sans-serif;
-    }
-
-
-
+    font-family: "Poppins Light", sans-serif;
+  }
 }
 
 /* Banner Contato */
 
 #banner-contato {
-margin: 120px 0 120px 0;
+  margin: 120px 0 120px 0;
   width: 100%;
-  background: rgb(131,199,172);
-background: -moz-linear-gradient(219deg, rgba(131, 199, 172, 0.5) 0%, rgba(15, 82, 108, 0.10) 100%);
-background: -webkit-linear-gradient(219deg, rgba(131, 199, 172, 0.5) 0%, rgba(15, 82, 108, 0.10) 100%);
-background: linear-gradient(219deg, rgba(131, 199, 172, 0.5) 0%, rgba(15, 82, 108, 0.10) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#83c7ac",endColorstr="#0f526c",GradientType=1);
+  background: rgb(131, 199, 172);
+  background: -moz-linear-gradient(
+    219deg,
+    rgba(131, 199, 172, 0.5) 0%,
+    rgba(15, 82, 108, 0.1) 100%
+  );
+  background: -webkit-linear-gradient(
+    219deg,
+    rgba(131, 199, 172, 0.5) 0%,
+    rgba(15, 82, 108, 0.1) 100%
+  );
+  background: linear-gradient(
+    219deg,
+    rgba(131, 199, 172, 0.5) 0%,
+    rgba(15, 82, 108, 0.1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#83c7ac",endColorstr="#0f526c",GradientType=1);
 }
 #banner-contato img {
-
- width:360px
+  width: 360px;
 }
 
-#mat-mdc-dialog-1 > div > div > app-privacy-policy > mat-dialog-actions > button{
-  background-color: inherit!important;
+#mat-mdc-dialog-1
+  > div
+  > div
+  > app-privacy-policy
+  > mat-dialog-actions
+  > button {
+  background-color: inherit !important;
 }
 
 #banner-contato span {
-font-weight: 200;
-font-family: 'Poppins Light',sans-serif;
+  font-weight: 200;
+  font-family: "Poppins Light", sans-serif;
 }
 /* Helper Class */
 
@@ -1389,7 +1397,6 @@ font-family: 'Poppins Light',sans-serif;
 
 .text-white {
   color: #fff;
-
 }
 
 .align-left {
@@ -1874,7 +1881,7 @@ button,
 
 .menu .navigation ul li a {
   display: block;
-  color: #0F526C;
+  color: #0f526c;
   text-align: center;
   padding: 0 20px;
 }
@@ -1882,7 +1889,7 @@ button,
 .menu .navigation ul li:last-child a {
 }
 
-.menu .navigation ul li a:hover {
+.menu .navigation ul li a:not(.whats):hover {
   font-weight: bolder;
   scale: 1.05;
   transition: 0.3s linear;
@@ -1903,7 +1910,7 @@ button,
   width: 32px;
   margin-bottom: 6px;
   height: 3px;
-  background: #0F526C;
+  background: #0f526c;
 }
 
 /*------------------------------------------------|
@@ -1955,11 +1962,10 @@ button,
 }
 
 .herobanner .hero_content {
-
 }
 
 .herobanner h1 {
-  color: #0F526C;
+  color: #0f526c;
   text-align: left;
 
   font-size: 48px;
@@ -1968,12 +1974,10 @@ button,
   font-family: "Poppins Bold", sans-serif;
 }
 .herobanner h2 {
- z-index:9;
- color: #0F526C;
- font-size: 2rem;
+  z-index: 9;
+  color: #0f526c;
+  font-size: 2rem;
 }
-
-
 
 .herobanner .hero_content h1 {
   margin: 0 0 15px;
@@ -2050,8 +2054,6 @@ button,
 4. About Section
 --------------------------------|*/
 
-
-
 .about_section .imgposabout {
   position: absolute;
   top: -60px;
@@ -2063,13 +2065,11 @@ button,
   -ms-background-size: cover;
 }
 
-
-
 .about_section .line {
   width: 50px;
   height: 2px;
   margin: 30px 0;
-  background: #0F526C;
+  background: #0f526c;
 }
 
 /*------------------------------------------------|
@@ -2285,31 +2285,25 @@ button,
     margin-bottom: 3.4rem;
     padding: 2rem 0;
   }
-  h3{
-    font-size:20px
+  h3 {
+    font-size: 20px;
   }
 }
 @media only screen and (min-width: 768px) {
   .w-2\/3 {
     width: 66.66666%;
   }
-  .w-1\/3{
+  .w-1\/3 {
     width: 33.333333%;
   }
-
 }
 @media only screen and (max-width: 768px) {
-
-  #atuacao p{
-   text-align:center;
-   justify-content: center;
-   align-self: center;
+  #atuacao p {
+    text-align: center;
+    justify-content: center;
+    align-self: center;
   }
 }
-
-
-
-
 
 .planos_section {
   padding: 0 0 100px 0;
@@ -2452,7 +2446,6 @@ h4.planos_descricao_incluso {
   color: #ffffff;
   font-size: 1.6rem;
   letter-spacing: 1px;
-
 }
 .relatorio__processual__content p {
   color: #ffffff;
@@ -2495,21 +2488,20 @@ h4.planos_descricao_incluso {
   padding: 0 2rem;
   text-align: center;
 }
-.mat-vertical-content-container{
+.mat-vertical-content-container {
   margin: 1rem 0 1rem 36px;
 }
-.mat-step-icon-selected{
-  background-color: #0F526C !important;
+.mat-step-icon-selected {
+  background-color: #0f526c !important;
 }
-.mat-step-icon-state-edit{
-  background-color: #0F526C !important;
+.mat-step-icon-state-edit {
+  background-color: #0f526c !important;
 }
 
-
-#cdk-step-content-0-2 > div > form > div:nth-child(5) > button:nth-child(2){
-  border-radius:1.2rem;
-  width:100%;
-  margin-top:8px;
+#cdk-step-content-0-2 > div > form > div:nth-child(5) > button:nth-child(2) {
+  border-radius: 1.2rem;
+  width: 100%;
+  margin-top: 8px;
 }
 @media only screen and (max-width: 997px) {
   .relatorio__processual__content {
@@ -2519,20 +2511,20 @@ h4.planos_descricao_incluso {
   .relatorio__processual__content button {
     padding: 2rem 0.8rem !important;
   }
-  .mat-vertical-content-container{
+  .mat-vertical-content-container {
     margin: 0;
   }
-  .mdc-dialog .mdc-dialog__content{
-    padding:0;
+  .mdc-dialog .mdc-dialog__content {
+    padding: 0;
   }
-  .mdc-dialog__content > :first-child{
-    padding:0;
+  .mdc-dialog__content > :first-child {
+    padding: 0;
   }
-  .mat-mdc-dialog-container .mdc-dialog__title{
-    padding:0 3.5rem;
+  .mat-mdc-dialog-container .mdc-dialog__title {
+    padding: 0 3.5rem;
   }
-  .mdc-dialog .mdc-dialog__content{
-    padding:0!important;
+  .mdc-dialog .mdc-dialog__content {
+    padding: 0 !important;
   }
 }
 
@@ -2541,8 +2533,6 @@ button span {
   position: relative;
   z-index: 10;
 }
-
-
 
 .section_phrase {
   padding: 0 0 100px 0;
@@ -2930,12 +2920,10 @@ button span {
 --------------------------------|*/
 
 .client {
-
-
 }
 
-.p-0{
-  padding:0 !important;
+.p-0 {
+  padding: 0 !important;
   max-width: 100%;
 }
 
@@ -2953,65 +2941,86 @@ button span {
   margin-bottom: 20px;
   font-size: 32px;
   font-weight: bolder;
-text-align: right;
+  text-align: right;
   max-width: 40rem;
 }
 
-svg{
-  overflow: initial!important;
+svg {
+  overflow: initial !important;
 }
 
-.steps .steps-item{
-  background: rgb(131,199,172);
-background: -moz-linear-gradient(219deg, rgba(131, 199, 172, 0.5) 0%, rgba(15, 82, 108, 0.10) 100%);
-background: -webkit-linear-gradient(219deg, rgba(131, 199, 172, 0.5) 0%, rgba(15, 82, 108, 0.10) 100%);
-background: linear-gradient(219deg, rgba(131, 199, 172, 0.5) 0%, rgba(15, 82, 108, 0.10) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#83c7ac",endColorstr="#0f526c",GradientType=1);
-border-radius: 24px;
-box-shadow: rgba(0, 0, 0, 0.1) 10px 10px 25px -5px, rgba(0, 0, 0, 0.003) 0px 10px 10px -5px;
-
-
-
-}
-
-#planos .steps .steps-item{
-  background: rgb(131,199,172);
-background: -moz-linear-gradient(219deg, rgba(131, 199, 172, 0.5) 0%, rgba(15, 82, 108, 0.10) 100%);
-background: -webkit-linear-gradient(219deg, rgba(131, 199, 172, 0.5) 0%, rgba(15, 82, 108, 0.10) 100%);
-background: linear-gradient(219deg, rgba(131, 199, 172, 0.5) 0%, rgba(15, 82, 108, 0.10) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#83c7ac",endColorstr="#0f526c",GradientType=1);
-border-radius: 24px;
-
-height: 480px;
-}
-
-.steps-item-two{
-  background:#393939;
-
+.steps .steps-item {
+  background: rgb(131, 199, 172);
+  background: -moz-linear-gradient(
+    219deg,
+    rgba(131, 199, 172, 0.5) 0%,
+    rgba(15, 82, 108, 0.1) 100%
+  );
+  background: -webkit-linear-gradient(
+    219deg,
+    rgba(131, 199, 172, 0.5) 0%,
+    rgba(15, 82, 108, 0.1) 100%
+  );
+  background: linear-gradient(
+    219deg,
+    rgba(131, 199, 172, 0.5) 0%,
+    rgba(15, 82, 108, 0.1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#83c7ac",endColorstr="#0f526c",GradientType=1);
   border-radius: 24px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 10px 10px 25px -5px,
+    rgba(0, 0, 0, 0.003) 0px 10px 10px -5px;
+}
+
+#planos .steps .steps-item {
+  background: rgb(131, 199, 172);
+  background: -moz-linear-gradient(
+    219deg,
+    rgba(131, 199, 172, 0.5) 0%,
+    rgba(15, 82, 108, 0.1) 100%
+  );
+  background: -webkit-linear-gradient(
+    219deg,
+    rgba(131, 199, 172, 0.5) 0%,
+    rgba(15, 82, 108, 0.1) 100%
+  );
+  background: linear-gradient(
+    219deg,
+    rgba(131, 199, 172, 0.5) 0%,
+    rgba(15, 82, 108, 0.1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#83c7ac",endColorstr="#0f526c",GradientType=1);
+  border-radius: 24px;
+
   height: 480px;
 }
-.steps-item-two h4{
-  font-weight: 600!important;
+
+.steps-item-two {
+  background: #393939;
+
+  border-radius: 24px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  height: 480px;
+}
+.steps-item-two h4 {
+  font-weight: 600 !important;
   font-family: "Poppins Bold", sans-serif;
   font-size: 2rem;
 }
 
-.steps .steps-item h4{
-  font-weight: 600!important;
+.steps .steps-item h4 {
+  font-weight: 600 !important;
   font-family: "Poppins Bold", sans-serif;
   font-size: 2rem;
 }
 
 @media only screen and (max-width: 768px) {
-  #planos .steps .steps-item{
-  height: auto;
+  #planos .steps .steps-item {
+    height: auto;
   }
-  .steps .steps-item{
-  margin: 0 24px;
-
-
+  .steps .steps-item {
+    margin: 0 24px;
   }
   .client h2 {
     margin-bottom: 64px;
@@ -3027,23 +3036,22 @@ height: 480px;
     padding: 3rem 2rem;
     font-size: 24px;
     font-weight: bolder;
-  text-align: right;
+    text-align: right;
     max-width: 40rem;
-    margin:0;
+    margin: 0;
   }
-  .steps .steps-item{
-    margin:0;
+  .steps .steps-item {
+    margin: 0;
   }
 
-  .steps-item-two{
-
+  .steps-item-two {
     height: auto;
   }
-  .steps .steps-item{
+  .steps .steps-item {
     margin-bottom: 20px;
   }
-  .steps h3{
-    font-size:32px
+  .steps h3 {
+    font-size: 32px;
   }
   #planos p {
     font-size: 12px;
@@ -3052,25 +3060,29 @@ height: 480px;
     font-size: 10px;
     margin-bottom: 24px;
   }
-  #planos > div > div.flex-col.md\:flex-row.flex.p-0.md\:px-32 > div.w-full.md\:w-2\/3.md\:ml-10 > div > div > div > div > p{
-
+  #planos
+    > div
+    > div.flex-col.md\:flex-row.flex.p-0.md\:px-32
+    > div.w-full.md\:w-2\/3.md\:ml-10
+    > div
+    > div
+    > div
+    > div
+    > p {
   }
 }
 
-
 .client p {
-    font-size: 14px;
+  font-size: 14px;
   font-weight: lighter;
   margin: 0;
-
 }
 .client h4 {
   font-size: 20px;
-font-weight: lighter;
-margin: 0;
-font-weight: bolder;
-font-family: "Poppins Bold", sans-serif;
-
+  font-weight: lighter;
+  margin: 0;
+  font-weight: bolder;
+  font-family: "Poppins Bold", sans-serif;
 }
 
 .client .line {
@@ -3170,9 +3182,9 @@ font-family: "Poppins Bold", sans-serif;
   color: #020f3b;
 }
 
-#cdk-step-content-3-3 > div > form > div > button:nth-child(2){
-  width:100%!important;
-  margin-top:8px
+#cdk-step-content-3-3 > div > form > div > button:nth-child(2) {
+  width: 100% !important;
+  margin-top: 8px;
 }
 
 /*--------Banner WhatsApp--------*/
@@ -3238,7 +3250,7 @@ font-family: "Poppins Bold", sans-serif;
   line-height: 38px;
   font-size: 32px;
   color: #fff;
-  background: #0F526C;
+  background: #0f526c;
   border-radius: 50px;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
@@ -3256,7 +3268,7 @@ font-family: "Poppins Bold", sans-serif;
 
 .footer {
   padding: 80px 80px 120px 80px;
-  background: #0F526C;
+  background: #0f526c;
 }
 
 .footer img {
@@ -3542,23 +3554,22 @@ font-family: "Poppins Bold", sans-serif;
     object-fit: cover;
     max-width: 100%;
   }
-  main{
-    top:0px!important;
+  main {
+    top: 0px !important;
   }
-  button{
+  button {
     min-width: 300px;
     padding: 12px 3px !important;
     font-size: 12px !important;
   }
 
   .herobanner h1 {
-
     font-size: 24px;
     line-height: 28px;
-    padding: 8px 0
+    padding: 8px 0;
   }
-  .herobanner h2{
-    font-size:1.6rem;
+  .herobanner h2 {
+    font-size: 1.6rem;
   }
 
   .herobanner .hero_content {

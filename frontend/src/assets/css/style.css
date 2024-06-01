@@ -3,41 +3,37 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* Fontes */
 
 @font-face {
-  font-family: 'Poppins Bold';
-  src: url('../fonts/Poppins-Bold.woff2') format('woff2'),
-      url('../fonts/Poppins-Bold.woff') format('woff'),
-      url('../fonts/Poppins-Bold.ttf') format('truetype');
+  font-family: "Poppins Bold";
+  src: url("../fonts/Poppins-Bold.woff2") format("woff2"),
+    url("../fonts/Poppins-Bold.woff") format("woff"),
+    url("../fonts/Poppins-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Poppins Light';
-  src: url('../fonts/Poppins-Light.woff2') format('woff2'),
-      url('../fonts/Poppins-Light.woff') format('woff'),
-      url('../fonts/Poppins-Light.ttf') format('truetype');
+  font-family: "Poppins Light";
+  src: url("../fonts/Poppins-Light.woff2") format("woff2"),
+    url("../fonts/Poppins-Light.woff") format("woff"),
+    url("../fonts/Poppins-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Poppins Regular';
-  src: url('../fonts/Poppins-Regular.woff2') format('woff2'),
-      url('../fonts/Poppins-Regular.woff') format('woff'),
-      url('../fonts/Poppins-Regular.ttf') format('truetype');
+  font-family: "Poppins Regular";
+  src: url("../fonts/Poppins-Regular.woff2") format("woff2"),
+    url("../fonts/Poppins-Regular.woff") format("woff"),
+    url("../fonts/Poppins-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
-
-
 
 .btn-primary.focus,
 .btn-primary:focus {
@@ -204,7 +200,6 @@ textarea:-ms-input-placeholder {
 }
 .text-white {
   color: #fff;
-
 }
 .align-left {
   text-align: left;
@@ -622,13 +617,19 @@ button,
 }
 .menu .navigation ul li a {
   display: block;
-  color: #0F526C;
+  color: #0f526c;
   text-align: center;
   padding: 0 20px;
 }
 .menu .navigation ul li:last-child a {
 }
-.menu .navigation ul li a:hover {
+.menu .navigation ul li a.whats {
+  background-color: #0f526c;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+.menu .navigation ul li a:not(.whats):hover {
   font-weight: bolder;
   scale: 1.05;
   transition: 0.3s linear;
@@ -692,7 +693,6 @@ button,
   padding: 90px 0;
 }
 .herobanner h1 {
-
 }
 .herobanner .hero_content h1 {
   margin: 0 0 15px;
@@ -1017,15 +1017,11 @@ h4.planos_descricao_incluso {
   padding: 4px 16px 16px 4px;
 }
 
-
 button span {
   display: block;
   position: relative;
   z-index: 10;
 }
-
-
-
 
 .section_phrase {
   padding: 0 0 100px 0;
@@ -1414,7 +1410,6 @@ button span {
 }
 .client p {
   margin: 0;
-
 }
 .client .line {
   width: 50px;
