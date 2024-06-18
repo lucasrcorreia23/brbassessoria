@@ -650,6 +650,17 @@ button,
   background: #00a29f;
 }
 
+.menu-d {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1199px) {
+  .menu-d {
+    display: block;
+  }
+}
+
 /*------------------------------------------------|
 3. Banner
 --------------------------------|*/
