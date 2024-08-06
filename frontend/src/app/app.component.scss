@@ -1,15 +1,43 @@
 .mat-form-field-appearance-fill .mat-form-field-flex {
-    background-color: #0FB9B1 !important;
+  background-color: #0fb9b1 !important;
 }
 
 .mat-form-field-appearance-fill .mat-form-field-label {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .mat-form-field-appearance-fill .mat-form-field-underline::before {
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 .mat-form-field-appearance-fill .mat-form-field-ripple {
-    background-color: #ffffff;
+  background-color: #ffffff;
+}
+
+.plans .container {
+  background-color: #0f526c;
+
+  .bg-blue-new {
+    background-color: #189aaf;
+  }
+
+  .bg-blue2-new {
+    background-color: #0f526c;
+  }
+
+  .bg-blue-light-new {
+    background-color: #eef8f9;
+  }
+
+  .text-success-2 {
+    color: #47bb86;
+  }
+
+  .text-danger-2 {
+    color: #e32b32;
+  }
+
+  .border-success-2 {
+    border-color: #47bb86;
+  }
 }
